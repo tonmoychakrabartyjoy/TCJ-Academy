@@ -1,6 +1,6 @@
 ﻿namespace OOP2_final_project
 {
-    partial class Form10
+    partial class Form11
     {
         /// <summary>
         /// Required designer variable.
@@ -28,62 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            lbl_student = new Label();
             lb_co_Name = new Label();
+            lbl_teacher = new Label();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(40, 116);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(932, 358);
-            dataGridView1.TabIndex = 1;
-            // 
-            // lbl_student
-            // 
-            lbl_student.AutoSize = true;
-            lbl_student.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_student.Location = new Point(40, 68);
-            lbl_student.Name = "lbl_student";
-            lbl_student.Size = new Size(126, 35);
-            lbl_student.TabIndex = 2;
-            lbl_student.Text = "Students";
             // 
             // lb_co_Name
             // 
             lb_co_Name.AutoSize = true;
             lb_co_Name.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lb_co_Name.ForeColor = Color.Black;
-            lb_co_Name.Location = new Point(421, 9);
+            lb_co_Name.Location = new Point(395, 9);
             lb_co_Name.Name = "lb_co_Name";
             lb_co_Name.Size = new Size(194, 35);
-            lb_co_Name.TabIndex = 23;
+            lb_co_Name.TabIndex = 26;
             lb_co_Name.Text = "TCJ Academy";
             // 
-            // Form10
+            // lbl_teacher
+            // 
+            lbl_teacher.AutoSize = true;
+            lbl_teacher.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_teacher.Location = new Point(45, 85);
+            lbl_teacher.Name = "lbl_teacher";
+            lbl_teacher.Size = new Size(125, 35);
+            lbl_teacher.TabIndex = 25;
+            lbl_teacher.Text = "Teachers";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(45, 133);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(938, 358);
+            dataGridView1.TabIndex = 24;
+            // 
+            // Form11
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSkyBlue;
-            ClientSize = new Size(1019, 519);
+            ClientSize = new Size(1023, 517);
             Controls.Add(lb_co_Name);
-            Controls.Add(lbl_student);
+            Controls.Add(lbl_teacher);
             Controls.Add(dataGridView1);
-            Name = "Form10";
+            Name = "Form11";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Student list";
+            Text = "Teacher show";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private DataGridView dataGridView1;
-        private Label lbl_student;
+
         private Label lb_co_Name;
+        private Label lbl_teacher;
+        private DataGridView dataGridView1;
     }
 }
