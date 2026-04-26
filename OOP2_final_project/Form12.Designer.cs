@@ -122,7 +122,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSkyBlue;
-            ClientSize = new Size(1026, 525);
+            ClientSize = new Size(1026, 537);
             Controls.Add(txt_student_id);
             Controls.Add(lbl_student_id);
             Controls.Add(btn_update);
