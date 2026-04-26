@@ -164,7 +164,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightSlateGray;
+            BackColor = Color.LightSkyBlue;
             ClientSize = new Size(1022, 543);
             Controls.Add(txt_subject);
             Controls.Add(lb_subject);
