@@ -1,6 +1,6 @@
 ﻿namespace OOP2_final_project
 {
-    partial class Form11
+    partial class Form14
     {
         /// <summary>
         /// Required designer variable.
@@ -28,54 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lb_co_Name = new Label();
-            lbl_teacher = new Label();
             dataGridView1 = new DataGridView();
+            lb_co_Name = new Label();
+            lbl_result = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // lb_co_Name
-            // 
-            lb_co_Name.AutoSize = true;
-            lb_co_Name.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lb_co_Name.ForeColor = Color.Black;
-            lb_co_Name.Location = new Point(395, 9);
-            lb_co_Name.Name = "lb_co_Name";
-            lb_co_Name.Size = new Size(194, 35);
-            lb_co_Name.TabIndex = 26;
-            lb_co_Name.Text = "TCJ Academy";
-            // 
-            // lbl_teacher
-            // 
-            lbl_teacher.AutoSize = true;
-            lbl_teacher.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_teacher.Location = new Point(45, 85);
-            lbl_teacher.Name = "lbl_teacher";
-            lbl_teacher.Size = new Size(125, 35);
-            lbl_teacher.TabIndex = 25;
-            lbl_teacher.Text = "Teachers";
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(45, 133);
+            dataGridView1.Location = new Point(54, 108);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(938, 358);
-            dataGridView1.TabIndex = 24;
+            dataGridView1.Size = new Size(924, 414);
+            dataGridView1.TabIndex = 0;
             // 
-            // Form11
+            // lb_co_Name
+            // 
+            lb_co_Name.AutoSize = true;
+            lb_co_Name.BackColor = SystemColors.ScrollBar;
+            lb_co_Name.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lb_co_Name.ForeColor = Color.Black;
+            lb_co_Name.Location = new Point(398, 9);
+            lb_co_Name.Name = "lb_co_Name";
+            lb_co_Name.Size = new Size(194, 35);
+            lb_co_Name.TabIndex = 14;
+            lb_co_Name.Text = "TCJ Academy";
+            // 
+            // lbl_result
+            // 
+            lbl_result.AutoSize = true;
+            lbl_result.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_result.Location = new Point(54, 62);
+            lbl_result.Name = "lbl_result";
+            lbl_result.Size = new Size(90, 32);
+            lbl_result.TabIndex = 15;
+            lbl_result.Text = "Result";
+            // 
+            // Form14
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightSkyBlue;
-            ClientSize = new Size(1023, 534);
+            BackColor = SystemColors.ScrollBar;
+            ClientSize = new Size(1006, 534);
+            Controls.Add(lbl_result);
             Controls.Add(lb_co_Name);
-            Controls.Add(lbl_teacher);
             Controls.Add(dataGridView1);
-            Name = "Form11";
+            Name = "Form14";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Teacher show";
+            Text = "Show result";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -83,8 +84,8 @@
 
         #endregion
 
-        private Label lb_co_Name;
-        private Label lbl_teacher;
         private DataGridView dataGridView1;
+        private Label lb_co_Name;
+        private Label lbl_result;
     }
 }
