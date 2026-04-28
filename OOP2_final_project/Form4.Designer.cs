@@ -31,7 +31,6 @@
             lb_co_Name = new Label();
             btn_cng_pass = new Button();
             btn_result = new Button();
-            btn_financials = new Button();
             btn_show_course = new Button();
             SuspendLayout();
             // 
@@ -64,15 +63,6 @@
             btn_result.Text = "Result";
             btn_result.UseVisualStyleBackColor = true;
             // 
-            // btn_financials
-            // 
-            btn_financials.Location = new Point(858, 162);
-            btn_financials.Name = "btn_financials";
-            btn_financials.Size = new Size(136, 29);
-            btn_financials.TabIndex = 21;
-            btn_financials.Text = "Financials";
-            btn_financials.UseVisualStyleBackColor = true;
-            // 
             // btn_show_course
             // 
             btn_show_course.Location = new Point(858, 127);
@@ -89,7 +79,6 @@
             BackColor = SystemColors.ScrollBar;
             ClientSize = new Size(1006, 542);
             Controls.Add(btn_show_course);
-            Controls.Add(btn_financials);
             Controls.Add(btn_result);
             Controls.Add(btn_cng_pass);
             Controls.Add(lb_co_Name);
@@ -105,7 +94,6 @@
         private Label lb_co_Name;
         private Button btn_cng_pass;
         private Button btn_result;
-        private Button btn_financials;
         private Button btn_show_course;
     }
 }
