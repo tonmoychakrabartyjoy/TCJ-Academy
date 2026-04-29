@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             lb_co_Name = new Label();
-            btn_cng_pass = new Button();
-            btn_up_result = new Button();
-            btn_payment = new Button();
+            txt_total_mark = new TextBox();
+            txt_user_id = new TextBox();
+            txt_exam_id = new TextBox();
+            lbl_mark = new Label();
+            lbl_user_id = new Label();
+            lbl_exam_id = new Label();
+            btn_add_result = new Button();
             SuspendLayout();
             // 
             // lb_co_Name
@@ -45,46 +49,80 @@
             lb_co_Name.TabIndex = 14;
             lb_co_Name.Text = "TCJ Academy";
             // 
-            // btn_cng_pass
+            // txt_total_mark
             // 
-            btn_cng_pass.Location = new Point(860, 68);
-            btn_cng_pass.Name = "btn_cng_pass";
-            btn_cng_pass.Size = new Size(136, 29);
-            btn_cng_pass.TabIndex = 20;
-            btn_cng_pass.Text = "Change Password";
-            btn_cng_pass.UseVisualStyleBackColor = true;
+            txt_total_mark.Location = new Point(379, 231);
+            txt_total_mark.Name = "txt_total_mark";
+            txt_total_mark.Size = new Size(190, 27);
+            txt_total_mark.TabIndex = 38;
             // 
-            // btn_up_result
+            // txt_user_id
             // 
-            btn_up_result.Location = new Point(860, 103);
-            btn_up_result.Name = "btn_up_result";
-            btn_up_result.Size = new Size(136, 29);
-            btn_up_result.TabIndex = 21;
-            btn_up_result.Text = "Upload Result";
-            btn_up_result.UseVisualStyleBackColor = true;
+            txt_user_id.Location = new Point(379, 195);
+            txt_user_id.Name = "txt_user_id";
+            txt_user_id.Size = new Size(190, 27);
+            txt_user_id.TabIndex = 37;
             // 
-            // btn_payment
+            // txt_exam_id
             // 
-            btn_payment.Location = new Point(860, 138);
-            btn_payment.Name = "btn_payment";
-            btn_payment.Size = new Size(136, 29);
-            btn_payment.TabIndex = 22;
-            btn_payment.Text = "Check Payment";
-            btn_payment.UseVisualStyleBackColor = true;
+            txt_exam_id.Location = new Point(379, 160);
+            txt_exam_id.Name = "txt_exam_id";
+            txt_exam_id.Size = new Size(190, 27);
+            txt_exam_id.TabIndex = 36;
+            // 
+            // lbl_mark
+            // 
+            lbl_mark.AutoSize = true;
+            lbl_mark.Location = new Point(331, 231);
+            lbl_mark.Name = "lbl_mark";
+            lbl_mark.Size = new Size(42, 20);
+            lbl_mark.TabIndex = 34;
+            lbl_mark.Text = "Mark";
+            // 
+            // lbl_user_id
+            // 
+            lbl_user_id.AutoSize = true;
+            lbl_user_id.Location = new Point(318, 195);
+            lbl_user_id.Name = "lbl_user_id";
+            lbl_user_id.Size = new Size(55, 20);
+            lbl_user_id.TabIndex = 33;
+            lbl_user_id.Text = "User Id";
+            // 
+            // lbl_exam_id
+            // 
+            lbl_exam_id.AutoSize = true;
+            lbl_exam_id.Location = new Point(309, 160);
+            lbl_exam_id.Name = "lbl_exam_id";
+            lbl_exam_id.Size = new Size(64, 20);
+            lbl_exam_id.TabIndex = 32;
+            lbl_exam_id.Text = "Exam ID";
+            // 
+            // btn_add_result
+            // 
+            btn_add_result.Location = new Point(398, 275);
+            btn_add_result.Name = "btn_add_result";
+            btn_add_result.Size = new Size(136, 29);
+            btn_add_result.TabIndex = 31;
+            btn_add_result.Text = "Add Result";
+            btn_add_result.UseVisualStyleBackColor = true;
             // 
             // Form5
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.PaleTurquoise;
+            BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1008, 540);
-            Controls.Add(btn_payment);
-            Controls.Add(btn_up_result);
-            Controls.Add(btn_cng_pass);
+            Controls.Add(txt_total_mark);
+            Controls.Add(txt_user_id);
+            Controls.Add(txt_exam_id);
+            Controls.Add(lbl_mark);
+            Controls.Add(lbl_user_id);
+            Controls.Add(lbl_exam_id);
+            Controls.Add(btn_add_result);
             Controls.Add(lb_co_Name);
             Name = "Form5";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Teacher page";
+            Text = "Upload result";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -95,5 +133,14 @@
         private Button btn_cng_pass;
         private Button btn_up_result;
         private Button btn_payment;
+        private TextBox textBox1;
+        private TextBox txt_total_mark;
+        private TextBox txt_user_id;
+        private TextBox txt_exam_id;
+        private Label lbl_section;
+        private Label lbl_mark;
+        private Label lbl_user_id;
+        private Label lbl_exam_id;
+        private Button btn_add_result;
     }
 }

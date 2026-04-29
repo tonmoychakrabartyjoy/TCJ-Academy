@@ -29,10 +29,15 @@
         private void InitializeComponent()
         {
             lb_co_Name = new Label();
-            btn_cng_pass = new Button();
-            btn_result = new Button();
-            btn_financials = new Button();
-            btn_show_course = new Button();
+            btn_exam = new Button();
+            lbl_exam_id = new Label();
+            lbl_subject = new Label();
+            lbl_total_mark = new Label();
+            lbl_section = new Label();
+            txt_exam_id = new TextBox();
+            txt_subject = new TextBox();
+            txt_total_mark = new TextBox();
+            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // lb_co_Name
@@ -46,56 +51,98 @@
             lb_co_Name.TabIndex = 13;
             lb_co_Name.Text = "TCJ Academy";
             // 
-            // btn_cng_pass
+            // btn_exam
             // 
-            btn_cng_pass.Location = new Point(858, 57);
-            btn_cng_pass.Name = "btn_cng_pass";
-            btn_cng_pass.Size = new Size(136, 29);
-            btn_cng_pass.TabIndex = 19;
-            btn_cng_pass.Text = "Change Password";
-            btn_cng_pass.UseVisualStyleBackColor = true;
+            btn_exam.Location = new Point(392, 291);
+            btn_exam.Name = "btn_exam";
+            btn_exam.Size = new Size(136, 29);
+            btn_exam.TabIndex = 20;
+            btn_exam.Text = "Add Exam";
+            btn_exam.UseVisualStyleBackColor = true;
             // 
-            // btn_result
+            // lbl_exam_id
             // 
-            btn_result.Location = new Point(858, 92);
-            btn_result.Name = "btn_result";
-            btn_result.Size = new Size(136, 29);
-            btn_result.TabIndex = 20;
-            btn_result.Text = "Result";
-            btn_result.UseVisualStyleBackColor = true;
+            lbl_exam_id.AutoSize = true;
+            lbl_exam_id.Location = new Point(307, 127);
+            lbl_exam_id.Name = "lbl_exam_id";
+            lbl_exam_id.Size = new Size(64, 20);
+            lbl_exam_id.TabIndex = 23;
+            lbl_exam_id.Text = "Exam ID";
             // 
-            // btn_financials
+            // lbl_subject
             // 
-            btn_financials.Location = new Point(858, 162);
-            btn_financials.Name = "btn_financials";
-            btn_financials.Size = new Size(136, 29);
-            btn_financials.TabIndex = 21;
-            btn_financials.Text = "Financials";
-            btn_financials.UseVisualStyleBackColor = true;
+            lbl_subject.AutoSize = true;
+            lbl_subject.Location = new Point(313, 162);
+            lbl_subject.Name = "lbl_subject";
+            lbl_subject.Size = new Size(58, 20);
+            lbl_subject.TabIndex = 24;
+            lbl_subject.Text = "Subject";
             // 
-            // btn_show_course
+            // lbl_total_mark
             // 
-            btn_show_course.Location = new Point(858, 127);
-            btn_show_course.Name = "btn_show_course";
-            btn_show_course.Size = new Size(136, 29);
-            btn_show_course.TabIndex = 22;
-            btn_show_course.Text = "Show Course";
-            btn_show_course.UseVisualStyleBackColor = true;
+            lbl_total_mark.AutoSize = true;
+            lbl_total_mark.Location = new Point(292, 201);
+            lbl_total_mark.Name = "lbl_total_mark";
+            lbl_total_mark.Size = new Size(79, 20);
+            lbl_total_mark.TabIndex = 25;
+            lbl_total_mark.Text = "Total Mark";
+            // 
+            // lbl_section
+            // 
+            lbl_section.AutoSize = true;
+            lbl_section.Location = new Point(313, 236);
+            lbl_section.Name = "lbl_section";
+            lbl_section.Size = new Size(58, 20);
+            lbl_section.TabIndex = 26;
+            lbl_section.Text = "Section";
+            // 
+            // txt_exam_id
+            // 
+            txt_exam_id.Location = new Point(377, 127);
+            txt_exam_id.Name = "txt_exam_id";
+            txt_exam_id.Size = new Size(190, 27);
+            txt_exam_id.TabIndex = 27;
+            // 
+            // txt_subject
+            // 
+            txt_subject.Location = new Point(377, 162);
+            txt_subject.Name = "txt_subject";
+            txt_subject.Size = new Size(190, 27);
+            txt_subject.TabIndex = 28;
+            // 
+            // txt_total_mark
+            // 
+            txt_total_mark.Location = new Point(377, 198);
+            txt_total_mark.Name = "txt_total_mark";
+            txt_total_mark.Size = new Size(190, 27);
+            txt_total_mark.TabIndex = 29;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(377, 236);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(190, 27);
+            textBox1.TabIndex = 30;
             // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ScrollBar;
+            BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1006, 542);
-            Controls.Add(btn_show_course);
-            Controls.Add(btn_financials);
-            Controls.Add(btn_result);
-            Controls.Add(btn_cng_pass);
+            Controls.Add(textBox1);
+            Controls.Add(txt_total_mark);
+            Controls.Add(txt_subject);
+            Controls.Add(txt_exam_id);
+            Controls.Add(lbl_section);
+            Controls.Add(lbl_total_mark);
+            Controls.Add(lbl_subject);
+            Controls.Add(lbl_exam_id);
+            Controls.Add(btn_exam);
             Controls.Add(lb_co_Name);
             Name = "Form4";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Student page";
+            Text = "Exam";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -103,9 +150,14 @@
         #endregion
 
         private Label lb_co_Name;
-        private Button btn_cng_pass;
-        private Button btn_result;
-        private Button btn_financials;
-        private Button btn_show_course;
+        private Button btn_exam;
+        private Label lbl_exam_id;
+        private Label lbl_subject;
+        private Label lbl_total_mark;
+        private Label lbl_section;
+        private TextBox txt_exam_id;
+        private TextBox txt_subject;
+        private TextBox txt_total_mark;
+        private TextBox textBox1;
     }
 }

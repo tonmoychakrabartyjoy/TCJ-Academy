@@ -37,6 +37,8 @@
             txt_course_day = new TextBox();
             txt_course_dis = new TextBox();
             lb_co_Name = new Label();
+            lbl_sec = new Label();
+            btn_add_course = new Button();
             SuspendLayout();
             // 
             // txt_course_title
@@ -76,11 +78,11 @@
             // lb_disc
             // 
             lb_disc.AutoSize = true;
-            lb_disc.Location = new Point(9, 197);
+            lb_disc.Location = new Point(32, 204);
             lb_disc.Name = "lb_disc";
-            lb_disc.Size = new Size(130, 20);
+            lb_disc.Size = new Size(107, 20);
             lb_disc.TabIndex = 4;
-            lb_disc.Text = "Course Discription";
+            lb_disc.Text = "Academic Year";
             // 
             // txt_course_subject
             // 
@@ -99,9 +101,8 @@
             // txt_course_dis
             // 
             txt_course_dis.Location = new Point(157, 197);
-            txt_course_dis.Multiline = true;
             txt_course_dis.Name = "txt_course_dis";
-            txt_course_dis.Size = new Size(376, 192);
+            txt_course_dis.Size = new Size(376, 27);
             txt_course_dis.TabIndex = 7;
             // 
             // lb_co_Name
@@ -115,12 +116,33 @@
             lb_co_Name.TabIndex = 16;
             lb_co_Name.Text = "TCJ Academy";
             // 
+            // lbl_sec
+            // 
+            lbl_sec.AutoSize = true;
+            lbl_sec.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_sec.Location = new Point(614, 88);
+            lbl_sec.Name = "lbl_sec";
+            lbl_sec.Size = new Size(80, 23);
+            lbl_sec.TabIndex = 17;
+            lbl_sec.Text = "Sections";
+            // 
+            // btn_add_course
+            // 
+            btn_add_course.Location = new Point(200, 312);
+            btn_add_course.Name = "btn_add_course";
+            btn_add_course.Size = new Size(162, 29);
+            btn_add_course.TabIndex = 22;
+            btn_add_course.Text = "Add Course";
+            btn_add_course.UseVisualStyleBackColor = true;
+            // 
             // Form7
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1021, 502);
+            Controls.Add(btn_add_course);
+            Controls.Add(lbl_sec);
             Controls.Add(lb_co_Name);
             Controls.Add(txt_course_dis);
             Controls.Add(txt_course_day);
@@ -148,5 +170,7 @@
         private TextBox txt_course_day;
         private TextBox txt_course_dis;
         private Label lb_co_Name;
+        private Label lbl_sec;
+        private Button btn_add_course;
     }
 }

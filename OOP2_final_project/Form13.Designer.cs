@@ -35,8 +35,7 @@
             txt_course_code = new TextBox();
             lbl_course_code = new Label();
             lbl_add_course = new Label();
-            txt_phone = new TextBox();
-            lbl_phone = new Label();
+            lbl_sec = new Label();
             SuspendLayout();
             // 
             // lb_co_Name
@@ -68,7 +67,7 @@
             // 
             // btn_update
             // 
-            btn_update.Location = new Point(104, 314);
+            btn_update.Location = new Point(75, 398);
             btn_update.Name = "btn_update";
             btn_update.Size = new Size(156, 29);
             btn_update.TabIndex = 41;
@@ -77,7 +76,7 @@
             // 
             // txt_course_code
             // 
-            txt_course_code.Location = new Point(134, 250);
+            txt_course_code.Location = new Point(159, 184);
             txt_course_code.Name = "txt_course_code";
             txt_course_code.Size = new Size(228, 25);
             txt_course_code.TabIndex = 40;
@@ -85,7 +84,7 @@
             // lbl_course_code
             // 
             lbl_course_code.AutoSize = true;
-            lbl_course_code.Location = new Point(35, 257);
+            lbl_course_code.Location = new Point(50, 184);
             lbl_course_code.Name = "lbl_course_code";
             lbl_course_code.Size = new Size(85, 17);
             lbl_course_code.TabIndex = 39;
@@ -95,27 +94,21 @@
             // 
             lbl_add_course.AutoSize = true;
             lbl_add_course.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_add_course.Location = new Point(22, 197);
+            lbl_add_course.Location = new Point(12, 135);
             lbl_add_course.Name = "lbl_add_course";
             lbl_add_course.Size = new Size(158, 32);
             lbl_add_course.TabIndex = 38;
             lbl_add_course.Text = "Add Course";
             // 
-            // txt_phone
+            // lbl_sec
             // 
-            txt_phone.Location = new Point(104, 153);
-            txt_phone.Name = "txt_phone";
-            txt_phone.Size = new Size(228, 25);
-            txt_phone.TabIndex = 37;
-            // 
-            // lbl_phone
-            // 
-            lbl_phone.AutoSize = true;
-            lbl_phone.Location = new Point(48, 156);
-            lbl_phone.Name = "lbl_phone";
-            lbl_phone.Size = new Size(45, 17);
-            lbl_phone.TabIndex = 36;
-            lbl_phone.Text = "Phone";
+            lbl_sec.AutoSize = true;
+            lbl_sec.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_sec.Location = new Point(55, 233);
+            lbl_sec.Name = "lbl_sec";
+            lbl_sec.Size = new Size(80, 23);
+            lbl_sec.TabIndex = 44;
+            lbl_sec.Text = "Sections";
             // 
             // Form13
             // 
@@ -123,14 +116,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSkyBlue;
             ClientSize = new Size(1024, 539);
+            Controls.Add(lbl_sec);
             Controls.Add(txt_teacher_id);
             Controls.Add(lbl_student_id);
             Controls.Add(btn_update);
             Controls.Add(txt_course_code);
             Controls.Add(lbl_course_code);
             Controls.Add(lbl_add_course);
-            Controls.Add(txt_phone);
-            Controls.Add(lbl_phone);
             Controls.Add(lb_co_Name);
             Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "Form13";
@@ -149,7 +141,6 @@
         private TextBox txt_course_code;
         private Label lbl_course_code;
         private Label lbl_add_course;
-        private TextBox txt_phone;
-        private Label lbl_phone;
+        private Label lbl_sec;
     }
 }

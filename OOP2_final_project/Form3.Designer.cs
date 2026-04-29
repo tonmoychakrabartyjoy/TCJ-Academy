@@ -34,9 +34,10 @@
             btn_add_teacher = new Button();
             btn_update_student = new Button();
             btn_update_teacher = new Button();
-            btn_cng_pass = new Button();
             btn_student_list = new Button();
             btn_teacher_list = new Button();
+            btn_add_exam = new Button();
+            btn_upload_result = new Button();
             SuspendLayout();
             // 
             // lb_co_Name
@@ -95,15 +96,6 @@
             btn_update_teacher.Text = "Update Teacher";
             btn_update_teacher.UseVisualStyleBackColor = true;
             // 
-            // btn_cng_pass
-            // 
-            btn_cng_pass.Location = new Point(12, 322);
-            btn_cng_pass.Name = "btn_cng_pass";
-            btn_cng_pass.Size = new Size(136, 29);
-            btn_cng_pass.TabIndex = 18;
-            btn_cng_pass.Text = "Change Password";
-            btn_cng_pass.UseVisualStyleBackColor = true;
-            // 
             // btn_student_list
             // 
             btn_student_list.Location = new Point(12, 182);
@@ -122,15 +114,34 @@
             btn_teacher_list.Text = "Teacher List";
             btn_teacher_list.UseVisualStyleBackColor = true;
             // 
+            // btn_add_exam
+            // 
+            btn_add_exam.Location = new Point(12, 322);
+            btn_add_exam.Name = "btn_add_exam";
+            btn_add_exam.Size = new Size(136, 29);
+            btn_add_exam.TabIndex = 21;
+            btn_add_exam.Text = "Add Exam";
+            btn_add_exam.UseVisualStyleBackColor = true;
+            // 
+            // btn_upload_result
+            // 
+            btn_upload_result.Location = new Point(12, 357);
+            btn_upload_result.Name = "btn_upload_result";
+            btn_upload_result.Size = new Size(136, 29);
+            btn_upload_result.TabIndex = 22;
+            btn_upload_result.Text = "Upload Result";
+            btn_upload_result.UseVisualStyleBackColor = true;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1006, 540);
+            Controls.Add(btn_upload_result);
+            Controls.Add(btn_add_exam);
             Controls.Add(btn_teacher_list);
             Controls.Add(btn_student_list);
-            Controls.Add(btn_cng_pass);
             Controls.Add(btn_update_teacher);
             Controls.Add(btn_update_student);
             Controls.Add(btn_add_teacher);
@@ -152,8 +163,9 @@
         private Button btn_add_teacher;
         private Button btn_update_student;
         private Button btn_update_teacher;
-        private Button btn_cng_pass;
         private Button btn_student_list;
         private Button btn_teacher_list;
+        private Button btn_add_exam;
+        private Button btn_upload_result;
     }
 }

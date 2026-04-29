@@ -43,7 +43,7 @@
             lb_co_Name.AutoSize = true;
             lb_co_Name.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lb_co_Name.ForeColor = Color.Black;
-            lb_co_Name.Location = new Point(399, 9);
+            lb_co_Name.Location = new Point(411, 9);
             lb_co_Name.Name = "lb_co_Name";
             lb_co_Name.Size = new Size(194, 35);
             lb_co_Name.TabIndex = 15;
@@ -51,7 +51,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(12, 72);
+            button1.Location = new Point(75, 59);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 16;
@@ -60,7 +60,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(112, 72);
+            button2.Location = new Point(175, 59);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
             button2.TabIndex = 17;
@@ -69,7 +69,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(212, 72);
+            button3.Location = new Point(275, 59);
             button3.Name = "button3";
             button3.Size = new Size(118, 29);
             button3.TabIndex = 18;
@@ -78,7 +78,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(336, 72);
+            button4.Location = new Point(399, 59);
             button4.Name = "button4";
             button4.Size = new Size(94, 29);
             button4.TabIndex = 19;
@@ -87,16 +87,16 @@
             // 
             // button5
             // 
-            button5.Location = new Point(436, 72);
+            button5.Location = new Point(499, 59);
             button5.Name = "button5";
-            button5.Size = new Size(119, 29);
+            button5.Size = new Size(157, 29);
             button5.TabIndex = 20;
-            button5.Text = "Teacher salary";
+            button5.Text = "Add Teacher salary";
             button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            button6.Location = new Point(561, 72);
+            button6.Location = new Point(662, 59);
             button6.Name = "button6";
             button6.Size = new Size(132, 29);
             button6.TabIndex = 21;
@@ -105,7 +105,7 @@
             // 
             // button7
             // 
-            button7.Location = new Point(699, 72);
+            button7.Location = new Point(800, 59);
             button7.Name = "button7";
             button7.Size = new Size(132, 29);
             button7.TabIndex = 22;
@@ -117,7 +117,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightGreen;
+            BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1016, 537);
             Controls.Add(button7);
             Controls.Add(button6);
