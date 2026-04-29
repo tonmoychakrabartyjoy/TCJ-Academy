@@ -31,21 +31,19 @@
             lb_name = new Label();
             txt_name = new TextBox();
             lb_id = new Label();
-            lb_old_pass = new Label();
-            lb_new_pass = new Label();
-            lb_con_pass = new Label();
             txt_id = new TextBox();
-            txt_old_pass = new TextBox();
-            txt_new_pass = new TextBox();
-            txt_con_pass = new TextBox();
-            btn_cng_pass = new Button();
+            btn_add_emp = new Button();
             lb_co_Name = new Label();
+            lb_type = new Label();
+            lb_salary = new Label();
+            txt_type = new TextBox();
+            txt_salary = new TextBox();
             SuspendLayout();
             // 
             // lb_name
             // 
             lb_name.AutoSize = true;
-            lb_name.Location = new Point(120, 106);
+            lb_name.Location = new Point(269, 149);
             lb_name.Name = "lb_name";
             lb_name.Size = new Size(49, 20);
             lb_name.TabIndex = 0;
@@ -53,7 +51,7 @@
             // 
             // txt_name
             // 
-            txt_name.Location = new Point(187, 99);
+            txt_name.Location = new Point(336, 142);
             txt_name.Name = "txt_name";
             txt_name.Size = new Size(282, 27);
             txt_name.TabIndex = 1;
@@ -61,75 +59,27 @@
             // lb_id
             // 
             lb_id.AutoSize = true;
-            lb_id.Location = new Point(147, 152);
+            lb_id.Location = new Point(296, 195);
             lb_id.Name = "lb_id";
             lb_id.Size = new Size(22, 20);
             lb_id.TabIndex = 2;
             lb_id.Text = "Id";
             // 
-            // lb_old_pass
-            // 
-            lb_old_pass.AutoSize = true;
-            lb_old_pass.Location = new Point(71, 187);
-            lb_old_pass.Name = "lb_old_pass";
-            lb_old_pass.Size = new Size(98, 20);
-            lb_old_pass.TabIndex = 3;
-            lb_old_pass.Text = "Old Password";
-            // 
-            // lb_new_pass
-            // 
-            lb_new_pass.AutoSize = true;
-            lb_new_pass.Location = new Point(63, 226);
-            lb_new_pass.Name = "lb_new_pass";
-            lb_new_pass.Size = new Size(106, 20);
-            lb_new_pass.TabIndex = 4;
-            lb_new_pass.Text = "New password";
-            // 
-            // lb_con_pass
-            // 
-            lb_con_pass.AutoSize = true;
-            lb_con_pass.Location = new Point(40, 265);
-            lb_con_pass.Name = "lb_con_pass";
-            lb_con_pass.Size = new Size(129, 20);
-            lb_con_pass.TabIndex = 5;
-            lb_con_pass.Text = "Confirm password";
-            // 
             // txt_id
             // 
-            txt_id.Location = new Point(187, 145);
+            txt_id.Location = new Point(336, 188);
             txt_id.Name = "txt_id";
             txt_id.Size = new Size(282, 27);
             txt_id.TabIndex = 6;
             // 
-            // txt_old_pass
+            // btn_add_emp
             // 
-            txt_old_pass.Location = new Point(187, 187);
-            txt_old_pass.Name = "txt_old_pass";
-            txt_old_pass.Size = new Size(282, 27);
-            txt_old_pass.TabIndex = 7;
-            // 
-            // txt_new_pass
-            // 
-            txt_new_pass.Location = new Point(187, 226);
-            txt_new_pass.Name = "txt_new_pass";
-            txt_new_pass.Size = new Size(282, 27);
-            txt_new_pass.TabIndex = 8;
-            // 
-            // txt_con_pass
-            // 
-            txt_con_pass.Location = new Point(187, 265);
-            txt_con_pass.Name = "txt_con_pass";
-            txt_con_pass.Size = new Size(282, 27);
-            txt_con_pass.TabIndex = 9;
-            // 
-            // btn_cng_pass
-            // 
-            btn_cng_pass.Location = new Point(247, 328);
-            btn_cng_pass.Name = "btn_cng_pass";
-            btn_cng_pass.Size = new Size(156, 29);
-            btn_cng_pass.TabIndex = 10;
-            btn_cng_pass.Text = "Change password";
-            btn_cng_pass.UseVisualStyleBackColor = true;
+            btn_add_emp.Location = new Point(390, 318);
+            btn_add_emp.Name = "btn_add_emp";
+            btn_add_emp.Size = new Size(156, 29);
+            btn_add_emp.TabIndex = 10;
+            btn_add_emp.Text = "Add employee";
+            btn_add_emp.UseVisualStyleBackColor = true;
             // 
             // lb_co_Name
             // 
@@ -142,6 +92,38 @@
             lb_co_Name.TabIndex = 11;
             lb_co_Name.Text = "TCJ Academy";
             // 
+            // lb_type
+            // 
+            lb_type.AutoSize = true;
+            lb_type.Location = new Point(278, 230);
+            lb_type.Name = "lb_type";
+            lb_type.Size = new Size(40, 20);
+            lb_type.TabIndex = 3;
+            lb_type.Text = "Type";
+            // 
+            // lb_salary
+            // 
+            lb_salary.AutoSize = true;
+            lb_salary.Location = new Point(269, 276);
+            lb_salary.Name = "lb_salary";
+            lb_salary.Size = new Size(49, 20);
+            lb_salary.TabIndex = 4;
+            lb_salary.Text = "Salary";
+            // 
+            // txt_type
+            // 
+            txt_type.Location = new Point(336, 230);
+            txt_type.Name = "txt_type";
+            txt_type.Size = new Size(282, 27);
+            txt_type.TabIndex = 7;
+            // 
+            // txt_salary
+            // 
+            txt_salary.Location = new Point(336, 269);
+            txt_salary.Name = "txt_salary";
+            txt_salary.Size = new Size(282, 27);
+            txt_salary.TabIndex = 8;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -149,20 +131,18 @@
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1011, 539);
             Controls.Add(lb_co_Name);
-            Controls.Add(btn_cng_pass);
-            Controls.Add(txt_con_pass);
-            Controls.Add(txt_new_pass);
-            Controls.Add(txt_old_pass);
+            Controls.Add(btn_add_emp);
+            Controls.Add(txt_salary);
+            Controls.Add(txt_type);
             Controls.Add(txt_id);
-            Controls.Add(lb_con_pass);
-            Controls.Add(lb_new_pass);
-            Controls.Add(lb_old_pass);
+            Controls.Add(lb_salary);
+            Controls.Add(lb_type);
             Controls.Add(lb_id);
             Controls.Add(txt_name);
             Controls.Add(lb_name);
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Change pass page";
+            Text = "Add employee";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -179,7 +159,11 @@
         private TextBox txt_old_pass;
         private TextBox txt_new_pass;
         private TextBox txt_con_pass;
-        private Button btn_cng_pass;
+        private Button btn_add_emp;
         private Label lb_co_Name;
+        private Label lb_type;
+        private Label lb_salary;
+        private TextBox txt_type;
+        private TextBox txt_salary;
     }
 }

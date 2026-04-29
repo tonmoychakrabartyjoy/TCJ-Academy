@@ -32,14 +32,14 @@
             lb_student_name = new Label();
             lb_phone = new Label();
             lb_address = new Label();
-            lb_password = new Label();
             txt_id = new TextBox();
             txt_name = new TextBox();
             txt_phone = new TextBox();
             txt_address = new TextBox();
-            txt_password = new TextBox();
             btn_add_student = new Button();
             lb_co_Name = new Label();
+            txt_type = new TextBox();
+            lb_type = new Label();
             SuspendLayout();
             // 
             // lb_student_id
@@ -79,15 +79,6 @@
             lb_address.Text = "Address";
             lb_address.Click += lb_address_Click;
             // 
-            // lb_password
-            // 
-            lb_password.AutoSize = true;
-            lb_password.Location = new Point(68, 261);
-            lb_password.Name = "lb_password";
-            lb_password.Size = new Size(70, 20);
-            lb_password.TabIndex = 4;
-            lb_password.Text = "Password";
-            // 
             // txt_id
             // 
             txt_id.Location = new Point(162, 100);
@@ -116,13 +107,6 @@
             txt_address.Size = new Size(320, 27);
             txt_address.TabIndex = 8;
             // 
-            // txt_password
-            // 
-            txt_password.Location = new Point(162, 254);
-            txt_password.Name = "txt_password";
-            txt_password.Size = new Size(320, 27);
-            txt_password.TabIndex = 9;
-            // 
             // btn_add_student
             // 
             btn_add_student.Location = new Point(233, 308);
@@ -143,6 +127,22 @@
             lb_co_Name.TabIndex = 17;
             lb_co_Name.Text = "TCJ Academy";
             // 
+            // txt_type
+            // 
+            txt_type.Location = new Point(162, 254);
+            txt_type.Name = "txt_type";
+            txt_type.Size = new Size(320, 27);
+            txt_type.TabIndex = 9;
+            // 
+            // lb_type
+            // 
+            lb_type.AutoSize = true;
+            lb_type.Location = new Point(98, 261);
+            lb_type.Name = "lb_type";
+            lb_type.Size = new Size(40, 20);
+            lb_type.TabIndex = 4;
+            lb_type.Text = "Type";
+            // 
             // Form8
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -151,12 +151,12 @@
             ClientSize = new Size(1021, 493);
             Controls.Add(lb_co_Name);
             Controls.Add(btn_add_student);
-            Controls.Add(txt_password);
+            Controls.Add(txt_type);
             Controls.Add(txt_address);
             Controls.Add(txt_phone);
             Controls.Add(txt_name);
             Controls.Add(txt_id);
-            Controls.Add(lb_password);
+            Controls.Add(lb_type);
             Controls.Add(lb_address);
             Controls.Add(lb_phone);
             Controls.Add(lb_student_name);
@@ -174,13 +174,13 @@
         private Label lb_student_name;
         private Label lb_phone;
         private Label lb_address;
-        private Label lb_password;
         private TextBox txt_id;
         private TextBox txt_name;
         private TextBox txt_phone;
         private TextBox txt_address;
-        private TextBox txt_password;
         private Button btn_add_student;
         private Label lb_co_Name;
+        private TextBox txt_type;
+        private Label lb_type;
     }
 }

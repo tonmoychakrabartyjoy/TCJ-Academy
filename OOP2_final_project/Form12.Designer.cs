@@ -37,6 +37,11 @@
             btn_update = new Button();
             lbl_student_id = new Label();
             txt_student_id = new TextBox();
+            lbl_amount = new Label();
+            txt_amount = new TextBox();
+            txt_month = new TextBox();
+            lbl_month = new Label();
+            lbl_sec = new Label();
             SuspendLayout();
             // 
             // lb_co_Name
@@ -53,15 +58,15 @@
             // lbl_phone
             // 
             lbl_phone.AutoSize = true;
-            lbl_phone.Location = new Point(38, 208);
+            lbl_phone.Location = new Point(73, 278);
             lbl_phone.Name = "lbl_phone";
-            lbl_phone.Size = new Size(50, 20);
+            lbl_phone.Size = new Size(48, 20);
             lbl_phone.TabIndex = 28;
-            lbl_phone.Text = "Phone";
+            lbl_phone.Text = "Pay id";
             // 
             // txt_phone
             // 
-            txt_phone.Location = new Point(94, 205);
+            txt_phone.Location = new Point(129, 278);
             txt_phone.Name = "txt_phone";
             txt_phone.Size = new Size(228, 27);
             txt_phone.TabIndex = 29;
@@ -70,7 +75,7 @@
             // 
             lbl_add_course.AutoSize = true;
             lbl_add_course.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_add_course.Location = new Point(12, 249);
+            lbl_add_course.Location = new Point(11, 183);
             lbl_add_course.Name = "lbl_add_course";
             lbl_add_course.Size = new Size(158, 32);
             lbl_add_course.TabIndex = 30;
@@ -79,7 +84,7 @@
             // lbl_course_code
             // 
             lbl_course_code.AutoSize = true;
-            lbl_course_code.Location = new Point(25, 309);
+            lbl_course_code.Location = new Point(30, 235);
             lbl_course_code.Name = "lbl_course_code";
             lbl_course_code.Size = new Size(93, 20);
             lbl_course_code.TabIndex = 31;
@@ -87,14 +92,14 @@
             // 
             // txt_course_code
             // 
-            txt_course_code.Location = new Point(124, 302);
+            txt_course_code.Location = new Point(129, 235);
             txt_course_code.Name = "txt_course_code";
             txt_course_code.Size = new Size(228, 27);
             txt_course_code.TabIndex = 32;
             // 
             // btn_update
             // 
-            btn_update.Location = new Point(94, 366);
+            btn_update.Location = new Point(94, 429);
             btn_update.Name = "btn_update";
             btn_update.Size = new Size(156, 29);
             btn_update.TabIndex = 33;
@@ -117,12 +122,59 @@
             txt_student_id.Size = new Size(228, 27);
             txt_student_id.TabIndex = 35;
             // 
+            // lbl_amount
+            // 
+            lbl_amount.AutoSize = true;
+            lbl_amount.Location = new Point(61, 327);
+            lbl_amount.Name = "lbl_amount";
+            lbl_amount.Size = new Size(62, 20);
+            lbl_amount.TabIndex = 36;
+            lbl_amount.Text = "Amount";
+            // 
+            // txt_amount
+            // 
+            txt_amount.Location = new Point(129, 327);
+            txt_amount.Name = "txt_amount";
+            txt_amount.Size = new Size(228, 27);
+            txt_amount.TabIndex = 37;
+            // 
+            // txt_month
+            // 
+            txt_month.Location = new Point(129, 377);
+            txt_month.Name = "txt_month";
+            txt_month.Size = new Size(228, 27);
+            txt_month.TabIndex = 38;
+            // 
+            // lbl_month
+            // 
+            lbl_month.AutoSize = true;
+            lbl_month.Location = new Point(71, 384);
+            lbl_month.Name = "lbl_month";
+            lbl_month.Size = new Size(52, 20);
+            lbl_month.TabIndex = 39;
+            lbl_month.Text = "Month";
+            // 
+            // lbl_sec
+            // 
+            lbl_sec.AutoSize = true;
+            lbl_sec.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_sec.Location = new Point(429, 232);
+            lbl_sec.Name = "lbl_sec";
+            lbl_sec.Size = new Size(80, 23);
+            lbl_sec.TabIndex = 40;
+            lbl_sec.Text = "Sections";
+            // 
             // Form12
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSkyBlue;
             ClientSize = new Size(1026, 537);
+            Controls.Add(lbl_sec);
+            Controls.Add(lbl_month);
+            Controls.Add(txt_month);
+            Controls.Add(txt_amount);
+            Controls.Add(lbl_amount);
             Controls.Add(txt_student_id);
             Controls.Add(lbl_student_id);
             Controls.Add(btn_update);
@@ -150,5 +202,10 @@
         private Button btn_update;
         private Label lbl_student_id;
         private TextBox txt_student_id;
+        private Label lbl_amount;
+        private TextBox txt_amount;
+        private TextBox txt_month;
+        private Label lbl_month;
+        private Label lbl_sec;
     }
 }

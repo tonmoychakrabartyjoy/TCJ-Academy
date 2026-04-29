@@ -37,7 +37,7 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(40, 116);
+            dataGridView1.Location = new Point(29, 115);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(932, 358);
@@ -69,7 +69,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSkyBlue;
-            ClientSize = new Size(1019, 519);
+            ClientSize = new Size(988, 519);
             Controls.Add(lb_co_Name);
             Controls.Add(lbl_student);
             Controls.Add(dataGridView1);
