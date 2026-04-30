@@ -28,6 +28,15 @@ namespace OOP2_final_project
 
                 this.Hide();
             }
+
+            else if(name == "Joy" && id == "1000-0001" && pass == "1234")
+            {
+                Form6 admin_page = new Form6();
+                admin_page.Show();
+
+                this.Hide();
+            }
+
             else
             {
                 MessageBox.Show("Invalid Id or Password!");
@@ -39,7 +48,31 @@ namespace OOP2_final_project
 
         private void login_Load(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void txt_name_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txt_id.Focus();
+            }
+        }
+
+        private void txt_id_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txt_pass.Focus();
+            }
+        }
+
+        private void txt_pass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_login.PerformClick();
+            }
         }
     }
 }

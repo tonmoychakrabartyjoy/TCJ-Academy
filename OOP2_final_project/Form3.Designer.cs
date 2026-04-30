@@ -40,6 +40,7 @@
             btn_add_exam = new Button();
             btn_upload_result = new Button();
             panel1 = new Panel();
+            panel5 = new Panel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
@@ -47,12 +48,15 @@
             lbl_calendar = new Label();
             monthCalendar1 = new MonthCalendar();
             panel4 = new Panel();
+            panel6 = new Panel();
             lbl_dashboard = new Label();
             panel1.SuspendLayout();
+            panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
+            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // lb_co_Name
@@ -61,15 +65,17 @@
             lb_co_Name.BackColor = Color.Transparent;
             lb_co_Name.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lb_co_Name.ForeColor = Color.Black;
-            lb_co_Name.Location = new Point(0, 26);
+            lb_co_Name.Location = new Point(10, 18);
             lb_co_Name.Name = "lb_co_Name";
             lb_co_Name.Size = new Size(194, 35);
             lb_co_Name.TabIndex = 12;
             lb_co_Name.Text = "TCJ Academy";
+            lb_co_Name.Click += lb_co_Name_Click;
             // 
             // btn_add_course
             // 
             btn_add_course.BackColor = Color.Transparent;
+            btn_add_course.Cursor = Cursors.Hand;
             btn_add_course.FlatAppearance.BorderSize = 0;
             btn_add_course.FlatStyle = FlatStyle.Flat;
             btn_add_course.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
@@ -80,10 +86,12 @@
             btn_add_course.Text = "Add Course";
             btn_add_course.TextAlign = ContentAlignment.MiddleLeft;
             btn_add_course.UseVisualStyleBackColor = false;
+            btn_add_course.Click += btn_add_course_Click;
             // 
             // btn_add_student
             // 
             btn_add_student.BackColor = Color.Transparent;
+            btn_add_student.Cursor = Cursors.Hand;
             btn_add_student.FlatAppearance.BorderSize = 0;
             btn_add_student.FlatStyle = FlatStyle.Flat;
             btn_add_student.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
@@ -94,10 +102,12 @@
             btn_add_student.Text = "Add Student";
             btn_add_student.TextAlign = ContentAlignment.MiddleLeft;
             btn_add_student.UseVisualStyleBackColor = false;
+            btn_add_student.Click += btn_add_student_Click;
             // 
             // btn_add_teacher
             // 
             btn_add_teacher.BackColor = Color.Transparent;
+            btn_add_teacher.Cursor = Cursors.Hand;
             btn_add_teacher.FlatAppearance.BorderSize = 0;
             btn_add_teacher.FlatStyle = FlatStyle.Flat;
             btn_add_teacher.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
@@ -113,6 +123,7 @@
             // btn_update_student
             // 
             btn_update_student.BackColor = Color.Transparent;
+            btn_update_student.Cursor = Cursors.Hand;
             btn_update_student.FlatAppearance.BorderSize = 0;
             btn_update_student.FlatStyle = FlatStyle.Flat;
             btn_update_student.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
@@ -127,6 +138,7 @@
             // btn_update_teacher
             // 
             btn_update_teacher.BackColor = Color.Transparent;
+            btn_update_teacher.Cursor = Cursors.Hand;
             btn_update_teacher.FlatAppearance.BorderSize = 0;
             btn_update_teacher.FlatStyle = FlatStyle.Flat;
             btn_update_teacher.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
@@ -141,6 +153,7 @@
             // btn_student_list
             // 
             btn_student_list.BackColor = Color.Transparent;
+            btn_student_list.Cursor = Cursors.Hand;
             btn_student_list.FlatAppearance.BorderSize = 0;
             btn_student_list.FlatStyle = FlatStyle.Flat;
             btn_student_list.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
@@ -155,6 +168,7 @@
             // btn_teacher_list
             // 
             btn_teacher_list.BackColor = Color.Transparent;
+            btn_teacher_list.Cursor = Cursors.Hand;
             btn_teacher_list.FlatAppearance.BorderSize = 0;
             btn_teacher_list.FlatStyle = FlatStyle.Flat;
             btn_teacher_list.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
@@ -169,6 +183,7 @@
             // btn_add_exam
             // 
             btn_add_exam.BackColor = Color.Transparent;
+            btn_add_exam.Cursor = Cursors.Hand;
             btn_add_exam.FlatAppearance.BorderSize = 0;
             btn_add_exam.FlatStyle = FlatStyle.Flat;
             btn_add_exam.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
@@ -184,6 +199,7 @@
             // btn_upload_result
             // 
             btn_upload_result.BackColor = Color.Transparent;
+            btn_upload_result.Cursor = Cursors.Hand;
             btn_upload_result.FlatAppearance.BorderSize = 0;
             btn_upload_result.FlatStyle = FlatStyle.Flat;
             btn_upload_result.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
@@ -199,7 +215,7 @@
             // panel1
             // 
             panel1.BackColor = Color.CornflowerBlue;
-            panel1.Controls.Add(lb_co_Name);
+            panel1.Controls.Add(panel5);
             panel1.Controls.Add(btn_upload_result);
             panel1.Controls.Add(btn_add_course);
             panel1.Controls.Add(btn_add_exam);
@@ -214,13 +230,22 @@
             panel1.Size = new Size(224, 544);
             panel1.TabIndex = 23;
             // 
+            // panel5
+            // 
+            panel5.BackColor = Color.AliceBlue;
+            panel5.Controls.Add(lb_co_Name);
+            panel5.Location = new Point(3, 2);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(220, 70);
+            panel5.TabIndex = 23;
+            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Times New Roman", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(102, 35);
+            label1.Location = new Point(110, 35);
             label1.Name = "label1";
             label1.Size = new Size(634, 51);
             label1.TabIndex = 24;
@@ -231,7 +256,7 @@
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(3, 16);
+            pictureBox1.Location = new Point(11, 20);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(96, 83);
             pictureBox1.TabIndex = 25;
@@ -242,13 +267,14 @@
             panel2.BackColor = Color.CornflowerBlue;
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(label1);
-            panel2.Location = new Point(242, 72);
+            panel2.Location = new Point(228, 72);
             panel2.Name = "panel2";
-            panel2.Size = new Size(755, 125);
+            panel2.Size = new Size(769, 125);
             panel2.TabIndex = 26;
             // 
             // panel3
             // 
+            panel3.BackColor = Color.LightSteelBlue;
             panel3.Controls.Add(lbl_calendar);
             panel3.Controls.Add(monthCalendar1);
             panel3.Location = new Point(228, 221);
@@ -275,17 +301,26 @@
             // 
             // panel4
             // 
-            panel4.Controls.Add(lbl_dashboard);
+            panel4.Controls.Add(panel6);
             panel4.Location = new Point(519, 221);
             panel4.Name = "panel4";
             panel4.Size = new Size(488, 291);
             panel4.TabIndex = 28;
             // 
+            // panel6
+            // 
+            panel6.BackColor = Color.LightSteelBlue;
+            panel6.Controls.Add(lbl_dashboard);
+            panel6.Location = new Point(0, 1);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(488, 69);
+            panel6.TabIndex = 2;
+            // 
             // lbl_dashboard
             // 
             lbl_dashboard.AutoSize = true;
             lbl_dashboard.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbl_dashboard.Location = new Point(182, 21);
+            lbl_dashboard.Location = new Point(177, 17);
             lbl_dashboard.Name = "lbl_dashboard";
             lbl_dashboard.Size = new Size(141, 32);
             lbl_dashboard.TabIndex = 0;
@@ -298,7 +333,7 @@
             BackColor = Color.AliceBlue;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1006, 540);
+            ClientSize = new Size(1011, 540);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel1);
@@ -309,14 +344,16 @@
             Text = "Employee page";
             Load += Form3_Load;
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
-            panel4.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -340,6 +377,8 @@
         private MonthCalendar monthCalendar1;
         private Label lbl_calendar;
         private Panel panel4;
+        private Panel panel6;
         private Label lbl_dashboard;
+        private Panel panel5;
     }
 }

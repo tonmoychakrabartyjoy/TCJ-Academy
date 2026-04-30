@@ -28,14 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
             lb_co_Name = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
+            btn_student_list = new Button();
+            btn_teacher_list = new Button();
+            btn_emp_list = new Button();
+            btn_course_list = new Button();
+            btn_add_teacher_sal = new Button();
+            btn_add_emp = new Button();
+            btn_add_course_fee = new Button();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            pictureBox1 = new PictureBox();
+            lbl_title = new Label();
+            panel4 = new Panel();
+            lbl_calendar = new Label();
+            monthCalendar1 = new MonthCalendar();
+            panel5 = new Panel();
+            panel6 = new Panel();
+            lbl_dashboard = new Label();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel4.SuspendLayout();
+            panel5.SuspendLayout();
+            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // lb_co_Name
@@ -43,106 +62,280 @@
             lb_co_Name.AutoSize = true;
             lb_co_Name.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lb_co_Name.ForeColor = Color.Black;
-            lb_co_Name.Location = new Point(411, 9);
+            lb_co_Name.Location = new Point(7, 13);
             lb_co_Name.Name = "lb_co_Name";
             lb_co_Name.Size = new Size(194, 35);
             lb_co_Name.TabIndex = 15;
             lb_co_Name.Text = "TCJ Academy";
             // 
-            // button1
+            // btn_student_list
             // 
-            button1.Location = new Point(75, 59);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 16;
-            button1.Text = "Student List";
-            button1.UseVisualStyleBackColor = true;
+            btn_student_list.Cursor = Cursors.Hand;
+            btn_student_list.FlatAppearance.BorderSize = 0;
+            btn_student_list.FlatStyle = FlatStyle.Flat;
+            btn_student_list.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
+            btn_student_list.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_student_list.Location = new Point(29, 90);
+            btn_student_list.Name = "btn_student_list";
+            btn_student_list.Size = new Size(112, 29);
+            btn_student_list.TabIndex = 16;
+            btn_student_list.Text = "Student List";
+            btn_student_list.TextAlign = ContentAlignment.MiddleLeft;
+            btn_student_list.UseVisualStyleBackColor = true;
+            btn_student_list.Click += btn_student_list_Click;
             // 
-            // button2
+            // btn_teacher_list
             // 
-            button2.Location = new Point(175, 59);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 17;
-            button2.Text = "Teacher List";
-            button2.UseVisualStyleBackColor = true;
+            btn_teacher_list.Cursor = Cursors.Hand;
+            btn_teacher_list.FlatAppearance.BorderSize = 0;
+            btn_teacher_list.FlatStyle = FlatStyle.Flat;
+            btn_teacher_list.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
+            btn_teacher_list.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_teacher_list.Location = new Point(29, 125);
+            btn_teacher_list.Name = "btn_teacher_list";
+            btn_teacher_list.Size = new Size(112, 29);
+            btn_teacher_list.TabIndex = 17;
+            btn_teacher_list.Text = "Teacher List";
+            btn_teacher_list.TextAlign = ContentAlignment.MiddleLeft;
+            btn_teacher_list.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_emp_list
             // 
-            button3.Location = new Point(275, 59);
-            button3.Name = "button3";
-            button3.Size = new Size(118, 29);
-            button3.TabIndex = 18;
-            button3.Text = "Employee List";
-            button3.UseVisualStyleBackColor = true;
+            btn_emp_list.Cursor = Cursors.Hand;
+            btn_emp_list.FlatAppearance.BorderSize = 0;
+            btn_emp_list.FlatStyle = FlatStyle.Flat;
+            btn_emp_list.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
+            btn_emp_list.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_emp_list.Location = new Point(29, 195);
+            btn_emp_list.Name = "btn_emp_list";
+            btn_emp_list.Size = new Size(132, 29);
+            btn_emp_list.TabIndex = 18;
+            btn_emp_list.Text = "Employee List";
+            btn_emp_list.TextAlign = ContentAlignment.MiddleLeft;
+            btn_emp_list.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_course_list
             // 
-            button4.Location = new Point(399, 59);
-            button4.Name = "button4";
-            button4.Size = new Size(94, 29);
-            button4.TabIndex = 19;
-            button4.Text = "Course List";
-            button4.UseVisualStyleBackColor = true;
+            btn_course_list.Cursor = Cursors.Hand;
+            btn_course_list.FlatAppearance.BorderSize = 0;
+            btn_course_list.FlatStyle = FlatStyle.Flat;
+            btn_course_list.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
+            btn_course_list.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_course_list.Location = new Point(29, 160);
+            btn_course_list.Name = "btn_course_list";
+            btn_course_list.Size = new Size(112, 29);
+            btn_course_list.TabIndex = 19;
+            btn_course_list.Text = "Course List";
+            btn_course_list.TextAlign = ContentAlignment.MiddleLeft;
+            btn_course_list.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btn_add_teacher_sal
             // 
-            button5.Location = new Point(499, 59);
-            button5.Name = "button5";
-            button5.Size = new Size(157, 29);
-            button5.TabIndex = 20;
-            button5.Text = "Add Teacher salary";
-            button5.UseVisualStyleBackColor = true;
+            btn_add_teacher_sal.Cursor = Cursors.Hand;
+            btn_add_teacher_sal.FlatAppearance.BorderSize = 0;
+            btn_add_teacher_sal.FlatStyle = FlatStyle.Flat;
+            btn_add_teacher_sal.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
+            btn_add_teacher_sal.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_add_teacher_sal.Location = new Point(29, 300);
+            btn_add_teacher_sal.Name = "btn_add_teacher_sal";
+            btn_add_teacher_sal.Size = new Size(157, 29);
+            btn_add_teacher_sal.TabIndex = 20;
+            btn_add_teacher_sal.Text = "Add Teacher salary";
+            btn_add_teacher_sal.TextAlign = ContentAlignment.MiddleLeft;
+            btn_add_teacher_sal.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btn_add_emp
             // 
-            button6.Location = new Point(662, 59);
-            button6.Name = "button6";
-            button6.Size = new Size(132, 29);
-            button6.TabIndex = 21;
-            button6.Text = "Add Employee";
-            button6.UseVisualStyleBackColor = true;
+            btn_add_emp.Cursor = Cursors.Hand;
+            btn_add_emp.FlatAppearance.BorderSize = 0;
+            btn_add_emp.FlatStyle = FlatStyle.Flat;
+            btn_add_emp.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
+            btn_add_emp.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_add_emp.Location = new Point(29, 265);
+            btn_add_emp.Name = "btn_add_emp";
+            btn_add_emp.Size = new Size(132, 29);
+            btn_add_emp.TabIndex = 21;
+            btn_add_emp.Text = "Add Employee";
+            btn_add_emp.TextAlign = ContentAlignment.MiddleLeft;
+            btn_add_emp.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btn_add_course_fee
             // 
-            button7.Location = new Point(800, 59);
-            button7.Name = "button7";
-            button7.Size = new Size(132, 29);
-            button7.TabIndex = 22;
-            button7.Text = "Add Course fee";
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
+            btn_add_course_fee.Cursor = Cursors.Hand;
+            btn_add_course_fee.FlatAppearance.BorderSize = 0;
+            btn_add_course_fee.FlatStyle = FlatStyle.Flat;
+            btn_add_course_fee.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
+            btn_add_course_fee.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_add_course_fee.Location = new Point(29, 230);
+            btn_add_course_fee.Name = "btn_add_course_fee";
+            btn_add_course_fee.Size = new Size(132, 29);
+            btn_add_course_fee.TabIndex = 22;
+            btn_add_course_fee.Text = "Add Course fee";
+            btn_add_course_fee.TextAlign = ContentAlignment.MiddleLeft;
+            btn_add_course_fee.UseVisualStyleBackColor = true;
+            btn_add_course_fee.Click += button7_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.CornflowerBlue;
+            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(btn_student_list);
+            panel1.Controls.Add(btn_add_teacher_sal);
+            panel1.Controls.Add(btn_add_course_fee);
+            panel1.Controls.Add(btn_teacher_list);
+            panel1.Controls.Add(btn_add_emp);
+            panel1.Controls.Add(btn_emp_list);
+            panel1.Controls.Add(btn_course_list);
+            panel1.Location = new Point(5, -2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(207, 539);
+            panel1.TabIndex = 23;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.AliceBlue;
+            panel2.Controls.Add(lb_co_Name);
+            panel2.Location = new Point(0, 2);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(207, 64);
+            panel2.TabIndex = 24;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.CornflowerBlue;
+            panel3.Controls.Add(pictureBox1);
+            panel3.Controls.Add(lbl_title);
+            panel3.Location = new Point(228, 75);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(779, 125);
+            panel3.TabIndex = 27;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Location = new Point(16, 23);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(96, 83);
+            pictureBox1.TabIndex = 25;
+            pictureBox1.TabStop = false;
+            // 
+            // lbl_title
+            // 
+            lbl_title.AutoSize = true;
+            lbl_title.BackColor = Color.Transparent;
+            lbl_title.Font = new Font("Times New Roman", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_title.ForeColor = Color.Black;
+            lbl_title.Location = new Point(125, 39);
+            lbl_title.Name = "lbl_title";
+            lbl_title.Size = new Size(574, 51);
+            lbl_title.TabIndex = 24;
+            lbl_title.Text = "TCJ Academy | Admin Portal";
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(lbl_calendar);
+            panel4.Controls.Add(monthCalendar1);
+            panel4.Location = new Point(228, 228);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(285, 291);
+            panel4.TabIndex = 28;
+            // 
+            // lbl_calendar
+            // 
+            lbl_calendar.AutoSize = true;
+            lbl_calendar.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lbl_calendar.Location = new Point(74, 15);
+            lbl_calendar.Name = "lbl_calendar";
+            lbl_calendar.Size = new Size(121, 32);
+            lbl_calendar.TabIndex = 1;
+            lbl_calendar.Text = "Calendar";
+            // 
+            // monthCalendar1
+            // 
+            monthCalendar1.Location = new Point(9, 68);
+            monthCalendar1.Name = "monthCalendar1";
+            monthCalendar1.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.AliceBlue;
+            panel5.Controls.Add(panel6);
+            panel5.Location = new Point(519, 228);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(488, 291);
+            panel5.TabIndex = 29;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.LightSteelBlue;
+            panel6.Controls.Add(lbl_dashboard);
+            panel6.Location = new Point(0, 1);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(488, 69);
+            panel6.TabIndex = 1;
+            // 
+            // lbl_dashboard
+            // 
+            lbl_dashboard.AutoSize = true;
+            lbl_dashboard.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lbl_dashboard.Location = new Point(177, 17);
+            lbl_dashboard.Name = "lbl_dashboard";
+            lbl_dashboard.Size = new Size(141, 32);
+            lbl_dashboard.TabIndex = 0;
+            lbl_dashboard.Text = "Dashboard";
             // 
             // Form6
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1016, 537);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(lb_co_Name);
+            Controls.Add(panel5);
+            Controls.Add(panel4);
+            Controls.Add(panel3);
+            Controls.Add(panel1);
+            DoubleBuffered = true;
             Name = "Form6";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin page";
+            panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Label lb_co_Name;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
+        private Button btn_student_list;
+        private Button btn_teacher_list;
+        private Button btn_emp_list;
+        private Button btn_course_list;
+        private Button btn_add_teacher_sal;
+        private Button btn_add_emp;
+        private Button btn_add_course_fee;
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel3;
+        private PictureBox pictureBox1;
+        private Label lbl_title;
+        private Panel panel4;
+        private Label lbl_calendar;
+        private MonthCalendar monthCalendar1;
+        private Panel panel5;
+        private Panel panel6;
+        private Label lbl_dashboard;
     }
 }

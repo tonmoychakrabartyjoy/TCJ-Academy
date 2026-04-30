@@ -45,6 +45,7 @@
             txt_name.Name = "txt_name";
             txt_name.Size = new Size(232, 27);
             txt_name.TabIndex = 0;
+            txt_name.KeyDown += txt_name_KeyDown;
             // 
             // txt_id
             // 
@@ -52,6 +53,7 @@
             txt_id.Name = "txt_id";
             txt_id.Size = new Size(232, 27);
             txt_id.TabIndex = 1;
+            txt_id.KeyDown += txt_id_KeyDown;
             // 
             // txt_pass
             // 
@@ -60,6 +62,7 @@
             txt_pass.PasswordChar = '*';
             txt_pass.Size = new Size(232, 27);
             txt_pass.TabIndex = 2;
+            txt_pass.KeyDown += txt_pass_KeyDown;
             // 
             // btn_login
             // 
