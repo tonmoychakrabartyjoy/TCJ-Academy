@@ -194,6 +194,7 @@
             btn_upload_result.Text = "Upload Result";
             btn_upload_result.TextAlign = ContentAlignment.MiddleLeft;
             btn_upload_result.UseVisualStyleBackColor = false;
+            btn_upload_result.Click += btn_upload_result_Click;
             // 
             // panel1
             // 
