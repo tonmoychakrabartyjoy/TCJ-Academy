@@ -12,6 +12,7 @@ namespace OOP2_final_project
         string pass;
 
 
+
         private void btn_login_Click(object sender, EventArgs e)
         {
 
@@ -38,7 +39,7 @@ namespace OOP2_final_project
 
         private void login_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

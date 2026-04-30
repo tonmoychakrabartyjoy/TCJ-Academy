@@ -14,5 +14,13 @@ namespace OOP2_final_project
         {
             InitializeComponent();
         }
+
+        private void lb_co_Name_Click(object sender, EventArgs e)
+        {
+            Form3 home = new Form3();
+            home.Show();
+
+            this.Hide();
+        }
     }
 }

@@ -41,6 +41,7 @@
             // lb_co_Name
             // 
             lb_co_Name.AutoSize = true;
+            lb_co_Name.Cursor = Cursors.Hand;
             lb_co_Name.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lb_co_Name.ForeColor = Color.Black;
             lb_co_Name.Location = new Point(375, 9);
@@ -48,6 +49,7 @@
             lb_co_Name.Size = new Size(194, 35);
             lb_co_Name.TabIndex = 14;
             lb_co_Name.Text = "TCJ Academy";
+            lb_co_Name.Click += lb_co_Name_Click;
             // 
             // txt_total_mark
             // 
