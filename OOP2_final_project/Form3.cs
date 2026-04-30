@@ -29,5 +29,13 @@ namespace OOP2_final_project
         {
 
         }
+
+        private void btn_upload_result_Click(object sender, EventArgs e)
+        {
+            Form5 upload_result = new Form5();
+            upload_result.Show();
+
+            this.Hide();
+        }
     }
 }
