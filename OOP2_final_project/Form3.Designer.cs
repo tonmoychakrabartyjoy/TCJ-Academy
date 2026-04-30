@@ -179,6 +179,7 @@
             btn_add_exam.Text = "Add Exam";
             btn_add_exam.TextAlign = ContentAlignment.MiddleLeft;
             btn_add_exam.UseVisualStyleBackColor = false;
+            btn_add_exam.Click += btn_add_exam_Click;
             // 
             // btn_upload_result
             // 
