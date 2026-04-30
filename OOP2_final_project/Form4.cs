@@ -22,5 +22,26 @@ namespace OOP2_final_project
 
             this.Hide();
         }
+
+        private void btn_exam_Click(object sender, EventArgs e)
+        {
+            string exam_id = txt_exam_id.Text;
+            string subject = txt_subject.Text;
+            string section = txt_section.Text;
+            DateTime date = date_picker.Value.Date;
+            try
+            {
+                int total_mark = int.Parse(txt_total_mark.Text);
+                MessageBox.Show("Exam added successfully");
+
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Please enter numbers only!");
+                txt_total_mark.Focus();
+            }
+       
+            
+        }
     }
 }

@@ -19,5 +19,24 @@ namespace OOP2_final_project
         {
 
         }
+
+        private void btn_add_student_Click(object sender, EventArgs e)
+        {
+            string id = txt_id.Text;
+            string name = txt_name.Text;
+            string address = txt_address.Text;
+            string phone = txt_phone.Text;
+            string role = txt_type.Text;
+
+            MessageBox.Show("Student added successfull");
+        }
+
+        private void lb_co_Name_Click(object sender, EventArgs e)
+        {
+            Form3 home = new Form3();
+            home.Show();
+
+            this.Hide();
+        }
     }
 }

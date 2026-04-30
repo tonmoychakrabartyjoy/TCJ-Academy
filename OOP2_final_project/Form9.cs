@@ -14,5 +14,24 @@ namespace OOP2_final_project
         {
             InitializeComponent();
         }
+
+        private void btn_add_teacher_Click(object sender, EventArgs e)
+        {
+            string id = txt_id.Text;
+            string name = txt_name.Text;
+            string phone = txt_phone.Text;
+            string subject = txt_subject.Text;
+            string address = txt_address.Text;
+
+            MessageBox.Show("Teacher added successfull");
+        }
+
+        private void lb_co_Name_Click(object sender, EventArgs e)
+        {
+            Form3 home = new Form3();
+            home.Show();
+
+            this.Hide();
+        }
     }
 }

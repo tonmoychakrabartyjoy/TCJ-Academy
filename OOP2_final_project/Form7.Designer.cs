@@ -28,149 +28,216 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txt_course_title = new TextBox();
-            lb_course_code = new Label();
-            lb_course_subject = new Label();
-            lb_course_day = new Label();
-            lb_disc = new Label();
-            txt_course_subject = new TextBox();
-            txt_course_day = new TextBox();
-            txt_course_dis = new TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
             lb_co_Name = new Label();
+            panel1 = new Panel();
+            txt_course_fee = new TextBox();
+            lbl_course_fee = new Label();
+            panel2 = new Panel();
             lbl_sec = new Label();
             btn_add_course = new Button();
+            txt_aca_year = new TextBox();
+            txt_course_day = new TextBox();
+            txt_course_subject = new TextBox();
+            lb_disc = new Label();
+            lb_course_day = new Label();
+            lb_course_subject = new Label();
+            lb_course_code = new Label();
+            txt_course_code = new TextBox();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
-            // 
-            // txt_course_title
-            // 
-            txt_course_title.Location = new Point(246, 93);
-            txt_course_title.Name = "txt_course_title";
-            txt_course_title.Size = new Size(376, 27);
-            txt_course_title.TabIndex = 0;
-            // 
-            // lb_course_code
-            // 
-            lb_course_code.AutoSize = true;
-            lb_course_code.Location = new Point(144, 100);
-            lb_course_code.Name = "lb_course_code";
-            lb_course_code.Size = new Size(93, 20);
-            lb_course_code.TabIndex = 1;
-            lb_course_code.Text = "Course Code";
-            // 
-            // lb_course_subject
-            // 
-            lb_course_subject.AutoSize = true;
-            lb_course_subject.Location = new Point(121, 143);
-            lb_course_subject.Name = "lb_course_subject";
-            lb_course_subject.Size = new Size(107, 20);
-            lb_course_subject.TabIndex = 2;
-            lb_course_subject.Text = "Course Subject";
-            // 
-            // lb_course_day
-            // 
-            lb_course_day.AutoSize = true;
-            lb_course_day.Location = new Point(144, 184);
-            lb_course_day.Name = "lb_course_day";
-            lb_course_day.Size = new Size(84, 20);
-            lb_course_day.TabIndex = 3;
-            lb_course_day.Text = "Course Day";
-            // 
-            // lb_disc
-            // 
-            lb_disc.AutoSize = true;
-            lb_disc.Location = new Point(121, 234);
-            lb_disc.Name = "lb_disc";
-            lb_disc.Size = new Size(107, 20);
-            lb_disc.TabIndex = 4;
-            lb_disc.Text = "Academic Year";
-            // 
-            // txt_course_subject
-            // 
-            txt_course_subject.Location = new Point(246, 136);
-            txt_course_subject.Name = "txt_course_subject";
-            txt_course_subject.Size = new Size(376, 27);
-            txt_course_subject.TabIndex = 5;
-            // 
-            // txt_course_day
-            // 
-            txt_course_day.Location = new Point(246, 177);
-            txt_course_day.Name = "txt_course_day";
-            txt_course_day.Size = new Size(376, 27);
-            txt_course_day.TabIndex = 6;
-            // 
-            // txt_course_dis
-            // 
-            txt_course_dis.Location = new Point(246, 227);
-            txt_course_dis.Name = "txt_course_dis";
-            txt_course_dis.Size = new Size(376, 27);
-            txt_course_dis.TabIndex = 7;
             // 
             // lb_co_Name
             // 
             lb_co_Name.AutoSize = true;
+            lb_co_Name.BackColor = Color.Transparent;
+            lb_co_Name.Cursor = Cursors.Hand;
             lb_co_Name.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lb_co_Name.ForeColor = Color.Black;
-            lb_co_Name.Location = new Point(466, 9);
+            lb_co_Name.Location = new Point(419, 9);
             lb_co_Name.Name = "lb_co_Name";
             lb_co_Name.Size = new Size(194, 35);
             lb_co_Name.TabIndex = 16;
             lb_co_Name.Text = "TCJ Academy";
+            lb_co_Name.Click += lb_co_Name_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Honeydew;
+            panel1.Controls.Add(txt_course_fee);
+            panel1.Controls.Add(lbl_course_fee);
+            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(btn_add_course);
+            panel1.Controls.Add(txt_aca_year);
+            panel1.Controls.Add(txt_course_day);
+            panel1.Controls.Add(txt_course_subject);
+            panel1.Controls.Add(lb_disc);
+            panel1.Controls.Add(lb_course_day);
+            panel1.Controls.Add(lb_course_subject);
+            panel1.Controls.Add(lb_course_code);
+            panel1.Controls.Add(txt_course_code);
+            panel1.Location = new Point(160, 97);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(705, 298);
+            panel1.TabIndex = 17;
+            // 
+            // txt_course_fee
+            // 
+            txt_course_fee.BorderStyle = BorderStyle.FixedSingle;
+            txt_course_fee.Location = new Point(128, 187);
+            txt_course_fee.Name = "txt_course_fee";
+            txt_course_fee.ReadOnly = true;
+            txt_course_fee.Size = new Size(376, 27);
+            txt_course_fee.TabIndex = 35;
+            txt_course_fee.TextChanged += txt_course_fee_TextChanged;
+            // 
+            // lbl_course_fee
+            // 
+            lbl_course_fee.AutoSize = true;
+            lbl_course_fee.Location = new Point(9, 189);
+            lbl_course_fee.Name = "lbl_course_fee";
+            lbl_course_fee.Size = new Size(113, 20);
+            lbl_course_fee.TabIndex = 34;
+            lbl_course_fee.Text = "Add Course Fee";
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.AliceBlue;
+            panel2.Controls.Add(lbl_sec);
+            panel2.Location = new Point(531, 33);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(146, 211);
+            panel2.TabIndex = 33;
             // 
             // lbl_sec
             // 
             lbl_sec.AutoSize = true;
             lbl_sec.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_sec.Location = new Point(703, 118);
+            lbl_sec.Location = new Point(3, 3);
             lbl_sec.Name = "lbl_sec";
             lbl_sec.Size = new Size(80, 23);
-            lbl_sec.TabIndex = 17;
+            lbl_sec.TabIndex = 31;
             lbl_sec.Text = "Sections";
             // 
             // btn_add_course
             // 
-            btn_add_course.Location = new Point(289, 342);
+            btn_add_course.BackColor = Color.Crimson;
+            btn_add_course.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_add_course.ForeColor = SystemColors.ButtonHighlight;
+            btn_add_course.Location = new Point(190, 240);
             btn_add_course.Name = "btn_add_course";
-            btn_add_course.Size = new Size(162, 29);
-            btn_add_course.TabIndex = 22;
+            btn_add_course.Size = new Size(224, 44);
+            btn_add_course.TabIndex = 32;
             btn_add_course.Text = "Add Course";
-            btn_add_course.UseVisualStyleBackColor = true;
+            btn_add_course.UseVisualStyleBackColor = false;
+            btn_add_course.Click += btn_add_course_Click;
+            // 
+            // txt_aca_year
+            // 
+            txt_aca_year.BorderStyle = BorderStyle.FixedSingle;
+            txt_aca_year.Location = new Point(128, 150);
+            txt_aca_year.Name = "txt_aca_year";
+            txt_aca_year.Size = new Size(376, 27);
+            txt_aca_year.TabIndex = 30;
+            // 
+            // txt_course_day
+            // 
+            txt_course_day.BorderStyle = BorderStyle.FixedSingle;
+            txt_course_day.Location = new Point(128, 107);
+            txt_course_day.Name = "txt_course_day";
+            txt_course_day.Size = new Size(376, 27);
+            txt_course_day.TabIndex = 29;
+            // 
+            // txt_course_subject
+            // 
+            txt_course_subject.BorderStyle = BorderStyle.FixedSingle;
+            txt_course_subject.Location = new Point(128, 66);
+            txt_course_subject.Name = "txt_course_subject";
+            txt_course_subject.Size = new Size(376, 27);
+            txt_course_subject.TabIndex = 28;
+            // 
+            // lb_disc
+            // 
+            lb_disc.AutoSize = true;
+            lb_disc.Location = new Point(15, 150);
+            lb_disc.Name = "lb_disc";
+            lb_disc.Size = new Size(107, 20);
+            lb_disc.TabIndex = 27;
+            lb_disc.Text = "Academic Year";
+            // 
+            // lb_course_day
+            // 
+            lb_course_day.AutoSize = true;
+            lb_course_day.Location = new Point(38, 110);
+            lb_course_day.Name = "lb_course_day";
+            lb_course_day.Size = new Size(84, 20);
+            lb_course_day.TabIndex = 26;
+            lb_course_day.Text = "Course Day";
+            // 
+            // lb_course_subject
+            // 
+            lb_course_subject.AutoSize = true;
+            lb_course_subject.Location = new Point(15, 66);
+            lb_course_subject.Name = "lb_course_subject";
+            lb_course_subject.Size = new Size(107, 20);
+            lb_course_subject.TabIndex = 25;
+            lb_course_subject.Text = "Course Subject";
+            // 
+            // lb_course_code
+            // 
+            lb_course_code.AutoSize = true;
+            lb_course_code.Location = new Point(29, 30);
+            lb_course_code.Name = "lb_course_code";
+            lb_course_code.Size = new Size(93, 20);
+            lb_course_code.TabIndex = 24;
+            lb_course_code.Text = "Course Code";
+            // 
+            // txt_course_code
+            // 
+            txt_course_code.BorderStyle = BorderStyle.FixedSingle;
+            txt_course_code.Location = new Point(128, 23);
+            txt_course_code.Name = "txt_course_code";
+            txt_course_code.Size = new Size(376, 27);
+            txt_course_code.TabIndex = 23;
             // 
             // Form7
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1021, 502);
-            Controls.Add(btn_add_course);
-            Controls.Add(lbl_sec);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1002, 502);
+            Controls.Add(panel1);
             Controls.Add(lb_co_Name);
-            Controls.Add(txt_course_dis);
-            Controls.Add(txt_course_day);
-            Controls.Add(txt_course_subject);
-            Controls.Add(lb_disc);
-            Controls.Add(lb_course_day);
-            Controls.Add(lb_course_subject);
-            Controls.Add(lb_course_code);
-            Controls.Add(txt_course_title);
+            DoubleBuffered = true;
             Name = "Form7";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Add Course";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private TextBox txt_course_title;
-        private Label lb_course_code;
-        private Label lb_course_subject;
-        private Label lb_course_day;
-        private Label lb_disc;
-        private TextBox txt_course_subject;
-        private TextBox txt_course_day;
-        private TextBox txt_course_dis;
         private Label lb_co_Name;
+        private Panel panel1;
+        private Panel panel2;
         private Label lbl_sec;
         private Button btn_add_course;
+        private TextBox txt_aca_year;
+        private TextBox txt_course_day;
+        private TextBox txt_course_subject;
+        private Label lb_disc;
+        private Label lb_course_day;
+        private Label lb_course_subject;
+        private Label lb_course_code;
+        private TextBox txt_course_code;
+        private TextBox txt_course_fee;
+        private Label lbl_course_fee;
     }
 }
