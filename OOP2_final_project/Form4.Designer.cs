@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             lb_co_Name = new Label();
             btn_exam = new Button();
             lbl_exam_id = new Label();
@@ -37,23 +38,30 @@
             txt_exam_id = new TextBox();
             txt_subject = new TextBox();
             txt_total_mark = new TextBox();
-            textBox1 = new TextBox();
+            txt_section = new TextBox();
+            panel1 = new Panel();
+            lbl_add_new_exam = new Label();
+            dateTimePicker1 = new DateTimePicker();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // lb_co_Name
             // 
             lb_co_Name.AutoSize = true;
-            lb_co_Name.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lb_co_Name.BackColor = Color.Transparent;
+            lb_co_Name.Cursor = Cursors.Hand;
+            lb_co_Name.Font = new Font("Times New Roman", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lb_co_Name.ForeColor = Color.Black;
-            lb_co_Name.Location = new Point(352, 9);
+            lb_co_Name.Location = new Point(367, 9);
             lb_co_Name.Name = "lb_co_Name";
-            lb_co_Name.Size = new Size(194, 35);
+            lb_co_Name.Size = new Size(242, 42);
             lb_co_Name.TabIndex = 13;
             lb_co_Name.Text = "TCJ Academy";
+            lb_co_Name.Click += lb_co_Name_Click;
             // 
             // btn_exam
             // 
-            btn_exam.Location = new Point(392, 291);
+            btn_exam.Location = new Point(92, 321);
             btn_exam.Name = "btn_exam";
             btn_exam.Size = new Size(136, 29);
             btn_exam.TabIndex = 20;
@@ -63,7 +71,7 @@
             // lbl_exam_id
             // 
             lbl_exam_id.AutoSize = true;
-            lbl_exam_id.Location = new Point(307, 127);
+            lbl_exam_id.Location = new Point(31, 119);
             lbl_exam_id.Name = "lbl_exam_id";
             lbl_exam_id.Size = new Size(64, 20);
             lbl_exam_id.TabIndex = 23;
@@ -72,7 +80,7 @@
             // lbl_subject
             // 
             lbl_subject.AutoSize = true;
-            lbl_subject.Location = new Point(313, 162);
+            lbl_subject.Location = new Point(37, 161);
             lbl_subject.Name = "lbl_subject";
             lbl_subject.Size = new Size(58, 20);
             lbl_subject.TabIndex = 24;
@@ -81,7 +89,7 @@
             // lbl_total_mark
             // 
             lbl_total_mark.AutoSize = true;
-            lbl_total_mark.Location = new Point(292, 201);
+            lbl_total_mark.Location = new Point(16, 200);
             lbl_total_mark.Name = "lbl_total_mark";
             lbl_total_mark.Size = new Size(79, 20);
             lbl_total_mark.TabIndex = 25;
@@ -90,7 +98,7 @@
             // lbl_section
             // 
             lbl_section.AutoSize = true;
-            lbl_section.Location = new Point(313, 236);
+            lbl_section.Location = new Point(37, 238);
             lbl_section.Name = "lbl_section";
             lbl_section.Size = new Size(58, 20);
             lbl_section.TabIndex = 26;
@@ -98,51 +106,84 @@
             // 
             // txt_exam_id
             // 
-            txt_exam_id.Location = new Point(377, 127);
+            txt_exam_id.Location = new Point(107, 116);
             txt_exam_id.Name = "txt_exam_id";
             txt_exam_id.Size = new Size(190, 27);
             txt_exam_id.TabIndex = 27;
             // 
             // txt_subject
             // 
-            txt_subject.Location = new Point(377, 162);
+            txt_subject.Location = new Point(107, 158);
             txt_subject.Name = "txt_subject";
             txt_subject.Size = new Size(190, 27);
             txt_subject.TabIndex = 28;
             // 
             // txt_total_mark
             // 
-            txt_total_mark.Location = new Point(377, 198);
+            txt_total_mark.Location = new Point(107, 197);
             txt_total_mark.Name = "txt_total_mark";
             txt_total_mark.Size = new Size(190, 27);
             txt_total_mark.TabIndex = 29;
             // 
-            // textBox1
+            // txt_section
             // 
-            textBox1.Location = new Point(377, 236);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(190, 27);
-            textBox1.TabIndex = 30;
+            txt_section.Location = new Point(107, 235);
+            txt_section.Name = "txt_section";
+            txt_section.Size = new Size(190, 27);
+            txt_section.TabIndex = 30;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.AliceBlue;
+            panel1.Controls.Add(dateTimePicker1);
+            panel1.Controls.Add(lbl_add_new_exam);
+            panel1.Controls.Add(lbl_exam_id);
+            panel1.Controls.Add(btn_exam);
+            panel1.Controls.Add(txt_exam_id);
+            panel1.Controls.Add(txt_subject);
+            panel1.Controls.Add(txt_total_mark);
+            panel1.Controls.Add(txt_section);
+            panel1.Controls.Add(lbl_subject);
+            panel1.Controls.Add(lbl_total_mark);
+            panel1.Controls.Add(lbl_section);
+            panel1.Location = new Point(330, 110);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(327, 376);
+            panel1.TabIndex = 31;
+            // 
+            // lbl_add_new_exam
+            // 
+            lbl_add_new_exam.AutoSize = true;
+            lbl_add_new_exam.Font = new Font("Times New Roman", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lbl_add_new_exam.Location = new Point(56, 33);
+            lbl_add_new_exam.Name = "lbl_add_new_exam";
+            lbl_add_new_exam.Size = new Size(210, 34);
+            lbl_add_new_exam.TabIndex = 31;
+            lbl_add_new_exam.Text = "Add New Exam";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(31, 279);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(266, 27);
+            dateTimePicker1.TabIndex = 32;
             // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1006, 542);
-            Controls.Add(textBox1);
-            Controls.Add(txt_total_mark);
-            Controls.Add(txt_subject);
-            Controls.Add(txt_exam_id);
-            Controls.Add(lbl_section);
-            Controls.Add(lbl_total_mark);
-            Controls.Add(lbl_subject);
-            Controls.Add(lbl_exam_id);
-            Controls.Add(btn_exam);
+            Controls.Add(panel1);
             Controls.Add(lb_co_Name);
+            DoubleBuffered = true;
             Name = "Form4";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Exam";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -158,6 +199,9 @@
         private TextBox txt_exam_id;
         private TextBox txt_subject;
         private TextBox txt_total_mark;
-        private TextBox textBox1;
+        private TextBox txt_section;
+        private Panel panel1;
+        private Label lbl_add_new_exam;
+        private DateTimePicker dateTimePicker1;
     }
 }
