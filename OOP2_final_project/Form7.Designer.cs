@@ -43,7 +43,7 @@
             // 
             // txt_course_title
             // 
-            txt_course_title.Location = new Point(157, 63);
+            txt_course_title.Location = new Point(246, 93);
             txt_course_title.Name = "txt_course_title";
             txt_course_title.Size = new Size(376, 27);
             txt_course_title.TabIndex = 0;
@@ -51,7 +51,7 @@
             // lb_course_code
             // 
             lb_course_code.AutoSize = true;
-            lb_course_code.Location = new Point(55, 70);
+            lb_course_code.Location = new Point(144, 100);
             lb_course_code.Name = "lb_course_code";
             lb_course_code.Size = new Size(93, 20);
             lb_course_code.TabIndex = 1;
@@ -60,7 +60,7 @@
             // lb_course_subject
             // 
             lb_course_subject.AutoSize = true;
-            lb_course_subject.Location = new Point(32, 113);
+            lb_course_subject.Location = new Point(121, 143);
             lb_course_subject.Name = "lb_course_subject";
             lb_course_subject.Size = new Size(107, 20);
             lb_course_subject.TabIndex = 2;
@@ -69,7 +69,7 @@
             // lb_course_day
             // 
             lb_course_day.AutoSize = true;
-            lb_course_day.Location = new Point(55, 154);
+            lb_course_day.Location = new Point(144, 184);
             lb_course_day.Name = "lb_course_day";
             lb_course_day.Size = new Size(84, 20);
             lb_course_day.TabIndex = 3;
@@ -78,7 +78,7 @@
             // lb_disc
             // 
             lb_disc.AutoSize = true;
-            lb_disc.Location = new Point(32, 204);
+            lb_disc.Location = new Point(121, 234);
             lb_disc.Name = "lb_disc";
             lb_disc.Size = new Size(107, 20);
             lb_disc.TabIndex = 4;
@@ -86,21 +86,21 @@
             // 
             // txt_course_subject
             // 
-            txt_course_subject.Location = new Point(157, 106);
+            txt_course_subject.Location = new Point(246, 136);
             txt_course_subject.Name = "txt_course_subject";
             txt_course_subject.Size = new Size(376, 27);
             txt_course_subject.TabIndex = 5;
             // 
             // txt_course_day
             // 
-            txt_course_day.Location = new Point(157, 147);
+            txt_course_day.Location = new Point(246, 177);
             txt_course_day.Name = "txt_course_day";
             txt_course_day.Size = new Size(376, 27);
             txt_course_day.TabIndex = 6;
             // 
             // txt_course_dis
             // 
-            txt_course_dis.Location = new Point(157, 197);
+            txt_course_dis.Location = new Point(246, 227);
             txt_course_dis.Name = "txt_course_dis";
             txt_course_dis.Size = new Size(376, 27);
             txt_course_dis.TabIndex = 7;
@@ -120,7 +120,7 @@
             // 
             lbl_sec.AutoSize = true;
             lbl_sec.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_sec.Location = new Point(614, 88);
+            lbl_sec.Location = new Point(703, 118);
             lbl_sec.Name = "lbl_sec";
             lbl_sec.Size = new Size(80, 23);
             lbl_sec.TabIndex = 17;
@@ -128,7 +128,7 @@
             // 
             // btn_add_course
             // 
-            btn_add_course.Location = new Point(200, 312);
+            btn_add_course.Location = new Point(289, 342);
             btn_add_course.Name = "btn_add_course";
             btn_add_course.Size = new Size(162, 29);
             btn_add_course.TabIndex = 22;
