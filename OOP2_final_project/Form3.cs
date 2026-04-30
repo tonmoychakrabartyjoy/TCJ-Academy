@@ -19,5 +19,15 @@ namespace OOP2_final_project
         {
 
         }
+
+        private void btn_add_teacher_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
     }
 }
