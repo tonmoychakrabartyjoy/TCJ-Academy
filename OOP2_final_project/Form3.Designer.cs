@@ -151,6 +151,7 @@
             Name = "Form3";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Employee page";
+            Load += Form3_Load;
             ResumeLayout(false);
             PerformLayout();
         }

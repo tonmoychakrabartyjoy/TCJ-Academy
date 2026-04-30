@@ -14,5 +14,10 @@ namespace OOP2_final_project
         {
             InitializeComponent();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
