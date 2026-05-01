@@ -74,5 +74,29 @@ namespace OOP2_final_project
 
             this.Hide();
         }
+
+        private void btn_student_list_Click(object sender, EventArgs e)
+        {
+            Form10 student_list = new Form10(this);
+            student_list.Show();
+
+            this.Hide();
+        }
+
+        private void btn_teacher_list_Click(object sender, EventArgs e)
+        {
+            Form11 teacher_list = new Form11(this);
+            teacher_list.Show();
+
+            this.Hide();
+        }
+
+        private void btn_update_student_Click(object sender, EventArgs e)
+        {
+            Form12 update_students = new Form12();
+            update_students.Show();
+
+            this.Hide();
+        }
     }
 }

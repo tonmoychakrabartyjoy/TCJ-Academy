@@ -40,6 +40,7 @@
             btn_add_exam = new Button();
             btn_upload_result = new Button();
             panel1 = new Panel();
+            btn_course_list = new Button();
             panel5 = new Panel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
@@ -79,7 +80,7 @@
             btn_add_course.FlatAppearance.BorderSize = 0;
             btn_add_course.FlatStyle = FlatStyle.Flat;
             btn_add_course.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            btn_add_course.Location = new Point(24, 73);
+            btn_add_course.Location = new Point(24, 128);
             btn_add_course.Name = "btn_add_course";
             btn_add_course.Size = new Size(144, 29);
             btn_add_course.TabIndex = 13;
@@ -95,7 +96,7 @@
             btn_add_student.FlatAppearance.BorderSize = 0;
             btn_add_student.FlatStyle = FlatStyle.Flat;
             btn_add_student.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            btn_add_student.Location = new Point(24, 108);
+            btn_add_student.Location = new Point(24, 268);
             btn_add_student.Name = "btn_add_student";
             btn_add_student.Size = new Size(144, 29);
             btn_add_student.TabIndex = 14;
@@ -111,7 +112,7 @@
             btn_add_teacher.FlatAppearance.BorderSize = 0;
             btn_add_teacher.FlatStyle = FlatStyle.Flat;
             btn_add_teacher.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            btn_add_teacher.Location = new Point(24, 143);
+            btn_add_teacher.Location = new Point(24, 303);
             btn_add_teacher.Name = "btn_add_teacher";
             btn_add_teacher.Size = new Size(144, 29);
             btn_add_teacher.TabIndex = 15;
@@ -127,13 +128,14 @@
             btn_update_student.FlatAppearance.BorderSize = 0;
             btn_update_student.FlatStyle = FlatStyle.Flat;
             btn_update_student.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            btn_update_student.Location = new Point(24, 248);
+            btn_update_student.Location = new Point(24, 373);
             btn_update_student.Name = "btn_update_student";
             btn_update_student.Size = new Size(144, 29);
             btn_update_student.TabIndex = 16;
             btn_update_student.Text = "Update Student";
             btn_update_student.TextAlign = ContentAlignment.MiddleLeft;
             btn_update_student.UseVisualStyleBackColor = false;
+            btn_update_student.Click += btn_update_student_Click;
             // 
             // btn_update_teacher
             // 
@@ -142,7 +144,7 @@
             btn_update_teacher.FlatAppearance.BorderSize = 0;
             btn_update_teacher.FlatStyle = FlatStyle.Flat;
             btn_update_teacher.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            btn_update_teacher.Location = new Point(24, 283);
+            btn_update_teacher.Location = new Point(24, 408);
             btn_update_teacher.Name = "btn_update_teacher";
             btn_update_teacher.Size = new Size(144, 29);
             btn_update_teacher.TabIndex = 17;
@@ -157,13 +159,14 @@
             btn_student_list.FlatAppearance.BorderSize = 0;
             btn_student_list.FlatStyle = FlatStyle.Flat;
             btn_student_list.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            btn_student_list.Location = new Point(24, 178);
+            btn_student_list.Location = new Point(24, 233);
             btn_student_list.Name = "btn_student_list";
             btn_student_list.Size = new Size(144, 29);
             btn_student_list.TabIndex = 19;
             btn_student_list.Text = "Student List";
             btn_student_list.TextAlign = ContentAlignment.MiddleLeft;
             btn_student_list.UseVisualStyleBackColor = false;
+            btn_student_list.Click += btn_student_list_Click;
             // 
             // btn_teacher_list
             // 
@@ -172,13 +175,14 @@
             btn_teacher_list.FlatAppearance.BorderSize = 0;
             btn_teacher_list.FlatStyle = FlatStyle.Flat;
             btn_teacher_list.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            btn_teacher_list.Location = new Point(24, 213);
+            btn_teacher_list.Location = new Point(24, 198);
             btn_teacher_list.Name = "btn_teacher_list";
             btn_teacher_list.Size = new Size(144, 29);
             btn_teacher_list.TabIndex = 20;
             btn_teacher_list.Text = "Teacher List";
             btn_teacher_list.TextAlign = ContentAlignment.MiddleLeft;
             btn_teacher_list.UseVisualStyleBackColor = false;
+            btn_teacher_list.Click += btn_teacher_list_Click;
             // 
             // btn_add_exam
             // 
@@ -187,7 +191,7 @@
             btn_add_exam.FlatAppearance.BorderSize = 0;
             btn_add_exam.FlatStyle = FlatStyle.Flat;
             btn_add_exam.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            btn_add_exam.Location = new Point(24, 318);
+            btn_add_exam.Location = new Point(24, 93);
             btn_add_exam.Name = "btn_add_exam";
             btn_add_exam.Size = new Size(144, 29);
             btn_add_exam.TabIndex = 21;
@@ -203,7 +207,7 @@
             btn_upload_result.FlatAppearance.BorderSize = 0;
             btn_upload_result.FlatStyle = FlatStyle.Flat;
             btn_upload_result.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            btn_upload_result.Location = new Point(24, 353);
+            btn_upload_result.Location = new Point(24, 338);
             btn_upload_result.Name = "btn_upload_result";
             btn_upload_result.Size = new Size(144, 29);
             btn_upload_result.TabIndex = 22;
@@ -215,6 +219,7 @@
             // panel1
             // 
             panel1.BackColor = Color.CornflowerBlue;
+            panel1.Controls.Add(btn_course_list);
             panel1.Controls.Add(panel5);
             panel1.Controls.Add(btn_upload_result);
             panel1.Controls.Add(btn_add_course);
@@ -230,13 +235,28 @@
             panel1.Size = new Size(224, 544);
             panel1.TabIndex = 23;
             // 
+            // btn_course_list
+            // 
+            btn_course_list.Cursor = Cursors.Hand;
+            btn_course_list.FlatAppearance.BorderSize = 0;
+            btn_course_list.FlatStyle = FlatStyle.Flat;
+            btn_course_list.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
+            btn_course_list.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_course_list.Location = new Point(24, 163);
+            btn_course_list.Name = "btn_course_list";
+            btn_course_list.Size = new Size(112, 29);
+            btn_course_list.TabIndex = 29;
+            btn_course_list.Text = "Course List";
+            btn_course_list.TextAlign = ContentAlignment.MiddleLeft;
+            btn_course_list.UseVisualStyleBackColor = true;
+            // 
             // panel5
             // 
             panel5.BackColor = Color.AliceBlue;
             panel5.Controls.Add(lb_co_Name);
-            panel5.Location = new Point(3, 2);
+            panel5.Location = new Point(2, 1);
             panel5.Name = "panel5";
-            panel5.Size = new Size(220, 70);
+            panel5.Size = new Size(222, 72);
             panel5.TabIndex = 23;
             // 
             // label1
@@ -311,7 +331,7 @@
             // 
             panel6.BackColor = Color.LightSteelBlue;
             panel6.Controls.Add(lbl_dashboard);
-            panel6.Location = new Point(0, 1);
+            panel6.Location = new Point(0, 0);
             panel6.Name = "panel6";
             panel6.Size = new Size(488, 69);
             panel6.TabIndex = 2;
@@ -380,5 +400,6 @@
         private Panel panel6;
         private Label lbl_dashboard;
         private Panel panel5;
+        private Button btn_course_list;
     }
 }
