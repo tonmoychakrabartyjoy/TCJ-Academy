@@ -10,9 +10,18 @@ namespace OOP2_final_project
 {
     public partial class Form10 : Form
     {
-        public Form10()
+        private Form home;
+        public Form10(Form sender)
         {
             InitializeComponent();
+            this.home = sender;
+        }
+
+        private void lb_co_Name_Click(object sender, EventArgs e)
+        {
+            home.Show();
+
+            this.Hide();
         }
     }
 }

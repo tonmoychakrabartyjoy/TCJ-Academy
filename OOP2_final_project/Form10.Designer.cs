@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form10));
             dataGridView1 = new DataGridView();
             lbl_student = new Label();
             lb_co_Name = new Label();
@@ -46,6 +47,7 @@
             // lbl_student
             // 
             lbl_student.AutoSize = true;
+            lbl_student.BackColor = Color.Transparent;
             lbl_student.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbl_student.Location = new Point(40, 68);
             lbl_student.Name = "lbl_student";
@@ -56,6 +58,8 @@
             // lb_co_Name
             // 
             lb_co_Name.AutoSize = true;
+            lb_co_Name.BackColor = Color.Transparent;
+            lb_co_Name.Cursor = Cursors.Hand;
             lb_co_Name.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lb_co_Name.ForeColor = Color.Black;
             lb_co_Name.Location = new Point(421, 9);
@@ -63,16 +67,20 @@
             lb_co_Name.Size = new Size(194, 35);
             lb_co_Name.TabIndex = 23;
             lb_co_Name.Text = "TCJ Academy";
+            lb_co_Name.Click += lb_co_Name_Click;
             // 
             // Form10
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSkyBlue;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(988, 519);
             Controls.Add(lb_co_Name);
             Controls.Add(lbl_student);
             Controls.Add(dataGridView1);
+            DoubleBuffered = true;
             Name = "Form10";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Student list";

@@ -98,6 +98,7 @@
             btn_teacher_list.Text = "Teacher List";
             btn_teacher_list.TextAlign = ContentAlignment.MiddleLeft;
             btn_teacher_list.UseVisualStyleBackColor = true;
+            btn_teacher_list.Click += btn_teacher_list_Click;
             // 
             // btn_emp_list
             // 
@@ -138,7 +139,7 @@
             btn_add_teacher_sal.ImageAlign = ContentAlignment.MiddleLeft;
             btn_add_teacher_sal.Location = new Point(29, 300);
             btn_add_teacher_sal.Name = "btn_add_teacher_sal";
-            btn_add_teacher_sal.Size = new Size(157, 29);
+            btn_add_teacher_sal.Size = new Size(172, 29);
             btn_add_teacher_sal.TabIndex = 20;
             btn_add_teacher_sal.Text = "Add Teacher salary";
             btn_add_teacher_sal.TextAlign = ContentAlignment.MiddleLeft;
@@ -151,9 +152,9 @@
             btn_add_emp.FlatStyle = FlatStyle.Flat;
             btn_add_emp.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
             btn_add_emp.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_add_emp.Location = new Point(29, 265);
+            btn_add_emp.Location = new Point(29, 230);
             btn_add_emp.Name = "btn_add_emp";
-            btn_add_emp.Size = new Size(132, 29);
+            btn_add_emp.Size = new Size(140, 29);
             btn_add_emp.TabIndex = 21;
             btn_add_emp.Text = "Add Employee";
             btn_add_emp.TextAlign = ContentAlignment.MiddleLeft;
@@ -166,9 +167,9 @@
             btn_add_course_fee.FlatStyle = FlatStyle.Flat;
             btn_add_course_fee.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
             btn_add_course_fee.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_add_course_fee.Location = new Point(29, 230);
+            btn_add_course_fee.Location = new Point(29, 265);
             btn_add_course_fee.Name = "btn_add_course_fee";
-            btn_add_course_fee.Size = new Size(132, 29);
+            btn_add_course_fee.Size = new Size(157, 29);
             btn_add_course_fee.TabIndex = 22;
             btn_add_course_fee.Text = "Add Course fee";
             btn_add_course_fee.TextAlign = ContentAlignment.MiddleLeft;
@@ -271,7 +272,7 @@
             // 
             panel6.BackColor = Color.LightSteelBlue;
             panel6.Controls.Add(lbl_dashboard);
-            panel6.Location = new Point(0, 1);
+            panel6.Location = new Point(0, 0);
             panel6.Name = "panel6";
             panel6.Size = new Size(488, 69);
             panel6.TabIndex = 1;
