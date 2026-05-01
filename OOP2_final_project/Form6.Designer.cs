@@ -38,6 +38,13 @@
             btn_add_emp = new Button();
             btn_add_course_fee = new Button();
             panel1 = new Panel();
+            pictureBox7 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox10 = new PictureBox();
             panel2 = new Panel();
             panel3 = new Panel();
             pictureBox1 = new PictureBox();
@@ -49,6 +56,13 @@
             panel6 = new Panel();
             lbl_dashboard = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -75,7 +89,7 @@
             btn_student_list.FlatStyle = FlatStyle.Flat;
             btn_student_list.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
             btn_student_list.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_student_list.Location = new Point(29, 90);
+            btn_student_list.Location = new Point(39, 90);
             btn_student_list.Name = "btn_student_list";
             btn_student_list.Size = new Size(112, 29);
             btn_student_list.TabIndex = 16;
@@ -91,7 +105,7 @@
             btn_teacher_list.FlatStyle = FlatStyle.Flat;
             btn_teacher_list.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
             btn_teacher_list.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_teacher_list.Location = new Point(29, 125);
+            btn_teacher_list.Location = new Point(39, 125);
             btn_teacher_list.Name = "btn_teacher_list";
             btn_teacher_list.Size = new Size(112, 29);
             btn_teacher_list.TabIndex = 17;
@@ -107,7 +121,7 @@
             btn_emp_list.FlatStyle = FlatStyle.Flat;
             btn_emp_list.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
             btn_emp_list.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_emp_list.Location = new Point(29, 195);
+            btn_emp_list.Location = new Point(39, 195);
             btn_emp_list.Name = "btn_emp_list";
             btn_emp_list.Size = new Size(132, 29);
             btn_emp_list.TabIndex = 18;
@@ -122,7 +136,7 @@
             btn_course_list.FlatStyle = FlatStyle.Flat;
             btn_course_list.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
             btn_course_list.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_course_list.Location = new Point(29, 160);
+            btn_course_list.Location = new Point(39, 160);
             btn_course_list.Name = "btn_course_list";
             btn_course_list.Size = new Size(112, 29);
             btn_course_list.TabIndex = 19;
@@ -137,9 +151,9 @@
             btn_add_teacher_sal.FlatStyle = FlatStyle.Flat;
             btn_add_teacher_sal.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
             btn_add_teacher_sal.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_add_teacher_sal.Location = new Point(29, 300);
+            btn_add_teacher_sal.Location = new Point(39, 300);
             btn_add_teacher_sal.Name = "btn_add_teacher_sal";
-            btn_add_teacher_sal.Size = new Size(172, 29);
+            btn_add_teacher_sal.Size = new Size(166, 29);
             btn_add_teacher_sal.TabIndex = 20;
             btn_add_teacher_sal.Text = "Add Teacher salary";
             btn_add_teacher_sal.TextAlign = ContentAlignment.MiddleLeft;
@@ -152,7 +166,7 @@
             btn_add_emp.FlatStyle = FlatStyle.Flat;
             btn_add_emp.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
             btn_add_emp.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_add_emp.Location = new Point(29, 230);
+            btn_add_emp.Location = new Point(39, 230);
             btn_add_emp.Name = "btn_add_emp";
             btn_add_emp.Size = new Size(140, 29);
             btn_add_emp.TabIndex = 21;
@@ -167,7 +181,7 @@
             btn_add_course_fee.FlatStyle = FlatStyle.Flat;
             btn_add_course_fee.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
             btn_add_course_fee.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_add_course_fee.Location = new Point(29, 265);
+            btn_add_course_fee.Location = new Point(39, 265);
             btn_add_course_fee.Name = "btn_add_course_fee";
             btn_add_course_fee.Size = new Size(157, 29);
             btn_add_course_fee.TabIndex = 22;
@@ -179,6 +193,13 @@
             // panel1
             // 
             panel1.BackColor = Color.CornflowerBlue;
+            panel1.Controls.Add(pictureBox7);
+            panel1.Controls.Add(pictureBox4);
+            panel1.Controls.Add(pictureBox5);
+            panel1.Controls.Add(pictureBox6);
+            panel1.Controls.Add(pictureBox3);
+            panel1.Controls.Add(pictureBox2);
+            panel1.Controls.Add(pictureBox10);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(btn_student_list);
             panel1.Controls.Add(btn_add_teacher_sal);
@@ -187,10 +208,80 @@
             panel1.Controls.Add(btn_add_emp);
             panel1.Controls.Add(btn_emp_list);
             panel1.Controls.Add(btn_course_list);
-            panel1.Location = new Point(5, -2);
+            panel1.Location = new Point(0, -2);
             panel1.Name = "panel1";
             panel1.Size = new Size(207, 539);
             panel1.TabIndex = 23;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.BackgroundImage = (Image)resources.GetObject("pictureBox7.BackgroundImage");
+            pictureBox7.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox7.Location = new Point(10, 300);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(29, 26);
+            pictureBox7.TabIndex = 45;
+            pictureBox7.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
+            pictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox4.Location = new Point(10, 268);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(29, 26);
+            pictureBox4.TabIndex = 44;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
+            pictureBox5.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox5.Location = new Point(10, 233);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(29, 26);
+            pictureBox5.TabIndex = 43;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BackgroundImage = (Image)resources.GetObject("pictureBox6.BackgroundImage");
+            pictureBox6.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox6.Location = new Point(10, 198);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(29, 26);
+            pictureBox6.TabIndex = 42;
+            pictureBox6.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
+            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox3.Location = new Point(10, 163);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(29, 26);
+            pictureBox3.TabIndex = 41;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox2.Location = new Point(10, 128);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(29, 26);
+            pictureBox2.TabIndex = 40;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
+            pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox10.Location = new Point(10, 93);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(29, 26);
+            pictureBox10.TabIndex = 39;
+            pictureBox10.TabStop = false;
             // 
             // panel2
             // 
@@ -304,6 +395,13 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin page";
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
@@ -338,5 +436,12 @@
         private Panel panel5;
         private Panel panel6;
         private Label lbl_dashboard;
+        private PictureBox pictureBox7;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox10;
     }
 }

@@ -98,5 +98,10 @@ namespace OOP2_final_project
 
             this.Hide();
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
