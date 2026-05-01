@@ -297,7 +297,7 @@
             panel3.BackColor = Color.CornflowerBlue;
             panel3.Controls.Add(pictureBox1);
             panel3.Controls.Add(lbl_title);
-            panel3.Location = new Point(228, 75);
+            panel3.Location = new Point(226, 75);
             panel3.Name = "panel3";
             panel3.Size = new Size(779, 125);
             panel3.TabIndex = 27;
@@ -346,7 +346,7 @@
             // 
             // monthCalendar1
             // 
-            monthCalendar1.Location = new Point(9, 68);
+            monthCalendar1.Location = new Point(11, 68);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 0;
             // 

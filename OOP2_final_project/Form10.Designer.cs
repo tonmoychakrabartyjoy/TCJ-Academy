@@ -32,17 +32,23 @@
             dataGridView1 = new DataGridView();
             lbl_student = new Label();
             lb_co_Name = new Label();
+            name = new DataGridViewTextBoxColumn();
+            studnet_id = new DataGridViewTextBoxColumn();
+            phone = new DataGridViewTextBoxColumn();
+            address = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(29, 115);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { name, studnet_id, phone, address });
+            dataGridView1.Location = new Point(30, 106);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(932, 358);
+            dataGridView1.Size = new Size(928, 358);
             dataGridView1.TabIndex = 1;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // lbl_student
             // 
@@ -69,6 +75,39 @@
             lb_co_Name.Text = "TCJ Academy";
             lb_co_Name.Click += lb_co_Name_Click;
             // 
+            // name
+            // 
+            name.HeaderText = "Name";
+            name.MinimumWidth = 6;
+            name.Name = "name";
+            name.ReadOnly = true;
+            name.Width = 125;
+            // 
+            // studnet_id
+            // 
+            studnet_id.HeaderText = "Student Id";
+            studnet_id.MinimumWidth = 6;
+            studnet_id.Name = "studnet_id";
+            studnet_id.ReadOnly = true;
+            studnet_id.Width = 125;
+            // 
+            // phone
+            // 
+            phone.HeaderText = "Phone";
+            phone.MinimumWidth = 6;
+            phone.Name = "phone";
+            phone.ReadOnly = true;
+            phone.Width = 125;
+            // 
+            // address
+            // 
+            address.FillWeight = 480F;
+            address.HeaderText = "Address";
+            address.MinimumWidth = 6;
+            address.Name = "address";
+            address.ReadOnly = true;
+            address.Width = 500;
+            // 
             // Form10
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -93,5 +132,9 @@
         private DataGridView dataGridView1;
         private Label lbl_student;
         private Label lb_co_Name;
+        private DataGridViewTextBoxColumn name;
+        private DataGridViewTextBoxColumn studnet_id;
+        private DataGridViewTextBoxColumn phone;
+        private DataGridViewTextBoxColumn address;
     }
 }
