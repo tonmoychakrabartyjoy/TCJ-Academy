@@ -30,10 +30,11 @@
         {
             lb_co_Name = new Label();
             dataGridView1 = new DataGridView();
+            lbl_course_list = new Label();
             course_code = new DataGridViewTextBoxColumn();
             subject = new DataGridViewTextBoxColumn();
             day = new DataGridViewTextBoxColumn();
-            lbl_course_list = new Label();
+            course_fee = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -54,12 +55,23 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { course_code, subject, day });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { course_code, subject, day, course_fee });
             dataGridView1.Location = new Point(107, 119);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(803, 390);
             dataGridView1.TabIndex = 14;
+            // 
+            // lbl_course_list
+            // 
+            lbl_course_list.AutoSize = true;
+            lbl_course_list.BackColor = Color.Transparent;
+            lbl_course_list.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lbl_course_list.Location = new Point(110, 86);
+            lbl_course_list.Name = "lbl_course_list";
+            lbl_course_list.Size = new Size(138, 32);
+            lbl_course_list.TabIndex = 15;
+            lbl_course_list.Text = "Course list";
             // 
             // course_code
             // 
@@ -81,23 +93,19 @@
             // 
             // day
             // 
-            day.FillWeight = 200F;
             day.HeaderText = "Course Day";
             day.MinimumWidth = 6;
             day.Name = "day";
             day.ReadOnly = true;
-            day.Width = 250;
+            day.Width = 125;
             // 
-            // lbl_course_list
+            // course_fee
             // 
-            lbl_course_list.AutoSize = true;
-            lbl_course_list.BackColor = Color.Transparent;
-            lbl_course_list.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbl_course_list.Location = new Point(110, 86);
-            lbl_course_list.Name = "lbl_course_list";
-            lbl_course_list.Size = new Size(138, 32);
-            lbl_course_list.TabIndex = 15;
-            lbl_course_list.Text = "Course list";
+            course_fee.HeaderText = "Course Fee";
+            course_fee.MinimumWidth = 6;
+            course_fee.Name = "course_fee";
+            course_fee.ReadOnly = true;
+            course_fee.Width = 125;
             // 
             // Form15
             // 
@@ -124,9 +132,10 @@
 
         private Label lb_co_Name;
         private DataGridView dataGridView1;
+        private Label lbl_course_list;
         private DataGridViewTextBoxColumn course_code;
         private DataGridViewTextBoxColumn subject;
         private DataGridViewTextBoxColumn day;
-        private Label lbl_course_list;
+        private DataGridViewTextBoxColumn course_fee;
     }
 }
