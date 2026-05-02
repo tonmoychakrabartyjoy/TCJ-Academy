@@ -38,6 +38,8 @@
             btn_add_emp = new Button();
             btn_add_course_fee = new Button();
             panel1 = new Panel();
+            pictureBox12 = new PictureBox();
+            btn_show_result = new Button();
             pictureBox7 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
@@ -55,9 +57,8 @@
             panel5 = new Panel();
             panel6 = new Panel();
             lbl_dashboard = new Label();
-            pictureBox12 = new PictureBox();
-            btn_show_result = new Button();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -71,7 +72,6 @@
             panel4.SuspendLayout();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             SuspendLayout();
             // 
             // lb_co_Name
@@ -146,6 +146,7 @@
             btn_course_list.Text = "Course List";
             btn_course_list.TextAlign = ContentAlignment.MiddleLeft;
             btn_course_list.UseVisualStyleBackColor = true;
+            btn_course_list.Click += btn_course_list_Click;
             // 
             // btn_add_teacher_sal
             // 
@@ -154,7 +155,7 @@
             btn_add_teacher_sal.FlatStyle = FlatStyle.Flat;
             btn_add_teacher_sal.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
             btn_add_teacher_sal.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_add_teacher_sal.Location = new Point(39, 300);
+            btn_add_teacher_sal.Location = new Point(35, 335);
             btn_add_teacher_sal.Name = "btn_add_teacher_sal";
             btn_add_teacher_sal.Size = new Size(166, 29);
             btn_add_teacher_sal.TabIndex = 20;
@@ -218,11 +219,37 @@
             panel1.Size = new Size(207, 539);
             panel1.TabIndex = 23;
             // 
+            // pictureBox12
+            // 
+            pictureBox12.BackgroundImage = (Image)resources.GetObject("pictureBox12.BackgroundImage");
+            pictureBox12.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox12.Location = new Point(7, 303);
+            pictureBox12.Name = "pictureBox12";
+            pictureBox12.Size = new Size(29, 26);
+            pictureBox12.TabIndex = 47;
+            pictureBox12.TabStop = false;
+            // 
+            // btn_show_result
+            // 
+            btn_show_result.BackColor = Color.Transparent;
+            btn_show_result.Cursor = Cursors.Hand;
+            btn_show_result.FlatAppearance.BorderSize = 0;
+            btn_show_result.FlatStyle = FlatStyle.Flat;
+            btn_show_result.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
+            btn_show_result.Location = new Point(39, 300);
+            btn_show_result.Name = "btn_show_result";
+            btn_show_result.Size = new Size(144, 29);
+            btn_show_result.TabIndex = 46;
+            btn_show_result.Text = "Show all Result";
+            btn_show_result.TextAlign = ContentAlignment.MiddleLeft;
+            btn_show_result.UseVisualStyleBackColor = false;
+            btn_show_result.Click += btn_show_result_Click;
+            // 
             // pictureBox7
             // 
             pictureBox7.BackgroundImage = (Image)resources.GetObject("pictureBox7.BackgroundImage");
             pictureBox7.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox7.Location = new Point(10, 300);
+            pictureBox7.Location = new Point(6, 335);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(29, 26);
             pictureBox7.TabIndex = 45;
@@ -383,32 +410,6 @@
             lbl_dashboard.TabIndex = 0;
             lbl_dashboard.Text = "Dashboard";
             // 
-            // pictureBox12
-            // 
-            pictureBox12.BackgroundImage = (Image)resources.GetObject("pictureBox12.BackgroundImage");
-            pictureBox12.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox12.Location = new Point(7, 338);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(29, 26);
-            pictureBox12.TabIndex = 47;
-            pictureBox12.TabStop = false;
-            // 
-            // btn_show_result
-            // 
-            btn_show_result.BackColor = Color.Transparent;
-            btn_show_result.Cursor = Cursors.Hand;
-            btn_show_result.FlatAppearance.BorderSize = 0;
-            btn_show_result.FlatStyle = FlatStyle.Flat;
-            btn_show_result.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            btn_show_result.Location = new Point(39, 335);
-            btn_show_result.Name = "btn_show_result";
-            btn_show_result.Size = new Size(144, 29);
-            btn_show_result.TabIndex = 46;
-            btn_show_result.Text = "Show all Result";
-            btn_show_result.TextAlign = ContentAlignment.MiddleLeft;
-            btn_show_result.UseVisualStyleBackColor = false;
-            btn_show_result.Click += btn_show_result_Click;
-            // 
             // Form6
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -426,6 +427,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin page";
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
@@ -443,7 +445,6 @@
             panel5.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ResumeLayout(false);
         }
 
