@@ -103,5 +103,21 @@ namespace OOP2_final_project
         {
 
         }
+
+        private void btn_update_teacher_Click(object sender, EventArgs e)
+        {
+            Form13 update_teacher = new Form13();
+            update_teacher.Show();
+
+            this.Hide();
+        }
+
+        private void btn_show_result_Click(object sender, EventArgs e)
+        {
+            Form14 show_result = new Form14(this);
+            show_result.Show();
+
+            this.Hide();
+        }
     }
 }
