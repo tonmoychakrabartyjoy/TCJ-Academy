@@ -131,6 +131,7 @@
             btn_emp_list.Text = "Employee List";
             btn_emp_list.TextAlign = ContentAlignment.MiddleLeft;
             btn_emp_list.UseVisualStyleBackColor = true;
+            btn_emp_list.Click += btn_emp_list_Click;
             // 
             // btn_course_list
             // 
