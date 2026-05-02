@@ -118,6 +118,7 @@
             txt_month.Name = "txt_month";
             txt_month.Size = new Size(228, 27);
             txt_month.TabIndex = 51;
+            txt_month.KeyDown += txt_month_KeyDown;
             // 
             // txt_amount
             // 
@@ -126,6 +127,7 @@
             txt_amount.Name = "txt_amount";
             txt_amount.Size = new Size(228, 27);
             txt_amount.TabIndex = 50;
+            txt_amount.KeyDown += txt_amount_KeyDown;
             // 
             // lbl_amount
             // 
@@ -143,6 +145,7 @@
             txt_student_id.Name = "txt_student_id";
             txt_student_id.Size = new Size(228, 27);
             txt_student_id.TabIndex = 48;
+            txt_student_id.KeyDown += txt_student_id_KeyDown;
             // 
             // lbl_student_id
             // 
@@ -171,6 +174,7 @@
             txt_course_code.Name = "txt_course_code";
             txt_course_code.Size = new Size(228, 27);
             txt_course_code.TabIndex = 45;
+            txt_course_code.KeyDown += txt_course_code_KeyDown;
             // 
             // lbl_course_code
             // 
@@ -198,6 +202,8 @@
             txt_pay_id.Name = "txt_pay_id";
             txt_pay_id.Size = new Size(228, 27);
             txt_pay_id.TabIndex = 42;
+            txt_pay_id.TextChanged += txt_pay_id_TextChanged;
+            txt_pay_id.KeyDown += txt_pay_id_KeyDown;
             // 
             // lbl_phone
             // 

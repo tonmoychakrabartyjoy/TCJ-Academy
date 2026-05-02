@@ -40,6 +40,16 @@
             btn_add_exam = new Button();
             btn_upload_result = new Button();
             panel1 = new Panel();
+            pictureBox11 = new PictureBox();
+            pictureBox10 = new PictureBox();
+            pictureBox9 = new PictureBox();
+            pictureBox8 = new PictureBox();
+            pictureBox7 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
             btn_course_list = new Button();
             panel5 = new Panel();
             label1 = new Label();
@@ -51,33 +61,26 @@
             panel4 = new Panel();
             panel6 = new Panel();
             lbl_dashboard = new Label();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            pictureBox6 = new PictureBox();
-            pictureBox7 = new PictureBox();
-            pictureBox8 = new PictureBox();
-            pictureBox9 = new PictureBox();
-            pictureBox10 = new PictureBox();
-            pictureBox11 = new PictureBox();
+            pictureBox12 = new PictureBox();
+            btn_show_result = new Button();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             SuspendLayout();
             // 
             // lb_co_Name
@@ -171,6 +174,7 @@
             btn_update_teacher.Text = "Update Teacher";
             btn_update_teacher.TextAlign = ContentAlignment.MiddleLeft;
             btn_update_teacher.UseVisualStyleBackColor = false;
+            btn_update_teacher.Click += btn_update_teacher_Click;
             // 
             // btn_student_list
             // 
@@ -239,6 +243,8 @@
             // panel1
             // 
             panel1.BackColor = Color.CornflowerBlue;
+            panel1.Controls.Add(pictureBox12);
+            panel1.Controls.Add(btn_show_result);
             panel1.Controls.Add(pictureBox11);
             panel1.Controls.Add(pictureBox10);
             panel1.Controls.Add(pictureBox9);
@@ -264,6 +270,107 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(224, 544);
             panel1.TabIndex = 23;
+            // 
+            // pictureBox11
+            // 
+            pictureBox11.BackgroundImage = (Image)resources.GetObject("pictureBox11.BackgroundImage");
+            pictureBox11.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox11.Location = new Point(27, 383);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(29, 26);
+            pictureBox11.TabIndex = 39;
+            pictureBox11.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
+            pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox10.Location = new Point(27, 351);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(29, 26);
+            pictureBox10.TabIndex = 38;
+            pictureBox10.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.BackgroundImage = (Image)resources.GetObject("pictureBox9.BackgroundImage");
+            pictureBox9.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox9.Location = new Point(27, 319);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(29, 26);
+            pictureBox9.TabIndex = 37;
+            pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.BackgroundImage = (Image)resources.GetObject("pictureBox8.BackgroundImage");
+            pictureBox8.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox8.Location = new Point(27, 287);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(29, 26);
+            pictureBox8.TabIndex = 36;
+            pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.BackgroundImage = (Image)resources.GetObject("pictureBox7.BackgroundImage");
+            pictureBox7.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox7.Location = new Point(27, 255);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(29, 26);
+            pictureBox7.TabIndex = 35;
+            pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BackgroundImage = (Image)resources.GetObject("pictureBox6.BackgroundImage");
+            pictureBox6.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox6.Location = new Point(27, 223);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(29, 26);
+            pictureBox6.TabIndex = 34;
+            pictureBox6.TabStop = false;
+            pictureBox6.Click += pictureBox6_Click;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
+            pictureBox5.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox5.Location = new Point(27, 191);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(29, 26);
+            pictureBox5.TabIndex = 33;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
+            pictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox4.Location = new Point(27, 159);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(29, 26);
+            pictureBox4.TabIndex = 32;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
+            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox3.Location = new Point(27, 127);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(29, 26);
+            pictureBox3.TabIndex = 31;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox2.Location = new Point(27, 95);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(29, 26);
+            pictureBox2.TabIndex = 30;
+            pictureBox2.TabStop = false;
             // 
             // btn_course_list
             // 
@@ -376,106 +483,31 @@
             lbl_dashboard.TabIndex = 0;
             lbl_dashboard.Text = "Dashboard";
             // 
-            // pictureBox2
+            // pictureBox12
             // 
-            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
-            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox2.Location = new Point(27, 95);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(29, 26);
-            pictureBox2.TabIndex = 30;
-            pictureBox2.TabStop = false;
+            pictureBox12.BackgroundImage = (Image)resources.GetObject("pictureBox12.BackgroundImage");
+            pictureBox12.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox12.Location = new Point(27, 418);
+            pictureBox12.Name = "pictureBox12";
+            pictureBox12.Size = new Size(29, 26);
+            pictureBox12.TabIndex = 41;
+            pictureBox12.TabStop = false;
             // 
-            // pictureBox3
+            // btn_show_result
             // 
-            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
-            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox3.Location = new Point(27, 127);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(29, 26);
-            pictureBox3.TabIndex = 31;
-            pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
-            pictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox4.Location = new Point(27, 159);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(29, 26);
-            pictureBox4.TabIndex = 32;
-            pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
-            pictureBox5.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox5.Location = new Point(27, 191);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(29, 26);
-            pictureBox5.TabIndex = 33;
-            pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.BackgroundImage = (Image)resources.GetObject("pictureBox6.BackgroundImage");
-            pictureBox6.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox6.Location = new Point(27, 223);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(29, 26);
-            pictureBox6.TabIndex = 34;
-            pictureBox6.TabStop = false;
-            pictureBox6.Click += pictureBox6_Click;
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.BackgroundImage = (Image)resources.GetObject("pictureBox7.BackgroundImage");
-            pictureBox7.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox7.Location = new Point(27, 255);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(29, 26);
-            pictureBox7.TabIndex = 35;
-            pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.BackgroundImage = (Image)resources.GetObject("pictureBox8.BackgroundImage");
-            pictureBox8.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox8.Location = new Point(27, 287);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(29, 26);
-            pictureBox8.TabIndex = 36;
-            pictureBox8.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            pictureBox9.BackgroundImage = (Image)resources.GetObject("pictureBox9.BackgroundImage");
-            pictureBox9.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox9.Location = new Point(27, 319);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(29, 26);
-            pictureBox9.TabIndex = 37;
-            pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
-            pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox10.Location = new Point(27, 351);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(29, 26);
-            pictureBox10.TabIndex = 38;
-            pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            pictureBox11.BackgroundImage = (Image)resources.GetObject("pictureBox11.BackgroundImage");
-            pictureBox11.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox11.Location = new Point(27, 383);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(29, 26);
-            pictureBox11.TabIndex = 39;
-            pictureBox11.TabStop = false;
+            btn_show_result.BackColor = Color.Transparent;
+            btn_show_result.Cursor = Cursors.Hand;
+            btn_show_result.FlatAppearance.BorderSize = 0;
+            btn_show_result.FlatStyle = FlatStyle.Flat;
+            btn_show_result.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
+            btn_show_result.Location = new Point(59, 415);
+            btn_show_result.Name = "btn_show_result";
+            btn_show_result.Size = new Size(144, 29);
+            btn_show_result.TabIndex = 40;
+            btn_show_result.Text = "Show all Result";
+            btn_show_result.TextAlign = ContentAlignment.MiddleLeft;
+            btn_show_result.UseVisualStyleBackColor = false;
+            btn_show_result.Click += btn_show_result_Click;
             // 
             // Form3
             // 
@@ -495,6 +527,16 @@
             Text = "Employee page";
             Load += Form3_Load;
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -505,16 +547,7 @@
             panel4.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ResumeLayout(false);
         }
 
@@ -552,5 +585,7 @@
         private PictureBox pictureBox9;
         private PictureBox pictureBox8;
         private PictureBox pictureBox7;
+        private PictureBox pictureBox12;
+        private Button btn_show_result;
     }
 }
