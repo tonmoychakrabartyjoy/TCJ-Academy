@@ -60,5 +60,13 @@ namespace OOP2_final_project
 
             this.Hide();
         }
+
+        private void btn_emp_list_Click(object sender, EventArgs e)
+        {
+            Form17 emp_list = new Form17();
+            emp_list.Show();
+
+            this.Hide();
+        }
     }
 }
