@@ -163,6 +163,7 @@
             btn_add_teacher_sal.Text = "Add Teacher salary";
             btn_add_teacher_sal.TextAlign = ContentAlignment.MiddleLeft;
             btn_add_teacher_sal.UseVisualStyleBackColor = true;
+            btn_add_teacher_sal.Click += btn_add_teacher_sal_Click;
             // 
             // btn_add_emp
             // 
