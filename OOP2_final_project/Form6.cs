@@ -18,7 +18,10 @@ namespace OOP2_final_project
 
         private void button7_Click(object sender, EventArgs e)
         {
+            Form18 add_course_fee = new Form18();
+            add_course_fee.Show();
 
+            this.Hide();
         }
 
         private void btn_student_list_Click(object sender, EventArgs e)
@@ -65,6 +68,14 @@ namespace OOP2_final_project
         {
             Form17 emp_list = new Form17();
             emp_list.Show();
+
+            this.Hide();
+        }
+
+        private void btn_add_teacher_sal_Click(object sender, EventArgs e)
+        {
+            Form19 add_teacher_sal = new Form19();
+            add_teacher_sal.Show();
 
             this.Hide();
         }
