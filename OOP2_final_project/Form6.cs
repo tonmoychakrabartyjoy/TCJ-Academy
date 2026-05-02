@@ -44,5 +44,13 @@ namespace OOP2_final_project
 
             this.Hide();
         }
+
+        private void btn_course_list_Click(object sender, EventArgs e)
+        {
+            Form15 course_list = new Form15(this);
+            course_list.Show();
+
+            this.Hide();
+        }
     }
 }
