@@ -177,6 +177,7 @@
             btn_add_emp.Text = "Add Employee";
             btn_add_emp.TextAlign = ContentAlignment.MiddleLeft;
             btn_add_emp.UseVisualStyleBackColor = true;
+            btn_add_emp.Click += btn_add_emp_Click;
             // 
             // btn_add_course_fee
             // 

@@ -52,5 +52,13 @@ namespace OOP2_final_project
 
             this.Hide();
         }
+
+        private void btn_add_emp_Click(object sender, EventArgs e)
+        {
+            Form16 add_emp = new Form16();
+            add_emp.Show();
+
+            this.Hide();
+        }
     }
 }
