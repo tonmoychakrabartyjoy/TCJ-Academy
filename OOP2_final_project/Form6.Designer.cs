@@ -429,6 +429,7 @@
             Name = "Form6";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin page";
+            Load += Form6_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();

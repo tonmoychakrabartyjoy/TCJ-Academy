@@ -79,5 +79,10 @@ namespace OOP2_final_project
 
             this.Hide();
         }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
