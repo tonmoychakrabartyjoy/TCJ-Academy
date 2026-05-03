@@ -128,6 +128,7 @@
             DoubleBuffered = true;
             Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "Form17";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Employee list";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

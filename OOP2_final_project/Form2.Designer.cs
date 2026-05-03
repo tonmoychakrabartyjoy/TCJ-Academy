@@ -129,7 +129,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1011, 539);
+            ClientSize = new Size(1016, 537);
             Controls.Add(lb_co_Name);
             Controls.Add(btn_add_emp);
             Controls.Add(txt_salary);

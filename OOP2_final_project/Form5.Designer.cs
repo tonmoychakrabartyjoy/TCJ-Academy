@@ -161,7 +161,7 @@
             BackColor = Color.LightSteelBlue;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1008, 532);
+            ClientSize = new Size(1016, 537);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(lb_co_Name);

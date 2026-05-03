@@ -194,7 +194,7 @@
             BackColor = SystemColors.ScrollBar;
             BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1006, 534);
+            ClientSize = new Size(1016, 537);
             Controls.Add(panel1);
             Controls.Add(lbl_result);
             Controls.Add(lb_co_Name);

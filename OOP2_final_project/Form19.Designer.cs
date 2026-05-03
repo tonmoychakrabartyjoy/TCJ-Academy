@@ -150,7 +150,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1016, 839);
+            ClientSize = new Size(1016, 537);
             Controls.Add(panel3);
             Controls.Add(panel1);
             Controls.Add(lb_co_Name);

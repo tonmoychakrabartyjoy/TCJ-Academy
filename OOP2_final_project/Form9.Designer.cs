@@ -181,7 +181,7 @@
             BackColor = Color.LightSkyBlue;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1022, 543);
+            ClientSize = new Size(1016, 537);
             Controls.Add(panel1);
             Controls.Add(lb_co_Name);
             DoubleBuffered = true;
