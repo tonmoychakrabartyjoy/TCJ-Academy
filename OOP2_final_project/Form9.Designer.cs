@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form9));
             lb_co_Name = new Label();
             panel1 = new Panel();
-            txt_subject = new TextBox();
-            lb_subject = new Label();
             btn_add_teacher = new Button();
             txt_address = new TextBox();
             txt_phone = new TextBox();
@@ -62,8 +60,6 @@
             // panel1
             // 
             panel1.BackColor = Color.GhostWhite;
-            panel1.Controls.Add(txt_subject);
-            panel1.Controls.Add(lb_subject);
             panel1.Controls.Add(btn_add_teacher);
             panel1.Controls.Add(txt_address);
             panel1.Controls.Add(txt_phone);
@@ -78,27 +74,10 @@
             panel1.Size = new Size(665, 317);
             panel1.TabIndex = 23;
             // 
-            // txt_subject
-            // 
-            txt_subject.BorderStyle = BorderStyle.FixedSingle;
-            txt_subject.Location = new Point(192, 199);
-            txt_subject.Name = "txt_subject";
-            txt_subject.Size = new Size(320, 27);
-            txt_subject.TabIndex = 35;
-            // 
-            // lb_subject
-            // 
-            lb_subject.AutoSize = true;
-            lb_subject.Location = new Point(110, 202);
-            lb_subject.Name = "lb_subject";
-            lb_subject.Size = new Size(58, 20);
-            lb_subject.TabIndex = 34;
-            lb_subject.Text = "Subject";
-            // 
             // btn_add_teacher
             // 
             btn_add_teacher.Cursor = Cursors.Hand;
-            btn_add_teacher.Location = new Point(246, 244);
+            btn_add_teacher.Location = new Point(272, 228);
             btn_add_teacher.Name = "btn_add_teacher";
             btn_add_teacher.Size = new Size(162, 42);
             btn_add_teacher.TabIndex = 33;
@@ -109,7 +88,7 @@
             // txt_address
             // 
             txt_address.BorderStyle = BorderStyle.FixedSingle;
-            txt_address.Location = new Point(192, 155);
+            txt_address.Location = new Point(204, 180);
             txt_address.Name = "txt_address";
             txt_address.Size = new Size(320, 27);
             txt_address.TabIndex = 32;
@@ -117,7 +96,7 @@
             // txt_phone
             // 
             txt_phone.BorderStyle = BorderStyle.FixedSingle;
-            txt_phone.Location = new Point(192, 118);
+            txt_phone.Location = new Point(204, 143);
             txt_phone.Name = "txt_phone";
             txt_phone.Size = new Size(320, 27);
             txt_phone.TabIndex = 31;
@@ -125,7 +104,7 @@
             // txt_name
             // 
             txt_name.BorderStyle = BorderStyle.FixedSingle;
-            txt_name.Location = new Point(192, 80);
+            txt_name.Location = new Point(204, 105);
             txt_name.Name = "txt_name";
             txt_name.Size = new Size(320, 27);
             txt_name.TabIndex = 30;
@@ -133,7 +112,7 @@
             // txt_id
             // 
             txt_id.BorderStyle = BorderStyle.FixedSingle;
-            txt_id.Location = new Point(192, 42);
+            txt_id.Location = new Point(204, 67);
             txt_id.Name = "txt_id";
             txt_id.Size = new Size(320, 27);
             txt_id.TabIndex = 29;
@@ -141,7 +120,7 @@
             // lb_address
             // 
             lb_address.AutoSize = true;
-            lb_address.Location = new Point(106, 162);
+            lb_address.Location = new Point(118, 187);
             lb_address.Name = "lb_address";
             lb_address.Size = new Size(62, 20);
             lb_address.TabIndex = 28;
@@ -150,7 +129,7 @@
             // lb_phone
             // 
             lb_phone.AutoSize = true;
-            lb_phone.Location = new Point(118, 125);
+            lb_phone.Location = new Point(130, 150);
             lb_phone.Name = "lb_phone";
             lb_phone.Size = new Size(50, 20);
             lb_phone.TabIndex = 27;
@@ -159,7 +138,7 @@
             // lb_teacher_name
             // 
             lb_teacher_name.AutoSize = true;
-            lb_teacher_name.Location = new Point(64, 87);
+            lb_teacher_name.Location = new Point(76, 112);
             lb_teacher_name.Name = "lb_teacher_name";
             lb_teacher_name.Size = new Size(104, 20);
             lb_teacher_name.TabIndex = 26;
@@ -168,7 +147,7 @@
             // lb_teacher_id
             // 
             lb_teacher_id.AutoSize = true;
-            lb_teacher_id.Location = new Point(91, 49);
+            lb_teacher_id.Location = new Point(103, 74);
             lb_teacher_id.Name = "lb_teacher_id";
             lb_teacher_id.Size = new Size(77, 20);
             lb_teacher_id.TabIndex = 25;
@@ -197,8 +176,6 @@
         #endregion
         private Label lb_co_Name;
         private Panel panel1;
-        private TextBox txt_subject;
-        private Label lb_subject;
         private Button btn_add_teacher;
         private TextBox txt_address;
         private TextBox txt_phone;
