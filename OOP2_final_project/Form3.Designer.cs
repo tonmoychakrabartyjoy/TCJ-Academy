@@ -34,7 +34,6 @@
             btn_add_student = new Button();
             btn_add_teacher = new Button();
             btn_update_student = new Button();
-            btn_update_teacher = new Button();
             btn_student_list = new Button();
             btn_teacher_list = new Button();
             btn_add_exam = new Button();
@@ -42,7 +41,6 @@
             panel1 = new Panel();
             pictureBox12 = new PictureBox();
             btn_show_result = new Button();
-            pictureBox11 = new PictureBox();
             pictureBox10 = new PictureBox();
             pictureBox9 = new PictureBox();
             pictureBox8 = new PictureBox();
@@ -63,9 +61,9 @@
             panel4 = new Panel();
             panel6 = new Panel();
             lbl_dashboard = new Label();
+            btn_logout = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
@@ -160,22 +158,6 @@
             btn_update_student.UseVisualStyleBackColor = false;
             btn_update_student.Click += btn_update_student_Click;
             // 
-            // btn_update_teacher
-            // 
-            btn_update_teacher.BackColor = Color.Transparent;
-            btn_update_teacher.Cursor = Cursors.Hand;
-            btn_update_teacher.FlatAppearance.BorderSize = 0;
-            btn_update_teacher.FlatStyle = FlatStyle.Flat;
-            btn_update_teacher.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            btn_update_teacher.Location = new Point(59, 380);
-            btn_update_teacher.Name = "btn_update_teacher";
-            btn_update_teacher.Size = new Size(144, 29);
-            btn_update_teacher.TabIndex = 17;
-            btn_update_teacher.Text = "Update Teacher";
-            btn_update_teacher.TextAlign = ContentAlignment.MiddleLeft;
-            btn_update_teacher.UseVisualStyleBackColor = false;
-            btn_update_teacher.Click += btn_update_teacher_Click;
-            // 
             // btn_student_list
             // 
             btn_student_list.BackColor = Color.Transparent;
@@ -243,9 +225,9 @@
             // panel1
             // 
             panel1.BackColor = Color.CornflowerBlue;
+            panel1.Controls.Add(btn_logout);
             panel1.Controls.Add(pictureBox12);
             panel1.Controls.Add(btn_show_result);
-            panel1.Controls.Add(pictureBox11);
             panel1.Controls.Add(pictureBox10);
             panel1.Controls.Add(pictureBox9);
             panel1.Controls.Add(pictureBox8);
@@ -265,7 +247,6 @@
             panel1.Controls.Add(btn_add_teacher);
             panel1.Controls.Add(btn_student_list);
             panel1.Controls.Add(btn_update_student);
-            panel1.Controls.Add(btn_update_teacher);
             panel1.Location = new Point(-2, -1);
             panel1.Name = "panel1";
             panel1.Size = new Size(224, 544);
@@ -275,7 +256,7 @@
             // 
             pictureBox12.BackgroundImage = (Image)resources.GetObject("pictureBox12.BackgroundImage");
             pictureBox12.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox12.Location = new Point(27, 418);
+            pictureBox12.Location = new Point(27, 386);
             pictureBox12.Name = "pictureBox12";
             pictureBox12.Size = new Size(29, 26);
             pictureBox12.TabIndex = 41;
@@ -288,7 +269,7 @@
             btn_show_result.FlatAppearance.BorderSize = 0;
             btn_show_result.FlatStyle = FlatStyle.Flat;
             btn_show_result.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            btn_show_result.Location = new Point(59, 415);
+            btn_show_result.Location = new Point(59, 383);
             btn_show_result.Name = "btn_show_result";
             btn_show_result.Size = new Size(144, 29);
             btn_show_result.TabIndex = 40;
@@ -296,16 +277,6 @@
             btn_show_result.TextAlign = ContentAlignment.MiddleLeft;
             btn_show_result.UseVisualStyleBackColor = false;
             btn_show_result.Click += btn_show_result_Click;
-            // 
-            // pictureBox11
-            // 
-            pictureBox11.BackgroundImage = (Image)resources.GetObject("pictureBox11.BackgroundImage");
-            pictureBox11.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox11.Location = new Point(27, 383);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(29, 26);
-            pictureBox11.TabIndex = 39;
-            pictureBox11.TabStop = false;
             // 
             // pictureBox10
             // 
@@ -510,6 +481,17 @@
             lbl_dashboard.TabIndex = 0;
             lbl_dashboard.Text = "Dashboard";
             // 
+            // btn_logout
+            // 
+            btn_logout.BackColor = Color.Red;
+            btn_logout.ForeColor = SystemColors.Control;
+            btn_logout.Location = new Point(48, 484);
+            btn_logout.Name = "btn_logout";
+            btn_logout.Size = new Size(94, 29);
+            btn_logout.TabIndex = 42;
+            btn_logout.Text = "Logout";
+            btn_logout.UseVisualStyleBackColor = false;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -529,7 +511,6 @@
             Load += Form3_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
@@ -559,7 +540,6 @@
         private Button btn_add_student;
         private Button btn_add_teacher;
         private Button btn_update_student;
-        private Button btn_update_teacher;
         private Button btn_student_list;
         private Button btn_teacher_list;
         private Button btn_add_exam;
@@ -581,12 +561,12 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox11;
         private PictureBox pictureBox10;
         private PictureBox pictureBox9;
         private PictureBox pictureBox8;
         private PictureBox pictureBox7;
         private PictureBox pictureBox12;
         private Button btn_show_result;
+        private Button btn_logout;
     }
 }

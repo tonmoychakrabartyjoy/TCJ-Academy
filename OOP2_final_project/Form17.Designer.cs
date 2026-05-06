@@ -34,7 +34,6 @@
             emp_id = new DataGridViewTextBoxColumn();
             emp_name = new DataGridViewTextBoxColumn();
             phone = new DataGridViewTextBoxColumn();
-            salary = new DataGridViewTextBoxColumn();
             address = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -66,10 +65,13 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { emp_id, emp_name, phone, salary, address });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { emp_id, emp_name, phone, address });
             dataGridView1.Location = new Point(29, 138);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(955, 326);
             dataGridView1.TabIndex = 18;
@@ -84,27 +86,21 @@
             // 
             // emp_name
             // 
+            emp_name.FillWeight = 200F;
             emp_name.HeaderText = "Employee Name";
             emp_name.MinimumWidth = 6;
             emp_name.Name = "emp_name";
             emp_name.ReadOnly = true;
-            emp_name.Width = 125;
+            emp_name.Width = 200;
             // 
             // phone
             // 
+            phone.FillWeight = 160F;
             phone.HeaderText = "Phone";
             phone.MinimumWidth = 6;
             phone.Name = "phone";
             phone.ReadOnly = true;
-            phone.Width = 125;
-            // 
-            // salary
-            // 
-            salary.HeaderText = "Salary";
-            salary.MinimumWidth = 6;
-            salary.Name = "salary";
-            salary.ReadOnly = true;
-            salary.Width = 125;
+            phone.Width = 175;
             // 
             // address
             // 
@@ -143,7 +139,6 @@
         private DataGridViewTextBoxColumn emp_id;
         private DataGridViewTextBoxColumn emp_name;
         private DataGridViewTextBoxColumn phone;
-        private DataGridViewTextBoxColumn salary;
         private DataGridViewTextBoxColumn address;
     }
 }

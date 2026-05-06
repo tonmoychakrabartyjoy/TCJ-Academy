@@ -35,8 +35,6 @@
             name = new DataGridViewTextBoxColumn();
             teacher_id = new DataGridViewTextBoxColumn();
             phone = new DataGridViewTextBoxColumn();
-            subject = new DataGridViewTextBoxColumn();
-            salary = new DataGridViewTextBoxColumn();
             address = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -68,53 +66,43 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { name, teacher_id, phone, subject, salary, address });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { name, teacher_id, phone, address });
             dataGridView1.Location = new Point(12, 123);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(999, 358);
             dataGridView1.TabIndex = 24;
             // 
             // name
             // 
+            name.FillWeight = 240F;
             name.HeaderText = "Name";
             name.MinimumWidth = 6;
             name.Name = "name";
             name.ReadOnly = true;
-            name.Width = 125;
+            name.Width = 250;
             // 
             // teacher_id
             // 
+            teacher_id.FillWeight = 150F;
             teacher_id.HeaderText = "Teacher Id";
             teacher_id.MinimumWidth = 6;
             teacher_id.Name = "teacher_id";
             teacher_id.ReadOnly = true;
-            teacher_id.Width = 125;
+            teacher_id.Width = 175;
             // 
             // phone
             // 
+            phone.FillWeight = 200F;
             phone.HeaderText = "Phone";
             phone.MinimumWidth = 6;
             phone.Name = "phone";
             phone.ReadOnly = true;
-            phone.Width = 125;
-            // 
-            // subject
-            // 
-            subject.HeaderText = "Subject";
-            subject.MinimumWidth = 6;
-            subject.Name = "subject";
-            subject.ReadOnly = true;
-            subject.Width = 125;
-            // 
-            // salary
-            // 
-            salary.HeaderText = "Salary";
-            salary.MinimumWidth = 6;
-            salary.Name = "salary";
-            salary.ReadOnly = true;
-            salary.Width = 125;
+            phone.Width = 200;
             // 
             // address
             // 
@@ -153,8 +141,6 @@
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn teacher_id;
         private DataGridViewTextBoxColumn phone;
-        private DataGridViewTextBoxColumn subject;
-        private DataGridViewTextBoxColumn salary;
         private DataGridViewTextBoxColumn address;
     }
 }

@@ -31,12 +31,10 @@
             lb_co_Name = new Label();
             panel1 = new Panel();
             btn_add_emp = new Button();
-            txt_salary = new TextBox();
             txt_address = new TextBox();
             txt_phone = new TextBox();
             txt_emp_id = new TextBox();
             txt_emp_name = new TextBox();
-            lbl_emp_sal = new Label();
             lbl_address = new Label();
             lbl_phone = new Label();
             lbl_emp_id = new Label();
@@ -61,12 +59,10 @@
             // panel1
             // 
             panel1.Controls.Add(btn_add_emp);
-            panel1.Controls.Add(txt_salary);
             panel1.Controls.Add(txt_address);
             panel1.Controls.Add(txt_phone);
             panel1.Controls.Add(txt_emp_id);
             panel1.Controls.Add(txt_emp_name);
-            panel1.Controls.Add(lbl_emp_sal);
             panel1.Controls.Add(lbl_address);
             panel1.Controls.Add(lbl_phone);
             panel1.Controls.Add(lbl_emp_id);
@@ -79,22 +75,13 @@
             // btn_add_emp
             // 
             btn_add_emp.Cursor = Cursors.Hand;
-            btn_add_emp.Location = new Point(239, 277);
+            btn_add_emp.Location = new Point(226, 223);
             btn_add_emp.Name = "btn_add_emp";
             btn_add_emp.Size = new Size(146, 49);
             btn_add_emp.TabIndex = 10;
             btn_add_emp.Text = "Add Employee";
             btn_add_emp.UseVisualStyleBackColor = true;
             btn_add_emp.Click += btn_add_emp_Click;
-            // 
-            // txt_salary
-            // 
-            txt_salary.BorderStyle = BorderStyle.FixedSingle;
-            txt_salary.Location = new Point(194, 223);
-            txt_salary.Name = "txt_salary";
-            txt_salary.Size = new Size(265, 27);
-            txt_salary.TabIndex = 9;
-            txt_salary.KeyDown += txt_salary_KeyDown;
             // 
             // txt_address
             // 
@@ -131,16 +118,6 @@
             txt_emp_name.Size = new Size(265, 27);
             txt_emp_name.TabIndex = 5;
             txt_emp_name.KeyDown += txt_emp_name_KeyDown;
-            // 
-            // lbl_emp_sal
-            // 
-            lbl_emp_sal.AutoSize = true;
-            lbl_emp_sal.Location = new Point(137, 231);
-            lbl_emp_sal.Name = "lbl_emp_sal";
-            lbl_emp_sal.Size = new Size(51, 19);
-            lbl_emp_sal.TabIndex = 4;
-            lbl_emp_sal.Text = "Salary";
-            lbl_emp_sal.TextAlign = ContentAlignment.MiddleRight;
             // 
             // lbl_address
             // 
@@ -206,13 +183,11 @@
 
         private Label lb_co_Name;
         private Panel panel1;
-        private Label lbl_emp_sal;
         private Label lbl_address;
         private Label lbl_phone;
         private Label lbl_emp_id;
         private Label lbl_emp_name;
         private Button btn_add_emp;
-        private TextBox txt_salary;
         private TextBox txt_address;
         private TextBox txt_phone;
         private TextBox txt_emp_id;

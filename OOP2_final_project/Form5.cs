@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,15 +28,32 @@ namespace OOP2_final_project
         {
             string exam_id = txt_exam_id.Text;
             string user_id = txt_user_id.Text;
-            try
-            {
-                int mark = int.Parse(txt_mark.Text);
-                MessageBox.Show("Result upload successfull");
-            }
-            catch (FormatException)
+            int mark;
+            if (!int.TryParse(txt_mark.Text, out mark))
             {
                 MessageBox.Show("Input valid mark");
                 txt_mark.Focus();
+                return;
+            }
+
+
+            try
+            {
+                string upload_result = "INSERT INTO ExamResult VALUES('" + exam_id + "','" + user_id + "'," + mark + ")";
+
+
+                Database.AddQuery(upload_result);
+
+                
+                MessageBox.Show("saved");
+
+                txt_exam_id.Clear();
+                txt_user_id.Clear();
+                txt_mark.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

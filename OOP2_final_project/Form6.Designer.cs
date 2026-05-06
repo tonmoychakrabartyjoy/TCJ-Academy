@@ -34,13 +34,11 @@
             btn_teacher_list = new Button();
             btn_emp_list = new Button();
             btn_course_list = new Button();
-            btn_add_teacher_sal = new Button();
             btn_add_emp = new Button();
             btn_add_course_fee = new Button();
             panel1 = new Panel();
             pictureBox12 = new PictureBox();
             btn_show_result = new Button();
-            pictureBox7 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
@@ -57,9 +55,9 @@
             panel5 = new Panel();
             panel6 = new Panel();
             lbl_dashboard = new Label();
+            btn_logout = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -149,22 +147,6 @@
             btn_course_list.UseVisualStyleBackColor = true;
             btn_course_list.Click += btn_course_list_Click;
             // 
-            // btn_add_teacher_sal
-            // 
-            btn_add_teacher_sal.Cursor = Cursors.Hand;
-            btn_add_teacher_sal.FlatAppearance.BorderSize = 0;
-            btn_add_teacher_sal.FlatStyle = FlatStyle.Flat;
-            btn_add_teacher_sal.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
-            btn_add_teacher_sal.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_add_teacher_sal.Location = new Point(35, 335);
-            btn_add_teacher_sal.Name = "btn_add_teacher_sal";
-            btn_add_teacher_sal.Size = new Size(166, 29);
-            btn_add_teacher_sal.TabIndex = 20;
-            btn_add_teacher_sal.Text = "Add Teacher salary";
-            btn_add_teacher_sal.TextAlign = ContentAlignment.MiddleLeft;
-            btn_add_teacher_sal.UseVisualStyleBackColor = true;
-            btn_add_teacher_sal.Click += btn_add_teacher_sal_Click;
-            // 
             // btn_add_emp
             // 
             btn_add_emp.Cursor = Cursors.Hand;
@@ -200,9 +182,9 @@
             // panel1
             // 
             panel1.BackColor = Color.CornflowerBlue;
+            panel1.Controls.Add(btn_logout);
             panel1.Controls.Add(pictureBox12);
             panel1.Controls.Add(btn_show_result);
-            panel1.Controls.Add(pictureBox7);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(pictureBox5);
             panel1.Controls.Add(pictureBox6);
@@ -211,7 +193,6 @@
             panel1.Controls.Add(pictureBox10);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(btn_student_list);
-            panel1.Controls.Add(btn_add_teacher_sal);
             panel1.Controls.Add(btn_add_course_fee);
             panel1.Controls.Add(btn_teacher_list);
             panel1.Controls.Add(btn_add_emp);
@@ -247,16 +228,6 @@
             btn_show_result.TextAlign = ContentAlignment.MiddleLeft;
             btn_show_result.UseVisualStyleBackColor = false;
             btn_show_result.Click += btn_show_result_Click;
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.BackgroundImage = (Image)resources.GetObject("pictureBox7.BackgroundImage");
-            pictureBox7.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox7.Location = new Point(6, 335);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(29, 26);
-            pictureBox7.TabIndex = 45;
-            pictureBox7.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -413,6 +384,18 @@
             lbl_dashboard.TabIndex = 0;
             lbl_dashboard.Text = "Dashboard";
             // 
+            // btn_logout
+            // 
+            btn_logout.BackColor = Color.Red;
+            btn_logout.ForeColor = SystemColors.Control;
+            btn_logout.Location = new Point(57, 476);
+            btn_logout.Name = "btn_logout";
+            btn_logout.Size = new Size(94, 29);
+            btn_logout.TabIndex = 48;
+            btn_logout.Text = "Logout";
+            btn_logout.UseVisualStyleBackColor = false;
+            btn_logout.Click += btn_logout_Click;
+            // 
             // Form6
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -432,7 +415,6 @@
             Load += Form6_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
@@ -459,7 +441,6 @@
         private Button btn_teacher_list;
         private Button btn_emp_list;
         private Button btn_course_list;
-        private Button btn_add_teacher_sal;
         private Button btn_add_emp;
         private Button btn_add_course_fee;
         private Panel panel1;
@@ -473,7 +454,6 @@
         private Panel panel5;
         private Panel panel6;
         private Label lbl_dashboard;
-        private PictureBox pictureBox7;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
@@ -482,5 +462,6 @@
         private PictureBox pictureBox10;
         private PictureBox pictureBox12;
         private Button btn_show_result;
+        private Button btn_logout;
     }
 }
