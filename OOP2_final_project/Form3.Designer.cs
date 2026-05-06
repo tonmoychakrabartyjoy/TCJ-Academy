@@ -39,6 +39,7 @@
             btn_add_exam = new Button();
             btn_upload_result = new Button();
             panel1 = new Panel();
+            btn_logout = new Button();
             pictureBox12 = new PictureBox();
             btn_show_result = new Button();
             pictureBox10 = new PictureBox();
@@ -61,7 +62,6 @@
             panel4 = new Panel();
             panel6 = new Panel();
             lbl_dashboard = new Label();
-            btn_logout = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
@@ -251,6 +251,18 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(224, 544);
             panel1.TabIndex = 23;
+            // 
+            // btn_logout
+            // 
+            btn_logout.BackColor = Color.Red;
+            btn_logout.ForeColor = SystemColors.Control;
+            btn_logout.Location = new Point(48, 484);
+            btn_logout.Name = "btn_logout";
+            btn_logout.Size = new Size(94, 29);
+            btn_logout.TabIndex = 42;
+            btn_logout.Text = "Logout";
+            btn_logout.UseVisualStyleBackColor = false;
+            btn_logout.Click += btn_logout_Click;
             // 
             // pictureBox12
             // 
@@ -480,17 +492,6 @@
             lbl_dashboard.Size = new Size(141, 32);
             lbl_dashboard.TabIndex = 0;
             lbl_dashboard.Text = "Dashboard";
-            // 
-            // btn_logout
-            // 
-            btn_logout.BackColor = Color.Red;
-            btn_logout.ForeColor = SystemColors.Control;
-            btn_logout.Location = new Point(48, 484);
-            btn_logout.Name = "btn_logout";
-            btn_logout.Size = new Size(94, 29);
-            btn_logout.TabIndex = 42;
-            btn_logout.Text = "Logout";
-            btn_logout.UseVisualStyleBackColor = false;
             // 
             // Form3
             // 

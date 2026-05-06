@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lb_co_Name = new Label();
-            dataGridView1 = new DataGridView();
+            dgvResult = new DataGridView();
             lbl_course_list = new Label();
-            course_code = new DataGridViewTextBoxColumn();
-            subject = new DataGridViewTextBoxColumn();
-            day = new DataGridViewTextBoxColumn();
-            course_fee = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            databaseBindingSource = new BindingSource(components);
+            ((System.ComponentModel.ISupportInitialize)dgvResult).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)databaseBindingSource).BeginInit();
             SuspendLayout();
             // 
             // lb_co_Name
@@ -52,15 +51,17 @@
             lb_co_Name.Text = "TCJ Academy";
             lb_co_Name.Click += lb_co_Name_Click;
             // 
-            // dataGridView1
+            // dgvResult
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { course_code, subject, day, course_fee });
-            dataGridView1.Location = new Point(107, 119);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(803, 390);
-            dataGridView1.TabIndex = 14;
+            dgvResult.AllowUserToAddRows = false;
+            dgvResult.AllowUserToDeleteRows = false;
+            dgvResult.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvResult.Location = new Point(107, 119);
+            dgvResult.Name = "dgvResult";
+            dgvResult.ReadOnly = true;
+            dgvResult.RowHeadersWidth = 51;
+            dgvResult.Size = new Size(803, 390);
+            dgvResult.TabIndex = 14;
             // 
             // lbl_course_list
             // 
@@ -72,40 +73,11 @@
             lbl_course_list.Size = new Size(138, 32);
             lbl_course_list.TabIndex = 15;
             lbl_course_list.Text = "Course list";
+            lbl_course_list.Click += lbl_course_list_Click;
             // 
-            // course_code
+            // databaseBindingSource
             // 
-            course_code.FillWeight = 200F;
-            course_code.HeaderText = "Course code";
-            course_code.MinimumWidth = 6;
-            course_code.Name = "course_code";
-            course_code.ReadOnly = true;
-            course_code.Width = 250;
-            // 
-            // subject
-            // 
-            subject.FillWeight = 200F;
-            subject.HeaderText = "Course Subject";
-            subject.MinimumWidth = 6;
-            subject.Name = "subject";
-            subject.ReadOnly = true;
-            subject.Width = 250;
-            // 
-            // day
-            // 
-            day.HeaderText = "Course Day";
-            day.MinimumWidth = 6;
-            day.Name = "day";
-            day.ReadOnly = true;
-            day.Width = 125;
-            // 
-            // course_fee
-            // 
-            course_fee.HeaderText = "Course Fee";
-            course_fee.MinimumWidth = 6;
-            course_fee.Name = "course_fee";
-            course_fee.ReadOnly = true;
-            course_fee.Width = 125;
+            databaseBindingSource.DataSource = typeof(Database);
             // 
             // Form15
             // 
@@ -115,7 +87,7 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1016, 537);
             Controls.Add(lbl_course_list);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvResult);
             Controls.Add(lb_co_Name);
             DoubleBuffered = true;
             Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -123,7 +95,8 @@
             Name = "Form15";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Course list";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvResult).EndInit();
+            ((System.ComponentModel.ISupportInitialize)databaseBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -131,11 +104,8 @@
         #endregion
 
         private Label lb_co_Name;
-        private DataGridView dataGridView1;
+        private DataGridView dgvResult;
         private Label lbl_course_list;
-        private DataGridViewTextBoxColumn course_code;
-        private DataGridViewTextBoxColumn subject;
-        private DataGridViewTextBoxColumn day;
-        private DataGridViewTextBoxColumn course_fee;
+        private BindingSource databaseBindingSource;
     }
 }
