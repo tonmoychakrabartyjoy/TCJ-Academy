@@ -13,6 +13,7 @@ namespace OOP2_final_project
         public Form7()
         {
             InitializeComponent();
+            txt_course_code.Text = "Auto Generate";
             txt_course_fee.Text = "NULL";
         }
 
@@ -24,13 +25,31 @@ namespace OOP2_final_project
 
         private void btn_add_course_Click(object sender, EventArgs e)
         {
-            string course_code = txt_course_code.Text;
             string subject = txt_course_subject.Text;
             string course_day = txt_course_day.Text;
             string aca_year = txt_aca_year.Text;
-            string section;
+            string section = com_section.Text;
 
-            MessageBox.Show("Course added successfull");
+            
+            try
+            {
+                string queryCourse = "INSERT INTO Course (CourseSubject, CourseDay) VALUES ('"+subject+"', '"+course_day+"'); SELECT SCOPE_IDENTITY();";
+
+
+                int course_code = Convert.ToInt32(Database.GetValue(queryCourse));
+
+
+                string queryAca =   "INSERT INTO AcademicYear (AcademicYear,SectionName, CourseCode) VALUES ('"+aca_year+"', '"+section+"', '"+course_code+"')";
+                Database.AddQuery(queryAca);
+
+                MessageBox.Show("Course added successfully.");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
         }
 
         private void lb_co_Name_Click(object sender, EventArgs e)
