@@ -20,7 +20,6 @@ namespace OOP2_final_project
             string id = txt_id.Text;
             string name = txt_name.Text;
             string phone = txt_phone.Text;
-            string subject = txt_subject.Text;
             string address = txt_address.Text;
 
             MessageBox.Show("Teacher added successfull");

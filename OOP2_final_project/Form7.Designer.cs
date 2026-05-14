@@ -44,6 +44,7 @@
             lb_course_subject = new Label();
             lb_course_code = new Label();
             txt_course_code = new TextBox();
+            com_section = new ComboBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -104,6 +105,7 @@
             // panel2
             // 
             panel2.BackColor = Color.AliceBlue;
+            panel2.Controls.Add(com_section);
             panel2.Controls.Add(lbl_sec);
             panel2.Location = new Point(531, 33);
             panel2.Name = "panel2";
@@ -198,8 +200,18 @@
             txt_course_code.BorderStyle = BorderStyle.FixedSingle;
             txt_course_code.Location = new Point(128, 23);
             txt_course_code.Name = "txt_course_code";
+            txt_course_code.ReadOnly = true;
             txt_course_code.Size = new Size(376, 27);
             txt_course_code.TabIndex = 23;
+            // 
+            // com_section
+            // 
+            com_section.FormattingEnabled = true;
+            com_section.Items.AddRange(new object[] { "A", "B", "C", "D", "E" });
+            com_section.Location = new Point(6, 33);
+            com_section.Name = "com_section";
+            com_section.Size = new Size(133, 28);
+            com_section.TabIndex = 32;
             // 
             // Form7
             // 
@@ -208,7 +220,7 @@
             BackColor = Color.LightSteelBlue;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1002, 502);
+            ClientSize = new Size(1016, 537);
             Controls.Add(panel1);
             Controls.Add(lb_co_Name);
             DoubleBuffered = true;
@@ -239,5 +251,6 @@
         private TextBox txt_course_code;
         private TextBox txt_course_fee;
         private Label lbl_course_fee;
+        private ComboBox com_section;
     }
 }

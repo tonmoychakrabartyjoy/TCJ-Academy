@@ -72,12 +72,19 @@ namespace OOP2_final_project
             this.Hide();
         }
 
-        private void btn_add_teacher_sal_Click(object sender, EventArgs e)
-        {
-            Form19 add_teacher_sal = new Form19();
-            add_teacher_sal.Show();
+        
 
-            this.Hide();
+        private void Form6_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            login login_page = new login();
+            login_page.Show();
+
+            this.Close();
         }
     }
 }

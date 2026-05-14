@@ -104,13 +104,7 @@ namespace OOP2_final_project
 
         }
 
-        private void btn_update_teacher_Click(object sender, EventArgs e)
-        {
-            Form13 update_teacher = new Form13();
-            update_teacher.Show();
 
-            this.Hide();
-        }
 
         private void btn_show_result_Click(object sender, EventArgs e)
         {
@@ -124,6 +118,14 @@ namespace OOP2_final_project
         {
             Form15 course_list = new Form15(this);
             course_list.Show();
+
+            this.Hide();
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            login login_page = new login();
+            login_page.Show();
 
             this.Hide();
         }

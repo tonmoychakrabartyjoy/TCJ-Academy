@@ -23,5 +23,11 @@ namespace OOP2_final_project
 
             this.Hide();
         }
+
+        private void lbl_course_list_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM course";
+            Database.showData(query, dgvResult);
+        }
     }
 }

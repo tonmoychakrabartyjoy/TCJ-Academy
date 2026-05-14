@@ -130,7 +130,7 @@
             BackColor = Color.LightSteelBlue;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1009, 544);
+            ClientSize = new Size(1016, 537);
             Controls.Add(lb6);
             Controls.Add(lb3);
             Controls.Add(lb2);

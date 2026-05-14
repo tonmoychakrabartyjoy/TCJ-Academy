@@ -30,8 +30,7 @@ namespace OOP2_final_project
                 if (txt_emp_id.Text == "" ||
                     txt_emp_name.Text == "" ||
                     txt_phone.Text == "" ||
-                    txt_address.Text == "" ||
-                    txt_salary.Text == "")
+                    txt_address.Text == "" )
                 {
                     MessageBox.Show("Please fill all the fields.");
                 }
@@ -41,10 +40,9 @@ namespace OOP2_final_project
                     string emp_name = txt_emp_name.Text;
                     string emp_phone = txt_phone.Text;
                     string emp_address = txt_address.Text;
-                    int emp_salary = int.Parse(txt_salary.Text);
+                    
                     MessageBox.Show("Employee added successfully.");
 
-                    txt_salary.Clear();
                     txt_phone.Clear();
                     txt_emp_name.Clear();
                     txt_address.Clear();
@@ -56,7 +54,7 @@ namespace OOP2_final_project
             catch (FormatException)
             {
                 MessageBox.Show("Please enter a valid salary.");
-                txt_salary.Focus();
+                
             }
         }
 
@@ -88,7 +86,7 @@ namespace OOP2_final_project
         {
             if (e.KeyCode == Keys.Enter)
             {
-                txt_salary.Focus();
+                btn_add_emp_Click(sender, e);
             }
         }
 
@@ -96,7 +94,7 @@ namespace OOP2_final_project
         {
             if (e.KeyCode == Keys.Enter) 
             { 
-                btn_add_emp_Click(sender, e);
+                
             }
         }
     }

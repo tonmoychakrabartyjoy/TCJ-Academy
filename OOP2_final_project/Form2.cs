@@ -14,5 +14,31 @@ namespace OOP2_final_project
         {
             InitializeComponent();
         }
+
+        private void txt_name_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txt_type.Focus();
+            }
+        }
+
+        private void txt_id_KeyDown(object sender, KeyEventArgs e) { }
+
+        private void txt_type_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txt_salary.Focus();
+            }
+        }
+
+        private void txt_salary_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btn_add_emp.Focus();
+            }
+        }
     }
 }
