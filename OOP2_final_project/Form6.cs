@@ -13,10 +13,10 @@ namespace OOP2_final_project
         string userid;
         public Form6()
         {
-            InitializeComponent();
+            InitializeComponent(GetBtn_add_course_fee1(), GetBtn_add_course_fee2());
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btn_add_course_fee_Click(object sender, EventArgs e)
         {
             Form18 add_course_fee = new Form18();
             add_course_fee.Show();

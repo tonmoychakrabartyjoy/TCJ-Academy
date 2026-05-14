@@ -20,13 +20,28 @@
             base.Dispose(disposing);
         }
 
+        private Button GetBtn_add_course_fee1()
+        {
+            return btn_add_course_fee;
+        }
+
+        private Button GetBtn_add_course_fee2()
+        {
+            return btn_add_course_fee;
+        }
+
+        private void InitializeComponent(Button btn_add_course_fee1, Button btn_add_course_fee2)
+        {
+            InitializeComponent(btn_add_course_fee1, btn_add_course_fee2, btn_add_course_fee);
+        }
+
         #region Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent(Button btn_add_course_fee1, Button btn_add_course_fee2, Button btn_add_course_fee3)
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
             lb_co_Name = new Label();
@@ -185,18 +200,18 @@
             // 
             btn_add_course_fee.Cursor = Cursors.Hand;
             btn_add_course_fee.FlatAppearance.BorderSize = 0;
-            btn_add_course_fee.FlatStyle = FlatStyle.Flat;
+            btn_add_course_fee3.FlatStyle = FlatStyle.Flat;
             btn_add_course_fee.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold);
             btn_add_course_fee.ImageAlign = ContentAlignment.MiddleLeft;
             btn_add_course_fee.Location = new Point(39, 265);
             btn_add_course_fee.Name = "btn_add_course_fee";
-            btn_add_course_fee.Size = new Size(157, 29);
+            btn_add_course_fee2.Size = new Size(157, 29);
             btn_add_course_fee.TabIndex = 22;
             btn_add_course_fee.Text = "Add Course fee";
             btn_add_course_fee.TextAlign = ContentAlignment.MiddleLeft;
             btn_add_course_fee.UseVisualStyleBackColor = true;
-            btn_add_course_fee.Click += button7_Click;
-            // 
+            btn_add_course_fee1.Click += btn_add_course_fee_Click;
+
             // panel1
             // 
             panel1.BackColor = Color.CornflowerBlue;
