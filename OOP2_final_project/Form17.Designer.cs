@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lb_co_Name = new Label();
             lbl_emp_list = new Label();
-            dataGridView1 = new DataGridView();
-            emp_id = new DataGridViewTextBoxColumn();
-            emp_name = new DataGridViewTextBoxColumn();
-            phone = new DataGridViewTextBoxColumn();
-            address = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgv_emp_table = new DataGridView();
+            databaseBindingSource = new BindingSource(components);
+            ((System.ComponentModel.ISupportInitialize)dgv_emp_table).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)databaseBindingSource).BeginInit();
             SuspendLayout();
             // 
             // lb_co_Name
@@ -63,53 +62,23 @@
             lbl_emp_list.TabIndex = 17;
             lbl_emp_list.Text = "Employee list";
             // 
-            // dataGridView1
+            // dgv_emp_table
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { emp_id, emp_name, phone, address });
-            dataGridView1.Location = new Point(29, 138);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(955, 326);
-            dataGridView1.TabIndex = 18;
+            dgv_emp_table.AllowUserToAddRows = false;
+            dgv_emp_table.AllowUserToDeleteRows = false;
+            dgv_emp_table.AutoGenerateColumns = false;
+            dgv_emp_table.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_emp_table.DataSource = databaseBindingSource;
+            dgv_emp_table.Location = new Point(29, 138);
+            dgv_emp_table.Name = "dgv_emp_table";
+            dgv_emp_table.ReadOnly = true;
+            dgv_emp_table.RowHeadersWidth = 51;
+            dgv_emp_table.Size = new Size(955, 326);
+            dgv_emp_table.TabIndex = 18;
             // 
-            // emp_id
+            // databaseBindingSource
             // 
-            emp_id.HeaderText = "Employee ID";
-            emp_id.MinimumWidth = 6;
-            emp_id.Name = "emp_id";
-            emp_id.ReadOnly = true;
-            emp_id.Width = 125;
-            // 
-            // emp_name
-            // 
-            emp_name.FillWeight = 200F;
-            emp_name.HeaderText = "Employee Name";
-            emp_name.MinimumWidth = 6;
-            emp_name.Name = "emp_name";
-            emp_name.ReadOnly = true;
-            emp_name.Width = 200;
-            // 
-            // phone
-            // 
-            phone.FillWeight = 160F;
-            phone.HeaderText = "Phone";
-            phone.MinimumWidth = 6;
-            phone.Name = "phone";
-            phone.ReadOnly = true;
-            phone.Width = 175;
-            // 
-            // address
-            // 
-            address.FillWeight = 390F;
-            address.HeaderText = "Address";
-            address.MinimumWidth = 6;
-            address.Name = "address";
-            address.ReadOnly = true;
-            address.Width = 400;
+            databaseBindingSource.DataSource = typeof(Database);
             // 
             // Form17
             // 
@@ -118,7 +87,7 @@
             BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1016, 537);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgv_emp_table);
             Controls.Add(lbl_emp_list);
             Controls.Add(lb_co_Name);
             DoubleBuffered = true;
@@ -126,7 +95,9 @@
             Name = "Form17";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Employee list";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += Form17_Load;
+            ((System.ComponentModel.ISupportInitialize)dgv_emp_table).EndInit();
+            ((System.ComponentModel.ISupportInitialize)databaseBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -135,10 +106,7 @@
 
         private Label lb_co_Name;
         private Label lbl_emp_list;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn emp_id;
-        private DataGridViewTextBoxColumn emp_name;
-        private DataGridViewTextBoxColumn phone;
-        private DataGridViewTextBoxColumn address;
+        private DataGridView dgv_emp_table;
+        private BindingSource databaseBindingSource;
     }
 }

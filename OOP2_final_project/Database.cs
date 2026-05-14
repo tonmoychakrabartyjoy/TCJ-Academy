@@ -12,6 +12,8 @@ namespace OOP2_final_project
     {
         public static SqlConnection con = new SqlConnection(@"Data Source = Tonmoy\SQLEXPRESS; Initial Catalog = TCJ_Academy; Integrated Security = True; TrustServerCertificate=True;");
 
+
+        // Tonmoy 
         public static void AddQuery(string query)
         {
             con.Open();
@@ -43,5 +45,7 @@ namespace OOP2_final_project
             dataGridView.Refresh();
             con.Close();
         }
+
+        // tonmoy
     }
 }
