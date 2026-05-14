@@ -22,5 +22,10 @@ namespace OOP2_final_project
 
             this.Hide();
         }
+
+        private void Form17_Load(object sender, EventArgs e)
+        {
+            Database.showData("SELECT * FROM Users", dgv_emp_table);
+        }
     }
 }

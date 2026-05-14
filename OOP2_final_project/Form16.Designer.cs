@@ -30,12 +30,14 @@
         {
             lb_co_Name = new Label();
             panel1 = new Panel();
+            lbl_address = new Label();
+            lbl_type = new Label();
+            txt_emp_type = new TextBox();
             btn_add_emp = new Button();
             txt_address = new TextBox();
             txt_phone = new TextBox();
             txt_emp_id = new TextBox();
             txt_emp_name = new TextBox();
-            lbl_address = new Label();
             lbl_phone = new Label();
             lbl_emp_id = new Label();
             lbl_emp_name = new Label();
@@ -58,12 +60,14 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(lbl_address);
+            panel1.Controls.Add(lbl_type);
+            panel1.Controls.Add(txt_emp_type);
             panel1.Controls.Add(btn_add_emp);
             panel1.Controls.Add(txt_address);
             panel1.Controls.Add(txt_phone);
             panel1.Controls.Add(txt_emp_id);
             panel1.Controls.Add(txt_emp_name);
-            panel1.Controls.Add(lbl_address);
             panel1.Controls.Add(lbl_phone);
             panel1.Controls.Add(lbl_emp_id);
             panel1.Controls.Add(lbl_emp_name);
@@ -72,10 +76,39 @@
             panel1.Size = new Size(541, 369);
             panel1.TabIndex = 17;
             // 
+            // lbl_address
+            // 
+            lbl_address.AutoSize = true;
+            lbl_address.Location = new Point(124, 192);
+            lbl_address.Name = "lbl_address";
+            lbl_address.Size = new Size(64, 19);
+            lbl_address.TabIndex = 13;
+            lbl_address.Text = "Address";
+            lbl_address.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lbl_type
+            // 
+            lbl_type.AutoSize = true;
+            lbl_type.Location = new Point(147, 223);
+            lbl_type.Name = "lbl_type";
+            lbl_type.Size = new Size(41, 19);
+            lbl_type.TabIndex = 12;
+            lbl_type.Text = "Type";
+            lbl_type.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // txt_emp_type
+            // 
+            txt_emp_type.BorderStyle = BorderStyle.FixedSingle;
+            txt_emp_type.Location = new Point(194, 223);
+            txt_emp_type.Name = "txt_emp_type";
+            txt_emp_type.Size = new Size(265, 27);
+            txt_emp_type.TabIndex = 11;
+            txt_emp_type.KeyDown += txt_emp_type_KeyDown;
+            // 
             // btn_add_emp
             // 
             btn_add_emp.Cursor = Cursors.Hand;
-            btn_add_emp.Location = new Point(226, 223);
+            btn_add_emp.Location = new Point(216, 269);
             btn_add_emp.Name = "btn_add_emp";
             btn_add_emp.Size = new Size(146, 49);
             btn_add_emp.TabIndex = 10;
@@ -106,8 +139,10 @@
             txt_emp_id.BorderStyle = BorderStyle.FixedSingle;
             txt_emp_id.Location = new Point(194, 122);
             txt_emp_id.Name = "txt_emp_id";
+            txt_emp_id.ReadOnly = true;
             txt_emp_id.Size = new Size(265, 27);
             txt_emp_id.TabIndex = 6;
+            txt_emp_id.TextChanged += txt_emp_id_TextChanged;
             txt_emp_id.KeyDown += txt_emp_id_KeyDown;
             // 
             // txt_emp_name
@@ -118,16 +153,6 @@
             txt_emp_name.Size = new Size(265, 27);
             txt_emp_name.TabIndex = 5;
             txt_emp_name.KeyDown += txt_emp_name_KeyDown;
-            // 
-            // lbl_address
-            // 
-            lbl_address.AutoSize = true;
-            lbl_address.Location = new Point(124, 198);
-            lbl_address.Name = "lbl_address";
-            lbl_address.Size = new Size(64, 19);
-            lbl_address.TabIndex = 3;
-            lbl_address.Text = "Address";
-            lbl_address.TextAlign = ContentAlignment.MiddleRight;
             // 
             // lbl_phone
             // 
@@ -183,7 +208,6 @@
 
         private Label lb_co_Name;
         private Panel panel1;
-        private Label lbl_address;
         private Label lbl_phone;
         private Label lbl_emp_id;
         private Label lbl_emp_name;
@@ -192,5 +216,8 @@
         private TextBox txt_phone;
         private TextBox txt_emp_id;
         private TextBox txt_emp_name;
+        private Label lbl_address;
+        private Label lbl_type;
+        private TextBox txt_emp_type;
     }
 }
