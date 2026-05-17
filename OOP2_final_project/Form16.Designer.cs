@@ -101,6 +101,7 @@
             txt_emp_type.BorderStyle = BorderStyle.FixedSingle;
             txt_emp_type.Location = new Point(194, 223);
             txt_emp_type.Name = "txt_emp_type";
+            txt_emp_type.ReadOnly = true;
             txt_emp_type.Size = new Size(265, 27);
             txt_emp_type.TabIndex = 11;
             txt_emp_type.KeyDown += txt_emp_type_KeyDown;
@@ -198,6 +199,7 @@
             Name = "Form16";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Add Employee";
+            Load += Form16_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

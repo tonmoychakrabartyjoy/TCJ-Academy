@@ -25,27 +25,32 @@ namespace OOP2_final_project
 
         private void btn_add_fee_Click(object sender, EventArgs e)
         {
+            String code;
+            decimal course_fee;
+            if (txt_fee.Text == "" ||
+                    txt_code.Text == "")
+            {
+                MessageBox.Show("Please enter the course fee or course code.");
+                return;
+            }
+            else
+            {
+                code = txt_code.Text;
+                course_fee = decimal.Parse(txt_fee.Text);
+                MessageBox.Show($"Course fee for {code} has been set to {course_fee:C}.");
+
+                txt_code.Clear();
+                txt_fee.Clear();
+            }
             try
             {
-                if (txt_fee.Text == "" ||
-                    txt_code.Text == "")
-                {
-                    MessageBox.Show("Please enter the course fee.");
-                    return;
-                }
-                else
-                {
-                    string code = txt_code.Text;
-                    decimal course_fee = decimal.Parse(txt_fee.Text);
-                    MessageBox.Show($"Course fee for {code} has been set to {course_fee:C}.");
+                string query = $"UPDATE Course SET CourseFee = {course_fee} WHERE CourseCode = '{code}'";
+                Database.AddQuery(query);
 
-                    txt_code.Clear();
-                    txt_fee.Clear();
-                }
             }
-            catch (FormatException)
+            catch (Exception ex)
             {
-                MessageBox.Show("input valid fee");
+                MessageBox.Show(ex.Message);
             }
         }
 
