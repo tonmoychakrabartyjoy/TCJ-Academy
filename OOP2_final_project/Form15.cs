@@ -26,8 +26,20 @@ namespace OOP2_final_project
 
         private void lbl_course_list_Click(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM course";
-            Database.showData(query, dgvResult);
+            dgvResult.Refresh();
+        }
+
+        private void Form15_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                var query = "SELECT CourseCode, CourseSubject, CourseDay, CourseFee FROM Course";
+                dgvResult.DataSource = Database.GetData(query);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

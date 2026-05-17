@@ -16,6 +16,7 @@ namespace OOP2_final_project
             InitializeComponent();
 
             txt_emp_id.Text = "Auto generated";
+            txt_emp_type.Text = "Employee";
         }
 
 
@@ -60,11 +61,12 @@ namespace OOP2_final_project
                 string emp_name = txt_emp_name.Text;
                 string emp_phone = txt_phone.Text;
                 string emp_address = txt_address.Text;
-                string emp_type = txt_emp_type.Text;
+                string emp_type = "Employee";
+
 
                 try
                 {
-                    string queryEmp = "INSERT INTO Users (UserName, Phone, Address) VALUES ('" + emp_name + "', '" + emp_phone + "' , '"+emp_address+"'); SELECT SCOPE_IDENTITY();";
+                    string queryEmp = "INSERT INTO Users (UserName, Phone, Address) VALUES ('" + emp_name + "', '" + emp_phone + "' , '" + emp_address + "'); SELECT SCOPE_IDENTITY();";
 
 
                     int User_id = Convert.ToInt32(Database.GetValue(queryEmp));
@@ -125,6 +127,10 @@ namespace OOP2_final_project
                 btn_add_emp_Click(sender, e);
             }
         }
-        
+
+        private void Form16_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

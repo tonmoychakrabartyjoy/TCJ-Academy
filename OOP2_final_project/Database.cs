@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using Microsoft.Data.SqlClient;
+using System.Data.SqlClient;
 using System.Text;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Runtime.CompilerServices;
@@ -10,7 +11,7 @@ namespace OOP2_final_project
 {
     public class Database
     {
-        public static SqlConnection con = new SqlConnection(@"Data Source = Tonmoy\SQLEXPRESS; Initial Catalog = TCJ_Academy; Integrated Security = True; TrustServerCertificate=True;");
+        public static SqlConnection con = new SqlConnection(@"Data Source=TONMOY\SQLEXPRESS;Initial Catalog=TCJ_Academy;Integrated Security=True; TrustServerCertificate=True;");
 
 
         // Tonmoy 
@@ -33,17 +34,27 @@ namespace OOP2_final_project
             return result;
         }
 
-        public static void showData(string query, DataGridView dataGridView)
+        public static DataTable GetData(string query)
         {
             con.Open();
-            SqlDataAdapter adp = new SqlDataAdapter(query, con);
-            DataSet Set = new DataSet();
-            adp.Fill(Set);
+            DataTable dt = new DataTable();
 
-            DataTable dt = Set.Tables[0];
-            dataGridView.DataSource = dt;
-            dataGridView.Refresh();
-            con.Close();
+            try
+            {
+                SqlDataAdapter adp = new SqlDataAdapter(query, con);
+                adp.Fill(dt);
+
+                
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally 
+            { 
+                con.Close(); 
+            }
+            return dt;
         }
 
         // tonmoy

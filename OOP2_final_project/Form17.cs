@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace OOP2_final_project
             InitializeComponent();
         }
 
+        public static SqlConnection con = new SqlConnection(@"Data Source=TONMOY\SQLEXPRESS;Initial Catalog=TCJ_Academy;Integrated Security=True;TrustServerCertificate=True;");
+
         private void lb_co_Name_Click(object sender, EventArgs e)
         {
             Form6 home = new Form6();
@@ -25,7 +28,28 @@ namespace OOP2_final_project
 
         private void Form17_Load(object sender, EventArgs e)
         {
-            Database.showData("SELECT * FROM Users", dgv_emp_table);
+            dgv_emp_table.AutoGenerateColumns = false;
+
+            try
+            {
+                
+                var query = "SELECT U.UserId, U.UserName, U.Phone, U.Address FROM Users U, UserType T where U.UserId = T.UserId";
+
+
+                dgv_emp_table.DataSource = Database.GetData(query);
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void lbl_emp_list_Click(object sender, EventArgs e)
+        {
+            dgv_emp_table.Refresh();
         }
     }
 }
