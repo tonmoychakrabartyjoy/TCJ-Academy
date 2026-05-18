@@ -26,7 +26,7 @@ namespace OOP2_final_project
 
         private void lbl_course_list_Click(object sender, EventArgs e)
         {
-            dgvResult.Refresh();
+            Form15_Load(sender, e);
         }
 
         private void Form15_Load(object sender, EventArgs e)
@@ -34,7 +34,16 @@ namespace OOP2_final_project
             try
             {
                 var query = "SELECT CourseCode, CourseSubject, CourseDay, CourseFee FROM Course";
-                dgvResult.DataSource = Database.GetData(query);
+
+                var result = Database.GetQueryData(query);
+
+                if (result.HasError)
+                {
+                    MessageBox.Show(result.Message);
+                    return;
+                }
+
+                dgvResult.DataSource = result.Data;
             }
             catch (Exception ex)
             {

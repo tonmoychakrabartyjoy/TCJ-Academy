@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Text;
 using System.Windows.Forms;
 using static System.Collections.Specialized.BitVector32;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace OOP2_final_project
 {
@@ -40,6 +42,7 @@ namespace OOP2_final_project
 
         // End of extra part
 
+
         private void lb_co_Name_Click(object sender, EventArgs e)
         {
             Form6 home = new Form6();
@@ -51,47 +54,58 @@ namespace OOP2_final_project
         private void btn_add_emp_Click(object sender, EventArgs e)
         {
             if (txt_emp_name.Text == "" ||
-                    txt_phone.Text == "" ||
-                    txt_address.Text == "")
+                txt_phone.Text == "" ||
+                txt_address.Text == "")
             {
                 MessageBox.Show("Please fill all the fields.");
+                return;
             }
-            else
+
+            string emp_name = txt_emp_name.Text;
+            string emp_phone = txt_phone.Text;
+            string emp_address = txt_address.Text;
+            string emp_type = "Employee";
+
+            try
             {
-                string emp_name = txt_emp_name.Text;
-                string emp_phone = txt_phone.Text;
-                string emp_address = txt_address.Text;
-                string emp_type = "Employee";
+                // 🔹 Insert into Users + get ID
+                string queryEmp = "INSERT INTO Users (UserName, Phone, Address) VALUES ('" + emp_name + "', '" + emp_phone + "', '" + emp_address + "'); SELECT SCOPE_IDENTITY(); ";
+        
+            var res1 = Database.ExecuteScalarQuery(queryEmp);
 
-
-                try
+                if (res1.HasError)
                 {
-                    string queryEmp = "INSERT INTO Users (UserName, Phone, Address) VALUES ('" + emp_name + "', '" + emp_phone + "' , '" + emp_address + "'); SELECT SCOPE_IDENTITY();";
-
-
-                    int User_id = Convert.ToInt32(Database.GetValue(queryEmp));
-
-
-                    string queryType = "INSERT INTO UserType (UserId,UserType) VALUES ('" + User_id + "', '" + emp_type + "')";
-                    Database.AddQuery(queryType);
-
-                    MessageBox.Show("Employee added successfully.");
+                    MessageBox.Show(res1.Message);
+                    return;
                 }
 
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
+                int userId = Convert.ToInt32(res1.Data.Rows[0][0]);
 
+                // 🔹 Insert into UserType
+                string queryType = "INSERT INTO UserType (UserId, UserType) VALUES ('" + userId + "', '" + emp_type + "')";
+
+                var res2 = Database.ExecuteNonResultQuery(queryType);
+
+                if (res2.HasError)
+                {
+                    MessageBox.Show(res2.Message);
+                    return;
                 }
 
-                txt_phone.Clear();
-                txt_emp_name.Clear();
-                txt_address.Clear();
-                txt_emp_id.Clear();
-                txt_address.Clear();
-                txt_emp_type.Clear();
+                MessageBox.Show("Employee added successfully.");
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            // Clear fields
+            txt_phone.Clear();
+            txt_emp_name.Clear();
+            txt_address.Clear();
         }
+
+
 
         private void txt_emp_name_KeyDown(object sender, KeyEventArgs e)
         {
@@ -100,8 +114,6 @@ namespace OOP2_final_project
                 txt_phone.Focus();
             }
         }
-
-
 
         private void txt_phone_KeyDown(object sender, KeyEventArgs e)
         {

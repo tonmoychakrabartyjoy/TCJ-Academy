@@ -34,6 +34,10 @@
             txt_course_fee = new TextBox();
             lbl_course_fee = new Label();
             panel2 = new Panel();
+            cbD = new CheckBox();
+            cbC = new CheckBox();
+            cbB = new CheckBox();
+            cbA = new CheckBox();
             lbl_sec = new Label();
             btn_add_course = new Button();
             txt_aca_year = new TextBox();
@@ -44,7 +48,6 @@
             lb_course_subject = new Label();
             lb_course_code = new Label();
             txt_course_code = new TextBox();
-            com_section = new ComboBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -105,12 +108,55 @@
             // panel2
             // 
             panel2.BackColor = Color.AliceBlue;
-            panel2.Controls.Add(com_section);
+            panel2.Controls.Add(cbD);
+            panel2.Controls.Add(cbC);
+            panel2.Controls.Add(cbB);
+            panel2.Controls.Add(cbA);
             panel2.Controls.Add(lbl_sec);
             panel2.Location = new Point(531, 33);
             panel2.Name = "panel2";
             panel2.Size = new Size(146, 211);
             panel2.TabIndex = 33;
+            // 
+            // cbD
+            // 
+            cbD.AutoSize = true;
+            cbD.Location = new Point(20, 157);
+            cbD.Name = "cbD";
+            cbD.Size = new Size(42, 24);
+            cbD.TabIndex = 35;
+            cbD.Text = "D";
+            cbD.UseVisualStyleBackColor = true;
+            // 
+            // cbC
+            // 
+            cbC.AutoSize = true;
+            cbC.Location = new Point(19, 113);
+            cbC.Name = "cbC";
+            cbC.Size = new Size(40, 24);
+            cbC.TabIndex = 34;
+            cbC.Text = "C";
+            cbC.UseVisualStyleBackColor = true;
+            // 
+            // cbB
+            // 
+            cbB.AutoSize = true;
+            cbB.Location = new Point(20, 73);
+            cbB.Name = "cbB";
+            cbB.Size = new Size(40, 24);
+            cbB.TabIndex = 33;
+            cbB.Text = "B";
+            cbB.UseVisualStyleBackColor = true;
+            // 
+            // cbA
+            // 
+            cbA.AutoSize = true;
+            cbA.Location = new Point(20, 34);
+            cbA.Name = "cbA";
+            cbA.Size = new Size(41, 24);
+            cbA.TabIndex = 32;
+            cbA.Text = "A";
+            cbA.UseVisualStyleBackColor = true;
             // 
             // lbl_sec
             // 
@@ -204,15 +250,6 @@
             txt_course_code.Size = new Size(376, 27);
             txt_course_code.TabIndex = 23;
             // 
-            // com_section
-            // 
-            com_section.FormattingEnabled = true;
-            com_section.Items.AddRange(new object[] { "A", "B", "C", "D", "E" });
-            com_section.Location = new Point(6, 33);
-            com_section.Name = "com_section";
-            com_section.Size = new Size(133, 28);
-            com_section.TabIndex = 32;
-            // 
             // Form7
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -251,6 +288,9 @@
         private TextBox txt_course_code;
         private TextBox txt_course_fee;
         private Label lbl_course_fee;
-        private ComboBox com_section;
+        private CheckBox cbC;
+        private CheckBox cbB;
+        private CheckBox cbA;
+        private CheckBox cbD;
     }
 }

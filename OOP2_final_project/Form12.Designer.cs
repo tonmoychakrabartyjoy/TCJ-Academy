@@ -45,6 +45,10 @@
             lbl_add_course = new Label();
             txt_pay_id = new TextBox();
             lbl_phone = new Label();
+            cbD = new CheckBox();
+            cbC = new CheckBox();
+            cbB = new CheckBox();
+            cbA = new CheckBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -86,6 +90,10 @@
             // panel2
             // 
             panel2.BackColor = Color.Azure;
+            panel2.Controls.Add(cbD);
+            panel2.Controls.Add(cbC);
+            panel2.Controls.Add(cbB);
+            panel2.Controls.Add(cbA);
             panel2.Controls.Add(lbl_sec);
             panel2.Location = new Point(400, 28);
             panel2.Name = "panel2";
@@ -214,6 +222,46 @@
             lbl_phone.TabIndex = 41;
             lbl_phone.Text = "Pay id";
             // 
+            // cbD
+            // 
+            cbD.AutoSize = true;
+            cbD.Location = new Point(51, 173);
+            cbD.Name = "cbD";
+            cbD.Size = new Size(42, 24);
+            cbD.TabIndex = 58;
+            cbD.Text = "D";
+            cbD.UseVisualStyleBackColor = true;
+            // 
+            // cbC
+            // 
+            cbC.AutoSize = true;
+            cbC.Location = new Point(50, 129);
+            cbC.Name = "cbC";
+            cbC.Size = new Size(40, 24);
+            cbC.TabIndex = 57;
+            cbC.Text = "C";
+            cbC.UseVisualStyleBackColor = true;
+            // 
+            // cbB
+            // 
+            cbB.AutoSize = true;
+            cbB.Location = new Point(51, 89);
+            cbB.Name = "cbB";
+            cbB.Size = new Size(40, 24);
+            cbB.TabIndex = 56;
+            cbB.Text = "B";
+            cbB.UseVisualStyleBackColor = true;
+            // 
+            // cbA
+            // 
+            cbA.AutoSize = true;
+            cbA.Location = new Point(51, 50);
+            cbA.Name = "cbA";
+            cbA.Size = new Size(41, 24);
+            cbA.TabIndex = 55;
+            cbA.Text = "A";
+            cbA.UseVisualStyleBackColor = true;
+            // 
             // Form12
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -254,5 +302,9 @@
         private Label lbl_add_course;
         private TextBox txt_pay_id;
         private Label lbl_phone;
+        private CheckBox cbD;
+        private CheckBox cbC;
+        private CheckBox cbB;
+        private CheckBox cbA;
     }
 }

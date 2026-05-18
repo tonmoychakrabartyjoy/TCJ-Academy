@@ -32,13 +32,17 @@ namespace OOP2_final_project
 
             try
             {
-                
-                var query = "SELECT U.UserId, U.UserName, U.Phone, U.Address FROM Users U, UserType T where U.UserId = T.UserId";
+                var query = "SELECT U.UserId, U.UserName, U.Phone, U.Address FROM Users U JOIN UserType T ON U.UserId = T.UserId WHERE T.UserType = 'Employee'";
 
+                var result = Database.GetQueryData(query);
 
-                dgv_emp_table.DataSource = Database.GetData(query);
+                if (result.HasError)
+                {
+                    MessageBox.Show(result.Message);
+                    return;
+                }
 
-
+                dgv_emp_table.DataSource = result.Data;
             }
             catch (Exception ex)
             {
@@ -49,7 +53,7 @@ namespace OOP2_final_project
 
         private void lbl_emp_list_Click(object sender, EventArgs e)
         {
-            dgv_emp_table.Refresh();
+            Form17_Load(sender, e);
         }
     }
 }
