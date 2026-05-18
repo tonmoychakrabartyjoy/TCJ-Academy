@@ -29,6 +29,13 @@ namespace OOP2_final_project
             string exam_id = txt_exam_id.Text;
             string user_id = txt_user_id.Text;
             int mark;
+
+            if (exam_id == "" || user_id == "")
+            {
+                MessageBox.Show("Please fill all fields.");
+                return;
+            }
+
             if (!int.TryParse(txt_mark.Text, out mark))
             {
                 MessageBox.Show("Input valid mark");
@@ -36,16 +43,19 @@ namespace OOP2_final_project
                 return;
             }
 
-
             try
             {
-                string upload_result = "INSERT INTO ExamResult VALUES('" + exam_id + "','" + user_id + "'," + mark + ")";
+                string upload_result = "INSERT INTO ExamResult (ExamId, UserId, Mark) VALUES ('" + exam_id + "', '" + user_id + "', " + mark + ")";
 
+                var result = Database.ExecuteNonResultQuery(upload_result);
 
-                Database.AddQuery(upload_result);
+                if (result.HasError)
+                {
+                    MessageBox.Show(result.Message);
+                    return;
+                }
 
-                
-                MessageBox.Show("saved");
+                MessageBox.Show("Result saved successfully.");
 
                 txt_exam_id.Clear();
                 txt_user_id.Clear();
