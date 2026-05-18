@@ -52,12 +52,7 @@ namespace OOP2_final_project
             return result;
         }
 
-        // tonmoy
 
-
-
-
-        // jannat
 
         public static Result GetQueryData(string query)
         {
@@ -106,6 +101,6 @@ namespace OOP2_final_project
             return result;
         }
 
-        // jannat
+        // Tonmoy
     }
 }

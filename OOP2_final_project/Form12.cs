@@ -26,25 +26,34 @@ namespace OOP2_final_project
         private void btn_update_Click(object sender, EventArgs e)
         {
 
+            txt_student_id.Focus();
+            string id = txt_student_id.Text;
+            string course_code = txt_course_code.Text;
+            string month = txt_month.Text;
+            string pay_id = txt_pay_id.Text;
+            int amount = int.Parse(txt_amount.Text);
+            List<string> sections = new List<string>();
+
+            if (cbA.Checked) sections.Add("A");
+            if (cbB.Checked) sections.Add("B");
+            if (cbC.Checked) sections.Add("C");
+            if (cbD.Checked) sections.Add("D");
+
+            string section = string.Join(",", sections);
+            if (string.IsNullOrWhiteSpace(txt_student_id.Text) ||
+                string.IsNullOrWhiteSpace(txt_course_code.Text) ||
+                string.IsNullOrWhiteSpace(txt_month.Text) ||
+                string.IsNullOrWhiteSpace(txt_pay_id.Text) ||
+                string.IsNullOrWhiteSpace(txt_amount.Text))
+            {
+                MessageBox.Show("Please fill all fields!");
+                return;
+            }
+
             try
             {
-                if (string.IsNullOrWhiteSpace(txt_student_id.Text) ||
-                    string.IsNullOrWhiteSpace(txt_course_code.Text) ||
-                    string.IsNullOrWhiteSpace(txt_month.Text) ||
-                    string.IsNullOrWhiteSpace(txt_pay_id.Text) ||
-                    string.IsNullOrWhiteSpace(txt_amount.Text))
-                {
-                    MessageBox.Show("Please fill all fields!");
-                    return;
-                }
-
-                txt_student_id.Focus();
-                string id = txt_student_id.Text;
-                string course_code = txt_course_code.Text;
-                string month = txt_month.Text;
-                string pay_id = txt_pay_id.Text;
-                string section;
-                int amount = int.Parse(txt_amount.Text);
+               
+                
                 MessageBox.Show("Course added successfully");
             }
             catch (FormatException)
