@@ -19,7 +19,7 @@ namespace OOP2_final_project
 
         private void txt_course_fee_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
 
@@ -27,8 +27,6 @@ namespace OOP2_final_project
         {
             string subject = txt_course_subject.Text;
             string course_day = txt_course_day.Text;
-            string aca_year = txt_aca_year.Text;
-            
 
             List<string> sections = new List<string>();
 
@@ -37,9 +35,7 @@ namespace OOP2_final_project
             if (cbC.Checked) sections.Add("C");
             if (cbD.Checked) sections.Add("D");
 
-            string section = string.Join(",", sections);
-
-            if (subject == "" || course_day == "" || aca_year == "" || section == "")
+            if (subject == "" || course_day == "" || sections.Count == 0)
             {
                 MessageBox.Show("Please fill all fields.");
                 return;
@@ -47,8 +43,7 @@ namespace OOP2_final_project
 
             try
             {
-               
-                string queryCourse = "INSERT INTO Course (CourseSubject, CourseDay) VALUES ('" + subject + "', '" + course_day + @"'); SELECT SCOPE_IDENTITY();";
+                string queryCourse = "INSERT INTO Course (courseSubject, courseDay) " + "VALUES ('" + subject + "', '" + course_day + "'); " + "SELECT SCOPE_IDENTITY();";
 
                 var res1 = Database.ExecuteScalarQuery(queryCourse);
 
@@ -61,23 +56,36 @@ namespace OOP2_final_project
                 int course_code = Convert.ToInt32(res1.Data.Rows[0][0]);
 
                 
-                string queryAca = "INSERT INTO AcademicYear (AcademicYear, SectionName, CourseCode) VALUES ('" + aca_year + "', '" + section + "', '" + course_code + "')";
-
-                var res2 = Database.ExecuteNonResultQuery(queryAca);
-
-                if (res2.HasError)
+                foreach (string sec in sections)
                 {
-                    MessageBox.Show(res2.Message);
-                    return;
+                    string querySec =
+                        "SELECT section_id FROM Section WHERE SectionName = '" + sec + "'";
+
+                    var resSec = Database.ExecuteScalarQuery(querySec);
+
+                    if (resSec.HasError)
+                    {
+                        MessageBox.Show(resSec.Message);
+                        return;
+                    }
+
+                    int section_id = Convert.ToInt32(resSec.Data.Rows[0][0]);
+
+                    string queryMap = "INSERT INTO Section_Course (section_id, course_code) VALUES (" + section_id + ", " + course_code + ")";
+
+                    var resMap = Database.ExecuteNonResultQuery(queryMap);
+
+                    if (resMap.HasError)
+                    {
+                        MessageBox.Show(resMap.Message);
+                        return;
+                    }
                 }
 
                 MessageBox.Show("Course added successfully.");
 
-                
                 txt_course_subject.Clear();
                 txt_course_day.Clear();
-                txt_aca_year.Clear();
-                
             }
             catch (Exception ex)
             {
@@ -90,6 +98,11 @@ namespace OOP2_final_project
             home.Show();
 
             this.Hide();
+        }
+
+        private void Form7_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

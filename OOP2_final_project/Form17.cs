@@ -32,7 +32,12 @@ namespace OOP2_final_project
 
             try
             {
-                var query = "SELECT U.UserId, U.UserName, U.Phone, U.Address FROM Users U JOIN UserType T ON U.UserId = T.UserId WHERE T.UserType = 'Employee'";
+                var query = @"
+            SELECT U.UserId, U.UserName, U.Phone, U.Address
+            FROM Users U, UserTypeRole UR, UserType UT
+            WHERE U.UserId = UR.UserId
+            AND UR.UserTypeId = UT.UserTypeId
+            AND UT.UserType = 'Employee'";
 
                 var result = Database.GetQueryData(query);
 
@@ -49,7 +54,6 @@ namespace OOP2_final_project
                 MessageBox.Show(ex.Message);
             }
         }
-
 
         private void lbl_emp_list_Click(object sender, EventArgs e)
         {
