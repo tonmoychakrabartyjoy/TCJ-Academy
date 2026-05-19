@@ -13,6 +13,8 @@ namespace OOP2_final_project
         public Form8()
         {
             InitializeComponent();
+            txt_id.Text = "Auto-generated";
+            txt_type.Text = "Student";
         }
 
         private void lb_address_Click(object sender, EventArgs e)
@@ -22,11 +24,11 @@ namespace OOP2_final_project
 
         private void btn_add_student_Click(object sender, EventArgs e)
         {
-            string id = txt_id.Text;
+            
             string name = txt_name.Text;
             string address = txt_address.Text;
             string phone = txt_phone.Text;
-            string role = txt_type.Text;
+            
 
             MessageBox.Show("Student added successfull");
         }

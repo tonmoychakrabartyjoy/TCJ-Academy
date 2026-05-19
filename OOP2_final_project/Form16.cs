@@ -64,14 +64,16 @@ namespace OOP2_final_project
             string emp_name = txt_emp_name.Text;
             string emp_phone = txt_phone.Text;
             string emp_address = txt_address.Text;
-            string emp_type = "Employee";
 
             try
             {
-                // 🔹 Insert into Users + get ID
-                string queryEmp = "INSERT INTO Users (UserName, Phone, Address) VALUES ('" + emp_name + "', '" + emp_phone + "', '" + emp_address + "'); SELECT SCOPE_IDENTITY(); ";
-        
-            var res1 = Database.ExecuteScalarQuery(queryEmp);
+                
+                string queryEmp =
+                    "INSERT INTO Users (UserName, Phone, Address) VALUES " +
+                    "('" + emp_name + "', '" + emp_phone + "', '" + emp_address + "'); " +
+                    "SELECT SCOPE_IDENTITY();";
+
+                var res1 = Database.ExecuteScalarQuery(queryEmp);
 
                 if (res1.HasError)
                 {
@@ -81,10 +83,15 @@ namespace OOP2_final_project
 
                 int userId = Convert.ToInt32(res1.Data.Rows[0][0]);
 
-                // 🔹 Insert into UserType
-                string queryType = "INSERT INTO UserType (UserId, UserType) VALUES ('" + userId + "', '" + emp_type + "')";
+                
+                int typeId = 1;
 
-                var res2 = Database.ExecuteNonResultQuery(queryType);
+                
+                string queryRole =
+                    "INSERT INTO UserTypeRole (userId, userTypeId) VALUES (" +
+                    userId + ", " + typeId + ")";
+
+                var res2 = Database.ExecuteNonResultQuery(queryRole);
 
                 if (res2.HasError)
                 {
@@ -99,9 +106,8 @@ namespace OOP2_final_project
                 MessageBox.Show(ex.Message);
             }
 
-            // Clear fields
-            txt_phone.Clear();
             txt_emp_name.Clear();
+            txt_phone.Clear();
             txt_address.Clear();
         }
 

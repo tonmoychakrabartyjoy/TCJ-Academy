@@ -123,6 +123,7 @@
             Controls.Add(lbl_student);
             Controls.Add(dataGridView1);
             DoubleBuffered = true;
+            MaximumSize = new Size(1034, 584);
             Name = "Form10";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Student list";
