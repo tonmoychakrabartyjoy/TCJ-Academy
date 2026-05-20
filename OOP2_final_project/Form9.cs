@@ -21,16 +21,27 @@ namespace OOP2_final_project
             string name = txt_name.Text;
             string phone = txt_phone.Text;
             string address = txt_address.Text;
+            string emp_email = txtEmail.Text;
+            string emp_gender;
+
+            if (rbMale.Checked)
+            {
+                emp_gender = "Male";
+            }
+            else
+            {
+                emp_gender = "Female";
+            }
 
             try
             {
 
-                string queryT =
-                    "INSERT INTO Users (UserName, Phone, Address) VALUES " +
-                    "('" + name + "', '" + phone + "', '" + address + "'); " +
+                string queryEmp =
+                    "INSERT INTO Users (UserName, Phone, Address, Email, Gender) VALUES " +
+                    "('" + name + "', '" + phone + "', '" + address + "', '" + emp_email + "', '" + emp_gender + "'); " +
                     "SELECT SCOPE_IDENTITY();";
 
-                var res1 = Database.ExecuteScalarQuery(queryT);
+                var res1 = Database.ExecuteScalarQuery(queryEmp);
 
                 if (res1.HasError)
                 {
@@ -66,6 +77,8 @@ namespace OOP2_final_project
             txt_name.Clear();
             txt_phone.Clear();
             txt_address.Clear();
+            txtEmail.Clear();
+
         }
 
         private void lb_co_Name_Click(object sender, EventArgs e)
