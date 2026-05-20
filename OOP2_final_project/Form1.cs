@@ -17,32 +17,54 @@ namespace OOP2_final_project
 
         private void btn_login_Click(object sender, EventArgs e)
         {
+            string name = txt_name.Text;
+            string id = txt_id.Text;
+            string pass = txt_pass.Text;
 
-            name = txt_name.Text;
-            id = txt_id.Text;
-            pass = txt_pass.Text;
-
-           
-
-            if (name == "Tonmoy" && id == "2000-0002" && pass == "1234")
+            if (pass != "1234")
             {
-                Form3 emp_page = new Form3();
-                emp_page.Show();
-
-                this.Hide();
+                MessageBox.Show("Invalid Password!");
+                return;
             }
 
-            else if(name == "Joy" && id == "1000-0001" && pass == "1234")
-            {
-                Form6 admin_page = new Form6();
-                admin_page.Show();
+            string query = "SELECT U.UserId, U.UserName, R.UserTypeId " +
+                           "FROM Users U, UserTypeRole R " +
+                           "WHERE U.UserId = R.UserId " +
+                           "AND U.UserName = '" + name + "' " +
+                           "AND U.UserId = '" + id + "'";
 
-                this.Hide();
+            var result = Database.GetQueryData(query);
+
+            if (result.HasError)
+            {
+                MessageBox.Show(result.Message);
+                return;
             }
 
+            if (result.Data.Rows.Count == 1)
+            {
+                int userTypeId = Convert.ToInt32(result.Data.Rows[0]["UserTypeId"]);
+                Case.UserName = name;
+               
+
+                if (userTypeId == 1)
+                {
+                    Form3 emp_page = new Form3();
+                    emp_page.Show();
+                    this.Hide();
+                }
+
+                
+                else if (userTypeId == 2)
+                {
+                    Form6 admin_page = new Form6();
+                    admin_page.Show();
+                    this.Hide();
+                }
+            }
             else
             {
-                MessageBox.Show("Invalid Id or Password!");
+                MessageBox.Show("Invalid Username or Id!");
             }
         }
 

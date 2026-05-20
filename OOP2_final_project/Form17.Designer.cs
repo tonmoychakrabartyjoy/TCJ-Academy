@@ -37,6 +37,9 @@
             UserName = new DataGridViewTextBoxColumn();
             Phone = new DataGridViewTextBoxColumn();
             Address = new DataGridViewTextBoxColumn();
+            btnSearch = new Button();
+            btnDelete = new Button();
+            txtSearch = new TextBox();
             ((System.ComponentModel.ISupportInitialize)databaseBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgv_emp_table).BeginInit();
             SuspendLayout();
@@ -82,8 +85,10 @@
             dgv_emp_table.Name = "dgv_emp_table";
             dgv_emp_table.ReadOnly = true;
             dgv_emp_table.RowHeadersWidth = 51;
+            dgv_emp_table.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv_emp_table.Size = new Size(905, 355);
             dgv_emp_table.TabIndex = 18;
+            dgv_emp_table.CellDoubleClick += dgv_emp_table_CellDoubleClick;
             // 
             // UserId
             // 
@@ -116,13 +121,41 @@
             // 
             // Address
             // 
+            Address.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Address.DataPropertyName = "Address";
             Address.FillWeight = 290F;
             Address.HeaderText = "Address";
             Address.MinimumWidth = 6;
             Address.Name = "Address";
             Address.ReadOnly = true;
-            Address.Width = 300;
+            // 
+            // btnSearch
+            // 
+            btnSearch.Location = new Point(729, 89);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(94, 29);
+            btnSearch.TabIndex = 19;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Location = new Point(829, 89);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(94, 29);
+            btnDelete.TabIndex = 20;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // txtSearch
+            // 
+            txtSearch.BorderStyle = BorderStyle.FixedSingle;
+            txtSearch.Location = new Point(546, 91);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(177, 27);
+            txtSearch.TabIndex = 21;
             // 
             // Form17
             // 
@@ -131,11 +164,15 @@
             BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1016, 537);
+            Controls.Add(txtSearch);
+            Controls.Add(btnDelete);
+            Controls.Add(btnSearch);
             Controls.Add(dgv_emp_table);
             Controls.Add(lbl_emp_list);
             Controls.Add(lb_co_Name);
             DoubleBuffered = true;
             Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MaximumSize = new Size(1034, 584);
             Name = "Form17";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Employee list";
@@ -156,5 +193,8 @@
         private DataGridViewTextBoxColumn UserName;
         private DataGridViewTextBoxColumn Phone;
         private DataGridViewTextBoxColumn Address;
+        private Button btnSearch;
+        private Button btnDelete;
+        private TextBox txtSearch;
     }
 }

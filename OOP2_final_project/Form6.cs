@@ -14,9 +14,11 @@ namespace OOP2_final_project
         public Form6()
         {
             InitializeComponent();
+            lblName.Text = Case.UserName;
+            
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btn_add_course_fee_Click(object sender, EventArgs e)
         {
             Form18 add_course_fee = new Form18();
             add_course_fee.Show();

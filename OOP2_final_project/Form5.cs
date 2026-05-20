@@ -1,5 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +15,13 @@ namespace OOP2_final_project
             InitializeComponent();
         }
 
+        private void resetForm()
+        {
+            txt_exam_id.Text = "";
+            txt_user_id.Text = "";
+            txt_mark.Text = "";
+        }
+
         private void lb_co_Name_Click(object sender, EventArgs e)
         {
             Form3 home = new Form3();
@@ -26,28 +32,28 @@ namespace OOP2_final_project
 
         private void btn_add_result_Click(object sender, EventArgs e)
         {
-            string exam_id = txt_exam_id.Text;
-            string user_id = txt_user_id.Text;
-            int mark;
-
-            if (exam_id == "" || user_id == "")
-            {
-                MessageBox.Show("Please fill all fields.");
-                return;
-            }
-
-            if (!int.TryParse(txt_mark.Text, out mark))
-            {
-                MessageBox.Show("Input valid mark");
-                txt_mark.Focus();
-                return;
-            }
-
             try
             {
-                string upload_result = "INSERT INTO ExamResult (ExamId, UserId, Mark) VALUES ('" + exam_id + "', '" + user_id + "', " + mark + ")";
+                string exam_id = txt_exam_id.Text;
+                string user_id = txt_user_id.Text;
+                int mark;
 
-                var result = Database.ExecuteNonResultQuery(upload_result);
+                if (string.IsNullOrWhiteSpace(exam_id) || string.IsNullOrWhiteSpace(user_id) || string.IsNullOrWhiteSpace(txt_mark.Text))
+                {
+                    MessageBox.Show("Please fill in all fields.");
+                    return;
+                }
+
+                if (!int.TryParse(txt_mark.Text, out mark))
+                {
+                    MessageBox.Show("Input valid mark");
+                    txt_mark.Focus();
+                    return;
+                }
+
+                var query = "INSERT INTO dbo.ExamResult (ExamId, UserId, Mark) VALUES('" + exam_id + "', '" + user_id + "', " + mark + ")";
+
+                var result = Database.ExecuteNonResultQuery(query);
 
                 if (result.HasError)
                 {
@@ -55,16 +61,24 @@ namespace OOP2_final_project
                     return;
                 }
 
-                MessageBox.Show("Result saved successfully.");
+                MessageBox.Show("Exam result added successfully.");
 
-                txt_exam_id.Clear();
-                txt_user_id.Clear();
-                txt_mark.Clear();
+                this.resetForm();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void lbl_update_mark_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

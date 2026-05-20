@@ -158,6 +158,7 @@
             Controls.Add(lb_co_Name);
             DoubleBuffered = true;
             Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MaximumSize = new Size(1034, 584);
             Name = "Form18";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Add course fee";

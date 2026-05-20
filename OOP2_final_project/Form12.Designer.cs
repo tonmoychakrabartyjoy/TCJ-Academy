@@ -32,6 +32,12 @@
             lb_co_Name = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
+            txtAcaY = new TextBox();
+            lblAcaY = new Label();
+            rbD = new RadioButton();
+            rbC = new RadioButton();
+            rbB = new RadioButton();
+            rbA = new RadioButton();
             lbl_sec = new Label();
             lbl_month = new Label();
             txt_month = new TextBox();
@@ -45,10 +51,6 @@
             lbl_add_course = new Label();
             txt_pay_id = new TextBox();
             lbl_phone = new Label();
-            cbD = new CheckBox();
-            cbC = new CheckBox();
-            cbB = new CheckBox();
-            cbA = new CheckBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -90,15 +92,78 @@
             // panel2
             // 
             panel2.BackColor = Color.Azure;
-            panel2.Controls.Add(cbD);
-            panel2.Controls.Add(cbC);
-            panel2.Controls.Add(cbB);
-            panel2.Controls.Add(cbA);
+            panel2.Controls.Add(txtAcaY);
+            panel2.Controls.Add(lblAcaY);
+            panel2.Controls.Add(rbD);
+            panel2.Controls.Add(rbC);
+            panel2.Controls.Add(rbB);
+            panel2.Controls.Add(rbA);
             panel2.Controls.Add(lbl_sec);
             panel2.Location = new Point(400, 28);
             panel2.Name = "panel2";
             panel2.Size = new Size(250, 271);
             panel2.TabIndex = 29;
+            // 
+            // txtAcaY
+            // 
+            txtAcaY.BorderStyle = BorderStyle.FixedSingle;
+            txtAcaY.Location = new Point(129, 222);
+            txtAcaY.Name = "txtAcaY";
+            txtAcaY.Size = new Size(118, 27);
+            txtAcaY.TabIndex = 60;
+            // 
+            // lblAcaY
+            // 
+            lblAcaY.AutoSize = true;
+            lblAcaY.Location = new Point(16, 224);
+            lblAcaY.Name = "lblAcaY";
+            lblAcaY.Size = new Size(107, 20);
+            lblAcaY.TabIndex = 59;
+            lblAcaY.Text = "Academic Year";
+            // 
+            // rbD
+            // 
+            rbD.AutoSize = true;
+            rbD.Location = new Point(58, 171);
+            rbD.Name = "rbD";
+            rbD.Size = new Size(41, 24);
+            rbD.TabIndex = 58;
+            rbD.TabStop = true;
+            rbD.Text = "D";
+            rbD.UseVisualStyleBackColor = true;
+            // 
+            // rbC
+            // 
+            rbC.AutoSize = true;
+            rbC.Location = new Point(58, 128);
+            rbC.Name = "rbC";
+            rbC.Size = new Size(39, 24);
+            rbC.TabIndex = 57;
+            rbC.TabStop = true;
+            rbC.Text = "C";
+            rbC.UseVisualStyleBackColor = true;
+            // 
+            // rbB
+            // 
+            rbB.AutoSize = true;
+            rbB.Location = new Point(58, 87);
+            rbB.Name = "rbB";
+            rbB.Size = new Size(39, 24);
+            rbB.TabIndex = 56;
+            rbB.TabStop = true;
+            rbB.Text = "B";
+            rbB.UseVisualStyleBackColor = true;
+            // 
+            // rbA
+            // 
+            rbA.AutoSize = true;
+            rbA.Location = new Point(58, 47);
+            rbA.Name = "rbA";
+            rbA.Size = new Size(40, 24);
+            rbA.TabIndex = 55;
+            rbA.TabStop = true;
+            rbA.Text = "A";
+            rbA.UseVisualStyleBackColor = true;
             // 
             // lbl_sec
             // 
@@ -222,46 +287,6 @@
             lbl_phone.TabIndex = 41;
             lbl_phone.Text = "Pay id";
             // 
-            // cbD
-            // 
-            cbD.AutoSize = true;
-            cbD.Location = new Point(51, 173);
-            cbD.Name = "cbD";
-            cbD.Size = new Size(42, 24);
-            cbD.TabIndex = 58;
-            cbD.Text = "D";
-            cbD.UseVisualStyleBackColor = true;
-            // 
-            // cbC
-            // 
-            cbC.AutoSize = true;
-            cbC.Location = new Point(50, 129);
-            cbC.Name = "cbC";
-            cbC.Size = new Size(40, 24);
-            cbC.TabIndex = 57;
-            cbC.Text = "C";
-            cbC.UseVisualStyleBackColor = true;
-            // 
-            // cbB
-            // 
-            cbB.AutoSize = true;
-            cbB.Location = new Point(51, 89);
-            cbB.Name = "cbB";
-            cbB.Size = new Size(40, 24);
-            cbB.TabIndex = 56;
-            cbB.Text = "B";
-            cbB.UseVisualStyleBackColor = true;
-            // 
-            // cbA
-            // 
-            cbA.AutoSize = true;
-            cbA.Location = new Point(51, 50);
-            cbA.Name = "cbA";
-            cbA.Size = new Size(41, 24);
-            cbA.TabIndex = 55;
-            cbA.Text = "A";
-            cbA.UseVisualStyleBackColor = true;
-            // 
             // Form12
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -273,6 +298,7 @@
             Controls.Add(panel1);
             Controls.Add(lb_co_Name);
             DoubleBuffered = true;
+            MaximumSize = new Size(1034, 584);
             Name = "Form12";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Update Student";
@@ -302,9 +328,11 @@
         private Label lbl_add_course;
         private TextBox txt_pay_id;
         private Label lbl_phone;
-        private CheckBox cbD;
-        private CheckBox cbC;
-        private CheckBox cbB;
-        private CheckBox cbA;
+        private RadioButton rbD;
+        private RadioButton rbC;
+        private RadioButton rbB;
+        private RadioButton rbA;
+        private TextBox txtAcaY;
+        private Label lblAcaY;
     }
 }

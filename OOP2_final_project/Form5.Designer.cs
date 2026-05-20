@@ -144,6 +144,7 @@
             lbl_update_mark.Size = new Size(175, 32);
             lbl_update_mark.TabIndex = 39;
             lbl_update_mark.Text = "Update Mrak";
+            lbl_update_mark.Click += lbl_update_mark_Click;
             // 
             // panel2
             // 
@@ -166,9 +167,11 @@
             Controls.Add(panel1);
             Controls.Add(lb_co_Name);
             DoubleBuffered = true;
+            MaximumSize = new Size(1034, 584);
             Name = "Form5";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Upload result";
+            Load += Form5_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
