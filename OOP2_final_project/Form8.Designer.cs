@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form8));
             lb_co_Name = new Label();
             panel1 = new Panel();
+            rbFemale = new RadioButton();
+            rbMale = new RadioButton();
+            txtEmail = new TextBox();
+            label1 = new Label();
             btn_add_student = new Button();
             txt_type = new TextBox();
             txt_address = new TextBox();
@@ -62,6 +66,10 @@
             // panel1
             // 
             panel1.BackColor = Color.AliceBlue;
+            panel1.Controls.Add(rbFemale);
+            panel1.Controls.Add(rbMale);
+            panel1.Controls.Add(txtEmail);
+            panel1.Controls.Add(label1);
             panel1.Controls.Add(btn_add_student);
             panel1.Controls.Add(txt_type);
             panel1.Controls.Add(txt_address);
@@ -75,13 +83,53 @@
             panel1.Controls.Add(lb_student_id);
             panel1.Location = new Point(221, 90);
             panel1.Name = "panel1";
-            panel1.Size = new Size(579, 318);
+            panel1.Size = new Size(579, 338);
             panel1.TabIndex = 18;
+            // 
+            // rbFemale
+            // 
+            rbFemale.AutoSize = true;
+            rbFemale.Location = new Point(298, 259);
+            rbFemale.Name = "rbFemale";
+            rbFemale.Size = new Size(78, 24);
+            rbFemale.TabIndex = 25;
+            rbFemale.TabStop = true;
+            rbFemale.Text = "Female";
+            rbFemale.UseVisualStyleBackColor = true;
+            // 
+            // rbMale
+            // 
+            rbMale.AutoSize = true;
+            rbMale.Location = new Point(227, 259);
+            rbMale.Name = "rbMale";
+            rbMale.Size = new Size(63, 24);
+            rbMale.TabIndex = 24;
+            rbMale.TabStop = true;
+            rbMale.Text = "Male";
+            rbMale.UseVisualStyleBackColor = true;
+            // 
+            // txtEmail
+            // 
+            txtEmail.BorderStyle = BorderStyle.FixedSingle;
+            txtEmail.Location = new Point(164, 226);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(320, 27);
+            txtEmail.TabIndex = 23;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(106, 228);
+            label1.Name = "label1";
+            label1.Size = new Size(46, 20);
+            label1.TabIndex = 22;
+            label1.Text = "Email";
+            label1.TextAlign = ContentAlignment.MiddleRight;
             // 
             // btn_add_student
             // 
             btn_add_student.Cursor = Cursors.Hand;
-            btn_add_student.Location = new Point(235, 244);
+            btn_add_student.Location = new Point(216, 295);
             btn_add_student.Name = "btn_add_student";
             btn_add_student.Size = new Size(162, 29);
             btn_add_student.TabIndex = 21;
@@ -185,6 +233,7 @@
             Controls.Add(panel1);
             Controls.Add(lb_co_Name);
             DoubleBuffered = true;
+            MaximumSize = new Size(1034, 584);
             Name = "Form8";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Add Student";
@@ -208,5 +257,9 @@
         private Label lb_phone;
         private Label lb_student_name;
         private Label lb_student_id;
+        private RadioButton rbFemale;
+        private RadioButton rbMale;
+        private TextBox txtEmail;
+        private Label label1;
     }
 }

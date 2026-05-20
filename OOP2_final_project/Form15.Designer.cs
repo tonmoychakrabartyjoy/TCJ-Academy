@@ -37,6 +37,9 @@
             CourseFee = new DataGridViewTextBoxColumn();
             lbl_course_list = new Label();
             databaseBindingSource = new BindingSource(components);
+            txtSearch = new TextBox();
+            btnDelete = new Button();
+            btnSearch = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvResult).BeginInit();
             ((System.ComponentModel.ISupportInitialize)databaseBindingSource).BeginInit();
             SuspendLayout();
@@ -61,12 +64,14 @@
             dgvResult.AllowUserToDeleteRows = false;
             dgvResult.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvResult.Columns.AddRange(new DataGridViewColumn[] { CourseCode, Subject, CourseDay, CourseFee });
-            dgvResult.Location = new Point(107, 119);
+            dgvResult.Location = new Point(107, 121);
             dgvResult.Name = "dgvResult";
             dgvResult.ReadOnly = true;
             dgvResult.RowHeadersWidth = 51;
-            dgvResult.Size = new Size(780, 390);
+            dgvResult.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvResult.Size = new Size(853, 390);
             dgvResult.TabIndex = 14;
+            dgvResult.CellDoubleClick += dgvResult_CellDoubleClick;
             // 
             // CourseCode
             // 
@@ -80,13 +85,13 @@
             // 
             // Subject
             // 
+            Subject.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Subject.DataPropertyName = "CourseSubject";
             Subject.FillWeight = 170F;
             Subject.HeaderText = "Subject";
             Subject.MinimumWidth = 6;
             Subject.Name = "Subject";
             Subject.ReadOnly = true;
-            Subject.Width = 175;
             // 
             // CourseDay
             // 
@@ -124,6 +129,34 @@
             // 
             databaseBindingSource.DataSource = typeof(Database);
             // 
+            // txtSearch
+            // 
+            txtSearch.BorderStyle = BorderStyle.FixedSingle;
+            txtSearch.Location = new Point(583, 68);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(177, 28);
+            txtSearch.TabIndex = 32;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Location = new Point(866, 66);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(94, 29);
+            btnDelete.TabIndex = 31;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // btnSearch
+            // 
+            btnSearch.Location = new Point(766, 66);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(94, 29);
+            btnSearch.TabIndex = 30;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
+            // 
             // Form15
             // 
             AutoScaleDimensions = new SizeF(10F, 20F);
@@ -131,12 +164,16 @@
             BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1016, 537);
+            Controls.Add(txtSearch);
+            Controls.Add(btnDelete);
+            Controls.Add(btnSearch);
             Controls.Add(lbl_course_list);
             Controls.Add(dgvResult);
             Controls.Add(lb_co_Name);
             DoubleBuffered = true;
             Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4, 3, 4, 3);
+            MaximumSize = new Size(1034, 584);
             Name = "Form15";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Course list";
@@ -157,5 +194,8 @@
         private DataGridViewTextBoxColumn Subject;
         private DataGridViewTextBoxColumn CourseDay;
         private DataGridViewTextBoxColumn CourseFee;
+        private TextBox txtSearch;
+        private Button btnDelete;
+        private Button btnSearch;
     }
 }

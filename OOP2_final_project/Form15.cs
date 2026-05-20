@@ -50,5 +50,58 @@ namespace OOP2_final_project
                 MessageBox.Show(ex.Message);
             }
         }
+
+        public static int selectedCourseCode;
+        private void dgvResult_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedCourseCode = int.Parse(dgvResult.Rows[e.RowIndex].Cells[0].Value.ToString());
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            int CourseCode = int.Parse(txtSearch.Text);
+
+            try
+            {
+                String querySearch = "SELECT CourseCode, CourseSubject, CourseDay, CourseFee FROM Course U WHERE U.CourseCode = " + CourseCode;
+
+                var result = Database.GetQueryData(querySearch);
+                if (result.HasError)
+                {
+                    MessageBox.Show(result.Message);
+                }
+                else
+                {
+                    dgvResult.DataSource = result.Data;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String queryDelete = "DELETE FROM Course WHERE CourseCode = " + selectedCourseCode;
+                var result = Database.ExecuteNonResultQuery(queryDelete);
+                if (result.HasError)
+                {
+                    MessageBox.Show(result.Message);
+                }
+                else
+                {
+                    MessageBox.Show("Course deleted successfully.");
+                    Form15_Load(sender, e);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

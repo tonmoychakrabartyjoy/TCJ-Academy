@@ -62,6 +62,8 @@
             panel4 = new Panel();
             panel6 = new Panel();
             lbl_dashboard = new Label();
+            lblName = new Label();
+            lblW = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
@@ -493,6 +495,27 @@
             lbl_dashboard.TabIndex = 0;
             lbl_dashboard.Text = "Dashboard";
             // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.BackColor = Color.Transparent;
+            lblName.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblName.Location = new Point(839, 18);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(0, 35);
+            lblName.TabIndex = 33;
+            // 
+            // lblW
+            // 
+            lblW.AutoSize = true;
+            lblW.BackColor = Color.Transparent;
+            lblW.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblW.Location = new Point(696, 18);
+            lblW.Name = "lblW";
+            lblW.Size = new Size(127, 35);
+            lblW.TabIndex = 32;
+            lblW.Text = "Welcome";
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -501,11 +524,14 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1016, 537);
+            Controls.Add(lblName);
+            Controls.Add(lblW);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel1);
             Controls.Add(panel2);
             DoubleBuffered = true;
+            MaximumSize = new Size(1034, 584);
             Name = "Form3";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Employee page";
@@ -532,6 +558,7 @@
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -569,5 +596,7 @@
         private PictureBox pictureBox12;
         private Button btn_show_result;
         private Button btn_logout;
+        private Label lblName;
+        private Label lblW;
     }
 }

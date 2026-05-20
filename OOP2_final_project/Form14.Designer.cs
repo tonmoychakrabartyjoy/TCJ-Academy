@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dgvR = new DataGridView();
             user_id = new DataGridViewTextBoxColumn();
             user_name = new DataGridViewTextBoxColumn();
             mark = new DataGridViewTextBoxColumn();
@@ -42,24 +42,32 @@
             lbl_search_result = new Label();
             txt_exam_id = new TextBox();
             lbl_exam_id = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txtSearch = new TextBox();
+            btnDelete = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvR).BeginInit();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvR
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { user_id, user_name, mark, total_mark });
-            dataGridView1.Location = new Point(333, 108);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(639, 414);
-            dataGridView1.TabIndex = 0;
+            dgvR.AllowUserToAddRows = false;
+            dgvR.AllowUserToDeleteRows = false;
+            dgvR.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvR.Columns.AddRange(new DataGridViewColumn[] { user_id, user_name, mark, total_mark });
+            dgvR.Location = new Point(333, 108);
+            dgvR.Name = "dgvR";
+            dgvR.ReadOnly = true;
+            dgvR.RowHeadersWidth = 51;
+            dgvR.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvR.Size = new Size(639, 414);
+            dgvR.TabIndex = 0;
+            dgvR.CellDoubleClick += dgvR_CellDoubleClick;
             // 
             // user_id
             // 
+            user_id.DataPropertyName = "UserId";
             user_id.FillWeight = 120F;
             user_id.HeaderText = "Student Id";
             user_id.MinimumWidth = 6;
@@ -69,15 +77,17 @@
             // 
             // user_name
             // 
+            user_name.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            user_name.DataPropertyName = "UserName";
             user_name.FillWeight = 190F;
             user_name.HeaderText = "Student Name";
             user_name.MinimumWidth = 6;
             user_name.Name = "user_name";
             user_name.ReadOnly = true;
-            user_name.Width = 200;
             // 
             // mark
             // 
+            mark.DataPropertyName = "Mark";
             mark.HeaderText = "Mark";
             mark.MinimumWidth = 6;
             mark.Name = "mark";
@@ -86,6 +96,7 @@
             // 
             // total_mark
             // 
+            total_mark.DataPropertyName = "TotalMark";
             total_mark.HeaderText = "Total mark";
             total_mark.MinimumWidth = 6;
             total_mark.Name = "total_mark";
@@ -187,6 +198,24 @@
             lbl_exam_id.TabIndex = 0;
             lbl_exam_id.Text = "Exam Id";
             // 
+            // txtSearch
+            // 
+            txtSearch.BorderStyle = BorderStyle.FixedSingle;
+            txtSearch.Location = new Point(691, 61);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(177, 27);
+            txtSearch.TabIndex = 24;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Location = new Point(874, 59);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(94, 29);
+            btnDelete.TabIndex = 23;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
             // Form14
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -195,15 +224,19 @@
             BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1016, 537);
+            Controls.Add(txtSearch);
+            Controls.Add(btnDelete);
             Controls.Add(panel1);
             Controls.Add(lbl_result);
             Controls.Add(lb_co_Name);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvR);
             DoubleBuffered = true;
+            MaximumSize = new Size(1034, 584);
             Name = "Form14";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Show result";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += Form14_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvR).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel3.ResumeLayout(false);
@@ -215,7 +248,7 @@
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvR;
         private Label lb_co_Name;
         private Label lbl_result;
         private Panel panel1;
@@ -229,5 +262,7 @@
         private DataGridViewTextBoxColumn user_name;
         private DataGridViewTextBoxColumn mark;
         private DataGridViewTextBoxColumn total_mark;
+        private TextBox txtSearch;
+        private Button btnDelete;
     }
 }

@@ -13,16 +13,59 @@ namespace OOP2_final_project
         public Form9()
         {
             InitializeComponent();
+            txt_id.Text = "Auto generated";
         }
 
         private void btn_add_teacher_Click(object sender, EventArgs e)
         {
-            string id = txt_id.Text;
             string name = txt_name.Text;
             string phone = txt_phone.Text;
             string address = txt_address.Text;
 
-            MessageBox.Show("Teacher added successfull");
+            try
+            {
+
+                string queryT =
+                    "INSERT INTO Users (UserName, Phone, Address) VALUES " +
+                    "('" + name + "', '" + phone + "', '" + address + "'); " +
+                    "SELECT SCOPE_IDENTITY();";
+
+                var res1 = Database.ExecuteScalarQuery(queryT);
+
+                if (res1.HasError)
+                {
+                    MessageBox.Show(res1.Message);
+                    return;
+                }
+
+                int userId = Convert.ToInt32(res1.Data.Rows[0][0]);
+
+
+                int typeId = 3;
+
+
+                string queryRole =
+                    "INSERT INTO UserTypeRole (userId, userTypeId) VALUES (" +
+                    userId + ", " + typeId + ")";
+
+                var res2 = Database.ExecuteNonResultQuery(queryRole);
+
+                if (res2.HasError)
+                {
+                    MessageBox.Show(res2.Message);
+                    return;
+                }
+
+                MessageBox.Show("Teacher added successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            txt_name.Clear();
+            txt_phone.Clear();
+            txt_address.Clear();
         }
 
         private void lb_co_Name_Click(object sender, EventArgs e)

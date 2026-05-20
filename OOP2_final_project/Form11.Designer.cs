@@ -31,12 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form11));
             lb_co_Name = new Label();
             lbl_teacher = new Label();
-            dataGridView1 = new DataGridView();
+            dgvt = new DataGridView();
             name = new DataGridViewTextBoxColumn();
             teacher_id = new DataGridViewTextBoxColumn();
             phone = new DataGridViewTextBoxColumn();
             address = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txtSearch = new TextBox();
+            btnDelete = new Button();
+            btnSearch = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvt).BeginInit();
             SuspendLayout();
             // 
             // lb_co_Name
@@ -63,22 +66,26 @@
             lbl_teacher.Size = new Size(125, 35);
             lbl_teacher.TabIndex = 25;
             lbl_teacher.Text = "Teachers";
+            lbl_teacher.Click += lbl_teacher_Click;
             // 
-            // dataGridView1
+            // dgvt
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { name, teacher_id, phone, address });
-            dataGridView1.Location = new Point(12, 123);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(999, 358);
-            dataGridView1.TabIndex = 24;
+            dgvt.AllowUserToAddRows = false;
+            dgvt.AllowUserToDeleteRows = false;
+            dgvt.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvt.Columns.AddRange(new DataGridViewColumn[] { name, teacher_id, phone, address });
+            dgvt.Location = new Point(12, 123);
+            dgvt.Name = "dgvt";
+            dgvt.ReadOnly = true;
+            dgvt.RowHeadersWidth = 51;
+            dgvt.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvt.Size = new Size(999, 358);
+            dgvt.TabIndex = 24;
+            dgvt.CellDoubleClick += dgvt_CellDoubleClick;
             // 
             // name
             // 
+            name.DataPropertyName = "UserName";
             name.FillWeight = 240F;
             name.HeaderText = "Name";
             name.MinimumWidth = 6;
@@ -88,6 +95,7 @@
             // 
             // teacher_id
             // 
+            teacher_id.DataPropertyName = "UserId";
             teacher_id.FillWeight = 150F;
             teacher_id.HeaderText = "Teacher Id";
             teacher_id.MinimumWidth = 6;
@@ -97,6 +105,7 @@
             // 
             // phone
             // 
+            phone.DataPropertyName = "Phone";
             phone.FillWeight = 200F;
             phone.HeaderText = "Phone";
             phone.MinimumWidth = 6;
@@ -106,12 +115,41 @@
             // 
             // address
             // 
+            address.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            address.DataPropertyName = "Address";
             address.FillWeight = 300F;
             address.HeaderText = "Address";
             address.MinimumWidth = 6;
             address.Name = "address";
             address.ReadOnly = true;
-            address.Width = 320;
+            // 
+            // txtSearch
+            // 
+            txtSearch.BorderStyle = BorderStyle.FixedSingle;
+            txtSearch.Location = new Point(627, 87);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(177, 27);
+            txtSearch.TabIndex = 29;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Location = new Point(910, 85);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(94, 29);
+            btnDelete.TabIndex = 28;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // btnSearch
+            // 
+            btnSearch.Location = new Point(810, 85);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(94, 29);
+            btnSearch.TabIndex = 27;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // Form11
             // 
@@ -121,14 +159,19 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1016, 537);
+            Controls.Add(txtSearch);
+            Controls.Add(btnDelete);
+            Controls.Add(btnSearch);
             Controls.Add(lb_co_Name);
             Controls.Add(lbl_teacher);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvt);
             DoubleBuffered = true;
+            MaximumSize = new Size(1034, 584);
             Name = "Form11";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Teacher show";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += Form11_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvt).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -137,7 +180,10 @@
 
         private Label lb_co_Name;
         private Label lbl_teacher;
-        private DataGridView dataGridView1;
+        private DataGridView dgvt;
+        private TextBox txtSearch;
+        private Button btnDelete;
+        private Button btnSearch;
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn teacher_id;
         private DataGridViewTextBoxColumn phone;

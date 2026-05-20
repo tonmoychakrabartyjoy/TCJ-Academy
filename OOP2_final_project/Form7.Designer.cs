@@ -261,6 +261,7 @@
             Controls.Add(panel1);
             Controls.Add(lb_co_Name);
             DoubleBuffered = true;
+            MaximumSize = new Size(1034, 584);
             Name = "Form7";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Add Course";

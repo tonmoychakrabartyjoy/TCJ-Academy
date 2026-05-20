@@ -18,6 +18,7 @@ namespace OOP2_final_project
 
         public static SqlConnection con = new SqlConnection(@"Data Source=TONMOY\SQLEXPRESS;Initial Catalog=TCJ_Academy;Integrated Security=True;TrustServerCertificate=True;");
 
+
         private void lb_co_Name_Click(object sender, EventArgs e)
         {
             Form6 home = new Form6();
@@ -58,6 +59,61 @@ namespace OOP2_final_project
         private void lbl_emp_list_Click(object sender, EventArgs e)
         {
             Form17_Load(sender, e);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            int empId = int.Parse(txtSearch.Text);
+
+            try
+            {
+                String querySearch = "SELECT U.UserId, U.UserName, U.Phone, U.Address FROM Users U WHERE U.UserId = " + empId;
+
+                var result = Database.GetQueryData(querySearch);
+                if (result.HasError)
+                {
+                    MessageBox.Show(result.Message);
+                }
+                else
+                {
+                    dgv_emp_table.DataSource = result.Data;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+
+        public static int selectedEmpId;
+        private void dgv_emp_table_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedEmpId = int.Parse(dgv_emp_table.Rows[e.RowIndex].Cells[0].Value.ToString());
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String queryDelete = "DELETE FROM Users WHERE UserId = " + selectedEmpId;
+                var result = Database.ExecuteNonResultQuery(queryDelete);
+                if (result.HasError)
+                {
+                    MessageBox.Show(result.Message);
+                }
+                else
+                {
+                    MessageBox.Show("Employee deleted successfully.");
+                    Form17_Load(sender, e);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

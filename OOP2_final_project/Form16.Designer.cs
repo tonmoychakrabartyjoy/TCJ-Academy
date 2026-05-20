@@ -30,6 +30,10 @@
         {
             lb_co_Name = new Label();
             panel1 = new Panel();
+            rbFemale = new RadioButton();
+            rbMale = new RadioButton();
+            txtEmail = new TextBox();
+            label1 = new Label();
             lbl_address = new Label();
             lbl_type = new Label();
             txt_emp_type = new TextBox();
@@ -60,6 +64,10 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(rbFemale);
+            panel1.Controls.Add(rbMale);
+            panel1.Controls.Add(txtEmail);
+            panel1.Controls.Add(label1);
             panel1.Controls.Add(lbl_address);
             panel1.Controls.Add(lbl_type);
             panel1.Controls.Add(txt_emp_type);
@@ -76,10 +84,50 @@
             panel1.Size = new Size(541, 369);
             panel1.TabIndex = 17;
             // 
+            // rbFemale
+            // 
+            rbFemale.AutoSize = true;
+            rbFemale.Location = new Point(255, 257);
+            rbFemale.Name = "rbFemale";
+            rbFemale.Size = new Size(80, 23);
+            rbFemale.TabIndex = 17;
+            rbFemale.TabStop = true;
+            rbFemale.Text = "Female";
+            rbFemale.UseVisualStyleBackColor = true;
+            // 
+            // rbMale
+            // 
+            rbMale.AutoSize = true;
+            rbMale.Location = new Point(184, 257);
+            rbMale.Name = "rbMale";
+            rbMale.Size = new Size(65, 23);
+            rbMale.TabIndex = 16;
+            rbMale.TabStop = true;
+            rbMale.Text = "Male";
+            rbMale.UseVisualStyleBackColor = true;
+            // 
+            // txtEmail
+            // 
+            txtEmail.BorderStyle = BorderStyle.FixedSingle;
+            txtEmail.Location = new Point(168, 212);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(265, 27);
+            txtEmail.TabIndex = 15;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(110, 214);
+            label1.Name = "label1";
+            label1.Size = new Size(49, 19);
+            label1.TabIndex = 14;
+            label1.Text = "Email";
+            label1.TextAlign = ContentAlignment.MiddleRight;
+            // 
             // lbl_address
             // 
             lbl_address.AutoSize = true;
-            lbl_address.Location = new Point(124, 192);
+            lbl_address.Location = new Point(98, 148);
             lbl_address.Name = "lbl_address";
             lbl_address.Size = new Size(64, 19);
             lbl_address.TabIndex = 13;
@@ -89,7 +137,7 @@
             // lbl_type
             // 
             lbl_type.AutoSize = true;
-            lbl_type.Location = new Point(147, 223);
+            lbl_type.Location = new Point(121, 179);
             lbl_type.Name = "lbl_type";
             lbl_type.Size = new Size(41, 19);
             lbl_type.TabIndex = 12;
@@ -99,7 +147,7 @@
             // txt_emp_type
             // 
             txt_emp_type.BorderStyle = BorderStyle.FixedSingle;
-            txt_emp_type.Location = new Point(194, 223);
+            txt_emp_type.Location = new Point(168, 179);
             txt_emp_type.Name = "txt_emp_type";
             txt_emp_type.ReadOnly = true;
             txt_emp_type.Size = new Size(265, 27);
@@ -109,7 +157,7 @@
             // btn_add_emp
             // 
             btn_add_emp.Cursor = Cursors.Hand;
-            btn_add_emp.Location = new Point(216, 269);
+            btn_add_emp.Location = new Point(202, 295);
             btn_add_emp.Name = "btn_add_emp";
             btn_add_emp.Size = new Size(146, 49);
             btn_add_emp.TabIndex = 10;
@@ -120,7 +168,7 @@
             // txt_address
             // 
             txt_address.BorderStyle = BorderStyle.FixedSingle;
-            txt_address.Location = new Point(194, 190);
+            txt_address.Location = new Point(168, 146);
             txt_address.Name = "txt_address";
             txt_address.Size = new Size(265, 27);
             txt_address.TabIndex = 8;
@@ -129,7 +177,7 @@
             // txt_phone
             // 
             txt_phone.BorderStyle = BorderStyle.FixedSingle;
-            txt_phone.Location = new Point(194, 157);
+            txt_phone.Location = new Point(168, 113);
             txt_phone.Name = "txt_phone";
             txt_phone.Size = new Size(265, 27);
             txt_phone.TabIndex = 7;
@@ -138,7 +186,7 @@
             // txt_emp_id
             // 
             txt_emp_id.BorderStyle = BorderStyle.FixedSingle;
-            txt_emp_id.Location = new Point(194, 122);
+            txt_emp_id.Location = new Point(168, 78);
             txt_emp_id.Name = "txt_emp_id";
             txt_emp_id.ReadOnly = true;
             txt_emp_id.Size = new Size(265, 27);
@@ -149,7 +197,7 @@
             // txt_emp_name
             // 
             txt_emp_name.BorderStyle = BorderStyle.FixedSingle;
-            txt_emp_name.Location = new Point(194, 87);
+            txt_emp_name.Location = new Point(168, 43);
             txt_emp_name.Name = "txt_emp_name";
             txt_emp_name.Size = new Size(265, 27);
             txt_emp_name.TabIndex = 5;
@@ -158,7 +206,7 @@
             // lbl_phone
             // 
             lbl_phone.AutoSize = true;
-            lbl_phone.Location = new Point(136, 165);
+            lbl_phone.Location = new Point(110, 121);
             lbl_phone.Name = "lbl_phone";
             lbl_phone.Size = new Size(52, 19);
             lbl_phone.TabIndex = 2;
@@ -168,7 +216,7 @@
             // lbl_emp_id
             // 
             lbl_emp_id.AutoSize = true;
-            lbl_emp_id.Location = new Point(93, 130);
+            lbl_emp_id.Location = new Point(67, 86);
             lbl_emp_id.Name = "lbl_emp_id";
             lbl_emp_id.Size = new Size(95, 19);
             lbl_emp_id.TabIndex = 1;
@@ -178,7 +226,7 @@
             // lbl_emp_name
             // 
             lbl_emp_name.AutoSize = true;
-            lbl_emp_name.Location = new Point(66, 95);
+            lbl_emp_name.Location = new Point(40, 51);
             lbl_emp_name.Name = "lbl_emp_name";
             lbl_emp_name.Size = new Size(122, 19);
             lbl_emp_name.TabIndex = 0;
@@ -196,6 +244,7 @@
             Controls.Add(lb_co_Name);
             DoubleBuffered = true;
             Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MaximumSize = new Size(1034, 584);
             Name = "Form16";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Add Employee";
@@ -221,5 +270,9 @@
         private Label lbl_address;
         private Label lbl_type;
         private TextBox txt_emp_type;
+        private RadioButton rbFemale;
+        private RadioButton rbMale;
+        private TextBox txtEmail;
+        private Label label1;
     }
 }

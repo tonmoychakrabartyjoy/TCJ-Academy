@@ -52,6 +52,7 @@
             btn_add_emp = new Button();
             btn_add_course_fee = new Button();
             panel1 = new Panel();
+            btn_logout = new Button();
             pictureBox12 = new PictureBox();
             btn_show_result = new Button();
             pictureBox4 = new PictureBox();
@@ -70,7 +71,8 @@
             panel5 = new Panel();
             panel6 = new Panel();
             lbl_dashboard = new Label();
-            btn_logout = new Button();
+            lblW = new Label();
+            lblName = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -217,6 +219,18 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(207, 539);
             panel1.TabIndex = 23;
+            // 
+            // btn_logout
+            // 
+            btn_logout.BackColor = Color.Red;
+            btn_logout.ForeColor = SystemColors.Control;
+            btn_logout.Location = new Point(57, 476);
+            btn_logout.Name = "btn_logout";
+            btn_logout.Size = new Size(94, 29);
+            btn_logout.TabIndex = 48;
+            btn_logout.Text = "Logout";
+            btn_logout.UseVisualStyleBackColor = false;
+            btn_logout.Click += btn_logout_Click;
             // 
             // pictureBox12
             // 
@@ -399,17 +413,26 @@
             lbl_dashboard.TabIndex = 0;
             lbl_dashboard.Text = "Dashboard";
             // 
-            // btn_logout
+            // lblW
             // 
-            btn_logout.BackColor = Color.Red;
-            btn_logout.ForeColor = SystemColors.Control;
-            btn_logout.Location = new Point(57, 476);
-            btn_logout.Name = "btn_logout";
-            btn_logout.Size = new Size(94, 29);
-            btn_logout.TabIndex = 48;
-            btn_logout.Text = "Logout";
-            btn_logout.UseVisualStyleBackColor = false;
-            btn_logout.Click += btn_logout_Click;
+            lblW.AutoSize = true;
+            lblW.BackColor = Color.Transparent;
+            lblW.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblW.Location = new Point(670, 23);
+            lblW.Name = "lblW";
+            lblW.Size = new Size(127, 35);
+            lblW.TabIndex = 30;
+            lblW.Text = "Welcome";
+            // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.BackColor = Color.Transparent;
+            lblName.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblName.Location = new Point(813, 23);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(0, 35);
+            lblName.TabIndex = 31;
             // 
             // Form6
             // 
@@ -419,11 +442,14 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1016, 537);
+            Controls.Add(lblName);
+            Controls.Add(lblW);
             Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel1);
             DoubleBuffered = true;
+            MaximumSize = new Size(1034, 584);
             Name = "Form6";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin page";
@@ -447,6 +473,7 @@
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -478,5 +505,7 @@
         private PictureBox pictureBox12;
         private Button btn_show_result;
         private Button btn_logout;
+        private Label lblW;
+        private Label lblName;
     }
 }

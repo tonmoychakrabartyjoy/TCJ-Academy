@@ -53,24 +53,39 @@ namespace OOP2_final_project
 
         private void btn_add_emp_Click(object sender, EventArgs e)
         {
-            if (txt_emp_name.Text == "" ||
+            string emp_name = txt_emp_name.Text;
+            string emp_phone = txt_phone.Text;
+            string emp_address = txt_address.Text;
+            string emp_email = txtEmail.Text;
+            string emp_gender ;
+
+            if(rbMale.Checked)
+            {
+                emp_gender = "Male";
+            }
+            else
+            {
+                emp_gender = "Female";
+            }
+
+                if (txt_emp_name.Text == "" ||
                 txt_phone.Text == "" ||
-                txt_address.Text == "")
+                txt_address.Text == ""||
+                string.IsNullOrWhiteSpace(emp_email) ||
+                string.IsNullOrWhiteSpace(emp_gender))
             {
                 MessageBox.Show("Please fill all the fields.");
                 return;
             }
 
-            string emp_name = txt_emp_name.Text;
-            string emp_phone = txt_phone.Text;
-            string emp_address = txt_address.Text;
+            
 
             try
             {
                 
                 string queryEmp =
-                    "INSERT INTO Users (UserName, Phone, Address) VALUES " +
-                    "('" + emp_name + "', '" + emp_phone + "', '" + emp_address + "'); " +
+                    "INSERT INTO Users (UserName, Phone, Address, Email, Gender) VALUES " +
+                    "('" + emp_name + "', '" + emp_phone + "', '" + emp_address + "', '" + emp_email + "', '" + emp_gender + "'); " +
                     "SELECT SCOPE_IDENTITY();";
 
                 var res1 = Database.ExecuteScalarQuery(queryEmp);

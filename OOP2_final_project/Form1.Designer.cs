@@ -141,6 +141,7 @@
             Controls.Add(txt_name);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximumSize = new Size(1034, 584);
             Name = "login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

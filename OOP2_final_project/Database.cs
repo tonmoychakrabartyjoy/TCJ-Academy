@@ -24,7 +24,7 @@ namespace OOP2_final_project
         public static SqlConnection con = new SqlConnection(@"Data Source=TONMOY\SQLEXPRESS;Initial Catalog=TCJ_Academy;Integrated Security=True; TrustServerCertificate=True;");
 
 
-        // Tonmoy 
+       
 
         public static Result ExecuteScalarQuery(string query)
         {
@@ -41,12 +41,17 @@ namespace OOP2_final_project
                 var val = cmd.ExecuteScalar();
                 result.Data.Rows.Add(val);
 
-                con.Close();
+                
             }
             catch (Exception ex)
             {
                 result.HasError = true;
                 result.Message = ex.Message;
+            }
+
+            finally
+            {
+                con.Close();
             }
 
             return result;
@@ -66,7 +71,7 @@ namespace OOP2_final_project
                 adp.Fill(ds);
 
                 result.Data = ds.Tables[0];
-                con.Close();
+                
             }
 
             catch (Exception exception)
@@ -74,6 +79,10 @@ namespace OOP2_final_project
                 result.HasError = true;
                 result.Message = exception.Message;
                 return result;
+            }
+            finally
+            {
+                con.Close();
             }
 
             return result;
@@ -89,7 +98,7 @@ namespace OOP2_final_project
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
 
-                con.Close();
+                
             }
             catch (Exception exception)
             {
@@ -97,10 +106,12 @@ namespace OOP2_final_project
                 result.Message = exception.Message;
                 return result;
             }
+            finally
+            {
+                con.Close();
+            }
 
             return result;
         }
-
-        // Tonmoy
     }
 }
