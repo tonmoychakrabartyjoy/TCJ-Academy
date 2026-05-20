@@ -40,6 +40,10 @@
             lb_phone = new Label();
             lb_teacher_name = new Label();
             lb_teacher_id = new Label();
+            rbFemale = new RadioButton();
+            rbMale = new RadioButton();
+            txtEmail = new TextBox();
+            label1 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -60,6 +64,10 @@
             // panel1
             // 
             panel1.BackColor = Color.GhostWhite;
+            panel1.Controls.Add(rbFemale);
+            panel1.Controls.Add(rbMale);
+            panel1.Controls.Add(txtEmail);
+            panel1.Controls.Add(label1);
             panel1.Controls.Add(btn_add_teacher);
             panel1.Controls.Add(txt_address);
             panel1.Controls.Add(txt_phone);
@@ -77,7 +85,7 @@
             // btn_add_teacher
             // 
             btn_add_teacher.Cursor = Cursors.Hand;
-            btn_add_teacher.Location = new Point(272, 228);
+            btn_add_teacher.Location = new Point(242, 261);
             btn_add_teacher.Name = "btn_add_teacher";
             btn_add_teacher.Size = new Size(162, 42);
             btn_add_teacher.TabIndex = 33;
@@ -88,7 +96,7 @@
             // txt_address
             // 
             txt_address.BorderStyle = BorderStyle.FixedSingle;
-            txt_address.Location = new Point(204, 180);
+            txt_address.Location = new Point(209, 150);
             txt_address.Name = "txt_address";
             txt_address.Size = new Size(320, 27);
             txt_address.TabIndex = 32;
@@ -96,7 +104,7 @@
             // txt_phone
             // 
             txt_phone.BorderStyle = BorderStyle.FixedSingle;
-            txt_phone.Location = new Point(204, 143);
+            txt_phone.Location = new Point(209, 113);
             txt_phone.Name = "txt_phone";
             txt_phone.Size = new Size(320, 27);
             txt_phone.TabIndex = 31;
@@ -104,7 +112,7 @@
             // txt_name
             // 
             txt_name.BorderStyle = BorderStyle.FixedSingle;
-            txt_name.Location = new Point(204, 105);
+            txt_name.Location = new Point(209, 75);
             txt_name.Name = "txt_name";
             txt_name.Size = new Size(320, 27);
             txt_name.TabIndex = 30;
@@ -112,7 +120,7 @@
             // txt_id
             // 
             txt_id.BorderStyle = BorderStyle.FixedSingle;
-            txt_id.Location = new Point(204, 67);
+            txt_id.Location = new Point(209, 37);
             txt_id.Name = "txt_id";
             txt_id.Size = new Size(320, 27);
             txt_id.TabIndex = 29;
@@ -120,7 +128,7 @@
             // lb_address
             // 
             lb_address.AutoSize = true;
-            lb_address.Location = new Point(118, 187);
+            lb_address.Location = new Point(123, 157);
             lb_address.Name = "lb_address";
             lb_address.Size = new Size(62, 20);
             lb_address.TabIndex = 28;
@@ -129,7 +137,7 @@
             // lb_phone
             // 
             lb_phone.AutoSize = true;
-            lb_phone.Location = new Point(130, 150);
+            lb_phone.Location = new Point(135, 120);
             lb_phone.Name = "lb_phone";
             lb_phone.Size = new Size(50, 20);
             lb_phone.TabIndex = 27;
@@ -138,7 +146,7 @@
             // lb_teacher_name
             // 
             lb_teacher_name.AutoSize = true;
-            lb_teacher_name.Location = new Point(76, 112);
+            lb_teacher_name.Location = new Point(81, 82);
             lb_teacher_name.Name = "lb_teacher_name";
             lb_teacher_name.Size = new Size(104, 20);
             lb_teacher_name.TabIndex = 26;
@@ -147,11 +155,51 @@
             // lb_teacher_id
             // 
             lb_teacher_id.AutoSize = true;
-            lb_teacher_id.Location = new Point(103, 74);
+            lb_teacher_id.Location = new Point(108, 44);
             lb_teacher_id.Name = "lb_teacher_id";
             lb_teacher_id.Size = new Size(77, 20);
             lb_teacher_id.TabIndex = 25;
             lb_teacher_id.Text = "Teacher Id";
+            // 
+            // rbFemale
+            // 
+            rbFemale.AutoSize = true;
+            rbFemale.Location = new Point(326, 231);
+            rbFemale.Name = "rbFemale";
+            rbFemale.Size = new Size(78, 24);
+            rbFemale.TabIndex = 37;
+            rbFemale.TabStop = true;
+            rbFemale.Text = "Female";
+            rbFemale.UseVisualStyleBackColor = true;
+            // 
+            // rbMale
+            // 
+            rbMale.AutoSize = true;
+            rbMale.Location = new Point(255, 231);
+            rbMale.Name = "rbMale";
+            rbMale.Size = new Size(63, 24);
+            rbMale.TabIndex = 36;
+            rbMale.TabStop = true;
+            rbMale.Text = "Male";
+            rbMale.UseVisualStyleBackColor = true;
+            // 
+            // txtEmail
+            // 
+            txtEmail.BorderStyle = BorderStyle.FixedSingle;
+            txtEmail.Location = new Point(209, 187);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(320, 27);
+            txtEmail.TabIndex = 35;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(139, 189);
+            label1.Name = "label1";
+            label1.Size = new Size(46, 20);
+            label1.TabIndex = 34;
+            label1.Text = "Email";
+            label1.TextAlign = ContentAlignment.MiddleRight;
             // 
             // Form9
             // 
@@ -186,5 +234,9 @@
         private Label lb_phone;
         private Label lb_teacher_name;
         private Label lb_teacher_id;
+        private RadioButton rbFemale;
+        private RadioButton rbMale;
+        private TextBox txtEmail;
+        private Label label1;
     }
 }
