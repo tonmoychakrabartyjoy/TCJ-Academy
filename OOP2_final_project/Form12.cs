@@ -25,7 +25,6 @@ namespace OOP2_final_project
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-            // Basic validation first
             txt_student_id.Focus();
             if (string.IsNullOrWhiteSpace(txt_student_id.Text) ||
                 string.IsNullOrWhiteSpace(txt_course_code.Text) ||
@@ -63,17 +62,13 @@ namespace OOP2_final_project
 
             try
             {
-                string queryAcaY = "INSERT INTO AcademicYear (UserId, CourseCode, AcademicYear, SectionName) " +
-                                    "VALUES ('" + id + "', '" + course_code + "', " + academic_year + ", '" + section + "')";
+                string queryAcaY = "INSERT INTO AcademicYear (UserId, CourseCode, AcademicYear, SectionName) VALUES ('" + id + "', '" + course_code + "', " + academic_year + ", '" + section + "')";
                 
 
-                string querypay = "INSERT INTO Payment (UserId, PayId, Amount) " +
-                                  "VALUES ('" + id + "', '" + pay_id + "', " + amount + ")";
+                string querypay = "INSERT INTO Payment (UserId, PayId, Amount) VALUES ('" + id + "', '" + pay_id + "', " + amount + ")";
                 
-
                 
-                string querypayMonth = "INSERT INTO PaymentMonth (UserId, CourseCode, PayMonth, PayId, SectionName, AcademicYear) " +
-                                       "VALUES ('" + id + "', '" + course_code + "', '" + month + "', '" + pay_id + "', '" + section + "', " + academic_year + ")";
+                string querypayMonth = "INSERT INTO PaymentMonth (UserId, CourseCode, PayMonth, PayId, SectionName, AcademicYear) VALUES ('" + id + "', '" + course_code + "', '" + month + "', '" + pay_id + "', '" + section + "', " + academic_year + ")";
 
 
                 Database.ExecuteNonResultQuery(querypay);

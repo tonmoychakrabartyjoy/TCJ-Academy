@@ -20,18 +20,9 @@ namespace OOP2_final_project
             string name = txt_name.Text;
             string id = txt_id.Text;
             string pass = txt_pass.Text;
+            
 
-            if (pass != "1234")
-            {
-                MessageBox.Show("Invalid Password!");
-                return;
-            }
-
-            string query = "SELECT U.UserId, U.UserName, R.UserTypeId " +
-                           "FROM Users U, UserTypeRole R " +
-                           "WHERE U.UserId = R.UserId " +
-                           "AND U.UserName = '" + name + "' " +
-                           "AND U.UserId = '" + id + "'";
+            string query = "SELECT U.UserId, U.UserName, R.UserTypeId, R.Password  FROM Users U, UserTypeRole R WHERE U.UserId = R.UserId AND U.UserName = '" + name + "' AND U.UserId = '" + id + "' AND R.Password = '" + pass + "'";
 
             var result = Database.GetQueryData(query);
 
