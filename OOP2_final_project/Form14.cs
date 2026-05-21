@@ -32,12 +32,8 @@ namespace OOP2_final_project
 
                 dgvR.AutoGenerateColumns = true;
 
-                var query = @"SELECT U.UserId, U.UserName, ER.Mark, E.TotalMark 
-                      FROM Users U 
-                      JOIN ExamResult ER ON U.UserId = ER.UserId
-                      JOIN Exam E ON ER.ExamId = E.ExamId
-                      WHERE E.ExamId = " + exam_id;
-
+                var query = "SELECT U.UserId, U.UserName, ER.Mark, E.TotalMark FROM Users U, ExamResult ER, Exam E WHERE U.UserId = ER.UserId AND ER.ExamId = E.ExamId AND E.ExamId = " + exam_id;
+                
                 var result = Database.GetQueryData(query);
 
                 if (result.HasError)
@@ -80,7 +76,7 @@ namespace OOP2_final_project
                 }
                 else
                 {
-                    MessageBox.Show("Employee deleted successfully.");
+                    MessageBox.Show("Result deleted successfully.");
                     Form14_Load(sender, e);
                 }
 

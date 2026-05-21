@@ -24,41 +24,6 @@ namespace OOP2_final_project
         public static SqlConnection con = new SqlConnection(@"Data Source=TONMOY\SQLEXPRESS;Initial Catalog=TCJ_Academy;Integrated Security=True; TrustServerCertificate=True;");
 
 
-       
-
-        public static Result ExecuteScalarQuery(string query)
-        {
-            var result = new Result();
-
-            try
-            {
-                con.Open();
-
-                SqlCommand cmd = new SqlCommand(query, con);
-                result.Data = new DataTable();
-                result.Data.Columns.Add("Value");
-
-                var val = cmd.ExecuteScalar();
-                result.Data.Rows.Add(val);
-
-                
-            }
-            catch (Exception ex)
-            {
-                result.HasError = true;
-                result.Message = ex.Message;
-            }
-
-            finally
-            {
-                con.Close();
-            }
-
-            return result;
-        }
-
-
-
         public static Result GetQueryData(string query)
         {
             var result = new Result();
@@ -106,6 +71,37 @@ namespace OOP2_final_project
                 result.Message = exception.Message;
                 return result;
             }
+            finally
+            {
+                con.Close();
+            }
+
+            return result;
+        }
+
+        public static Result ExecuteScalarQuery(string query)
+        {
+            var result = new Result();
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                result.Data = new DataTable();
+                result.Data.Columns.Add("Value");
+
+                var val = cmd.ExecuteScalar();
+                result.Data.Rows.Add(val);
+
+
+            }
+            catch (Exception ex)
+            {
+                result.HasError = true;
+                result.Message = ex.Message;
+            }
+
             finally
             {
                 con.Close();

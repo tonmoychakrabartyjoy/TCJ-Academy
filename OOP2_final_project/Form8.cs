@@ -51,9 +51,7 @@ namespace OOP2_final_project
             {
 
                 string queryEmp =
-                    "INSERT INTO Users (UserName, Phone, Address, Email, Gender) VALUES " +
-                    "('" + name + "', '" + phone + "', '" + address + "', '" + Email + "', '" + emp_gender + "'); " +
-                    "SELECT SCOPE_IDENTITY();";
+                    "INSERT INTO Users (UserName, Phone, Address, Email, Gender) VALUES ('" + name + "', '" + phone + "', '" + address + "', '" + Email + "', '" + emp_gender + "'); SELECT SCOPE_IDENTITY();";
 
                 var res1 = Database.ExecuteScalarQuery(queryEmp);
 
@@ -69,9 +67,7 @@ namespace OOP2_final_project
                 int typeId = 4;
 
 
-                string queryRole =
-                    "INSERT INTO UserTypeRole (userId, userTypeId) VALUES (" +
-                    userId + ", " + typeId + ")";
+                string queryRole = "INSERT INTO UserTypeRole (userId, userTypeId) VALUES (" + userId + ", " + typeId + ")";
 
                 var res2 = Database.ExecuteNonResultQuery(queryRole);
 

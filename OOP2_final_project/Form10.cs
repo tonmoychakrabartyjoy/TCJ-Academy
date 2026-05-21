@@ -35,7 +35,7 @@ namespace OOP2_final_project
 
             try
             {
-                var query = @"SELECT U.UserId, U.UserName, U.Phone, U.Address FROM Users U, UserTypeRole UR, UserType UT WHERE U.UserId = UR.UserId AND UR.UserTypeId = UT.UserTypeId AND UT.UserType = 'Student'";
+                var query = "SELECT U.UserId, U.UserName, U.Phone, U.Address FROM Users U, UserTypeRole UR, UserType UT WHERE U.UserId = UR.UserId AND UR.UserTypeId = UT.UserTypeId AND UT.UserType = 'Student'";
 
                 var result = Database.GetQueryData(query);
 

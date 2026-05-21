@@ -13,7 +13,9 @@ namespace OOP2_final_project
         string userid;
         public Form6()
         {
-            InitializeComponent(GetBtn_add_course_fee1(), GetBtn_add_course_fee2());
+            InitializeComponent();
+            lblName.Text = Case.UserName;
+            
         }
 
         private void btn_add_course_fee_Click(object sender, EventArgs e)
