@@ -62,19 +62,35 @@ namespace OOP2_final_project
 
             try
             {
-                string queryAcaY = "INSERT INTO AcademicYear (UserId, CourseCode, AcademicYear, SectionName) VALUES ('" + id + "', '" + course_code + "', " + academic_year + ", '" + section + "')";
-                
+                string queryAcaY = "INSERT INTO AcademicYear (CourseCode, AcademicYear, SectionName) VALUES ('" + course_code + "', " + academic_year + ", '" + section + "')";
+
 
                 string querypay = "INSERT INTO Payment (UserId, PayId, Amount) VALUES ('" + id + "', '" + pay_id + "', " + amount + ")";
-                
-                
+
+
                 string querypayMonth = "INSERT INTO PaymentMonth (UserId, CourseCode, PayMonth, PayId, SectionName, AcademicYear) VALUES ('" + id + "', '" + course_code + "', '" + month + "', '" + pay_id + "', '" + section + "', " + academic_year + ")";
 
 
-                Database.ExecuteNonResultQuery(querypay);
-                Database.ExecuteNonResultQuery(querypayMonth);
-                Database.ExecuteNonResultQuery(queryAcaY);
+                var result = Database.ExecuteNonResultQuery(querypay);
+                if (result.HasError)
+                {
+                    MessageBox.Show(result.Message);
+                    return;
+                }
 
+                var result2 = Database.ExecuteNonResultQuery(querypayMonth);
+                if (result2.HasError)
+                {
+                    MessageBox.Show(result2.Message);
+                    return;
+                }
+
+                var result3 = Database.ExecuteNonResultQuery(queryAcaY);
+                if (result3.HasError)
+                {
+                    MessageBox.Show(result3.Message);
+                    return;
+                }
 
                 MessageBox.Show("Course added successfully");
             }
@@ -89,6 +105,10 @@ namespace OOP2_final_project
             txt_month.Clear();
             txt_pay_id.Clear();
             txt_student_id.Clear();
+            rbA.Checked = false;
+            rbB.Checked = false;
+            rbC.Checked = false; 
+            rbD.Checked = false;
 
         }
 
@@ -133,8 +153,13 @@ namespace OOP2_final_project
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btn_update_Click(sender, e);
+                //atxtAcaY.Focus();
             }
+        }
+
+        private void txtAcaY_TextChanged(object sender, EventArgs e)
+        {
+            //btn_update_Click(sender, e);
         }
     }
 }

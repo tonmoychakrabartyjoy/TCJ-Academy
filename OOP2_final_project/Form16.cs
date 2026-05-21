@@ -22,7 +22,7 @@ namespace OOP2_final_project
         }
 
 
-        // Extra part
+        // Auto generated code part starts here
 
         private void txt_salary_KeyDown(object sender, KeyEventArgs e)
         {
@@ -40,8 +40,8 @@ namespace OOP2_final_project
         }
 
 
-        // End of extra part
-
+       
+        // Auto generated code part ends here
 
         private void lb_co_Name_Click(object sender, EventArgs e)
         {
@@ -119,6 +119,7 @@ namespace OOP2_final_project
             txt_emp_name.Clear();
             txt_phone.Clear();
             txt_address.Clear();
+            txtEmail.Clear();
         }
 
 

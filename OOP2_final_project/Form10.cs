@@ -64,12 +64,16 @@ namespace OOP2_final_project
 
             try
             {
-                String querySearch = "SELECT U.UserId, U.UserName, U.Phone, U.Address FROM Users U WHERE U.UserId = " + StudentId;
+                String querySearch = "SELECT U.UserId, U.UserName, U.Phone, U.Address FROM Users U, UserTypeRole UR WHERE U.UserId = UR.UserId AND U.UserId = " + StudentId + " AND UR.UserTypeId = 4";
 
                 var result = Database.GetQueryData(querySearch);
                 if (result.HasError)
                 {
                     MessageBox.Show(result.Message);
+                }
+                else if (result.Data.Rows.Count == 0)
+                {
+                    MessageBox.Show("Student not found");
                 }
                 else
                 {

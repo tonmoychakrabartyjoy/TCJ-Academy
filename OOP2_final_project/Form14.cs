@@ -30,7 +30,7 @@ namespace OOP2_final_project
             {
                 int exam_id = int.Parse(txt_exam_id.Text);
 
-                dgvR.AutoGenerateColumns = true;
+                dgvR.AutoGenerateColumns = false;
 
                 var query = "SELECT U.UserId, U.UserName, ER.Mark, E.TotalMark FROM Users U, ExamResult ER, Exam E WHERE U.UserId = ER.UserId AND ER.ExamId = E.ExamId AND E.ExamId = " + exam_id;
                 
@@ -59,16 +59,18 @@ namespace OOP2_final_project
         public static int Mark;
         private void dgvR_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            userId = int.Parse(dgvR.Rows[e.RowIndex].Cells[0].Value.ToString());
             Mark = int.Parse(dgvR.Rows[e.RowIndex].Cells[2].Value.ToString());
-           
+            userId = int.Parse(dgvR.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try
             {
-                String queryDelete = "DELETE FROM Users WHERE UserId = " + userId + " AND Mark = " + Mark;
+                
+                String queryDelete = "DELETE FROM ExamResult WHERE UserId = " + userId + " AND UserId = " + userId + " AND Mark = " + Mark;
                 var result = Database.ExecuteNonResultQuery(queryDelete);
                 if (result.HasError)
                 {
