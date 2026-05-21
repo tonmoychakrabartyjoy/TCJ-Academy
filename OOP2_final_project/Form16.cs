@@ -119,6 +119,7 @@ namespace OOP2_final_project
             txt_emp_name.Clear();
             txt_phone.Clear();
             txt_address.Clear();
+            txtEmail.Clear();
         }
 
 

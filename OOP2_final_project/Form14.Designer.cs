@@ -201,14 +201,14 @@
             // txtSearch
             // 
             txtSearch.BorderStyle = BorderStyle.FixedSingle;
-            txtSearch.Location = new Point(691, 61);
+            txtSearch.Location = new Point(600, 301);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(177, 27);
+            txtSearch.Size = new Size(94, 27);
             txtSearch.TabIndex = 24;
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(874, 59);
+            btnDelete.Location = new Point(861, 60);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(94, 29);
             btnDelete.TabIndex = 23;
@@ -224,12 +224,12 @@
             BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1016, 537);
-            Controls.Add(txtSearch);
             Controls.Add(btnDelete);
             Controls.Add(panel1);
             Controls.Add(lbl_result);
             Controls.Add(lb_co_Name);
             Controls.Add(dgvR);
+            Controls.Add(txtSearch);
             DoubleBuffered = true;
             MaximumSize = new Size(1034, 584);
             Name = "Form14";

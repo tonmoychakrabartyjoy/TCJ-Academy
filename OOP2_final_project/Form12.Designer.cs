@@ -111,6 +111,7 @@
             txtAcaY.Name = "txtAcaY";
             txtAcaY.Size = new Size(118, 27);
             txtAcaY.TabIndex = 60;
+            txtAcaY.TextChanged += txtAcaY_TextChanged;
             // 
             // lblAcaY
             // 

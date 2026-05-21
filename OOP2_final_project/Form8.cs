@@ -87,6 +87,9 @@ namespace OOP2_final_project
             txt_name.Clear();
             txt_phone.Clear();
             txt_address.Clear();
+            txtEmail.Clear();
+            rbFemale.Checked = false;
+            rbMale.Checked = false;
         }
 
         private void lb_co_Name_Click(object sender, EventArgs e)

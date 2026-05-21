@@ -69,6 +69,10 @@ namespace OOP2_final_project
                 {
                     MessageBox.Show(result.Message);
                 }
+                else if (result.Data.Rows.Count == 0)
+                {
+                    MessageBox.Show("Teacher not found");
+                }
                 else
                 {
                     dgv_emp_table.DataSource = result.Data;

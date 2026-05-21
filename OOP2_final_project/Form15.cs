@@ -70,6 +70,10 @@ namespace OOP2_final_project
                 {
                     MessageBox.Show(result.Message);
                 }
+                else if (result.Data.Rows.Count == 0)
+                {
+                    MessageBox.Show("Course not found");
+                }
                 else
                 {
                     dgvResult.DataSource = result.Data;
