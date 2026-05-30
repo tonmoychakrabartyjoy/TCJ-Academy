@@ -10,9 +10,11 @@ namespace OOP2_final_project
 {
     public partial class Form8 : Form
     {
-        public Form8()
+        Form home;
+        public Form8(Form home)
         {
             InitializeComponent();
+            this.home = home;
             txt_id.Text = "Auto-generated";
             txt_type.Text = "Student";
         }
@@ -94,7 +96,6 @@ namespace OOP2_final_project
 
         private void lb_co_Name_Click(object sender, EventArgs e)
         {
-            Form3 home = new Form3();
             home.Show();
 
             this.Hide();
