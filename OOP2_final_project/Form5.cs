@@ -10,9 +10,11 @@ namespace OOP2_final_project
 {
     public partial class Form5 : Form
     {
-        public Form5()
+        Form home;
+        public Form5(Form home)
         {
             InitializeComponent();
+            this.home = home;
         }
 
         private void resetForm()
@@ -24,7 +26,6 @@ namespace OOP2_final_project
 
         private void lb_co_Name_Click(object sender, EventArgs e)
         {
-            Form3 home = new Form3();
             home.Show();
 
             this.Hide();

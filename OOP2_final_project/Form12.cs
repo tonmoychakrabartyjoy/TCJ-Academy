@@ -10,14 +10,15 @@ namespace OOP2_final_project
 {
     public partial class Form12 : Form
     {
-        public Form12()
+        Form home;
+        public Form12(Form home)
         {
             InitializeComponent();
+            this.home = home;
         }
 
         private void lb_co_Name_Click(object sender, EventArgs e)
         {
-            Form3 home = new Form3();
             home.Show();
 
             this.Hide();

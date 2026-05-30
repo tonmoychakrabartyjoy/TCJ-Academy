@@ -39,8 +39,11 @@ namespace OOP2_final_project
 
         }
 
+        private void Form16_Load(object sender, EventArgs e)
+        {
 
-       
+        }
+
         // Auto generated code part ends here
 
         private void lb_co_Name_Click(object sender, EventArgs e)
@@ -73,10 +76,10 @@ namespace OOP2_final_project
                 txt_address.Text == ""||
                 string.IsNullOrWhiteSpace(emp_email) ||
                 string.IsNullOrWhiteSpace(emp_gender))
-            {
-                MessageBox.Show("Please fill all the fields.");
-                return;
-            }
+                {
+                    MessageBox.Show("Please fill all the fields.");
+                    return;
+                }
 
             
 
@@ -157,9 +160,6 @@ namespace OOP2_final_project
             }
         }
 
-        private void Form16_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

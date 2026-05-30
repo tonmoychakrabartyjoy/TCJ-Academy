@@ -10,9 +10,11 @@ namespace OOP2_final_project
 {
     public partial class Form9 : Form
     {
-        public Form9()
+        Form home;
+        public Form9(Form home)
         {
             InitializeComponent();
+            this.home = home;
             txt_id.Text = "Auto generated";
         }
 
@@ -36,7 +38,7 @@ namespace OOP2_final_project
             try
             {
 
-                string queryEmp ="INSERT INTO Users (UserName, Phone, Address, Email, Gender) VALUES ('" + name + "', '" + phone + "', '" + address + "', '" + emp_email + "', '" + emp_gender + "'); SELECT SCOPE_IDENTITY();";
+                string queryEmp = "INSERT INTO Users (UserName, Phone, Address, Email, Gender) VALUES ('" + name + "', '" + phone + "', '" + address + "', '" + emp_email + "', '" + emp_gender + "'); SELECT SCOPE_IDENTITY();";
 
                 var res1 = Database.ExecuteScalarQuery(queryEmp);
 
@@ -52,7 +54,7 @@ namespace OOP2_final_project
                 int typeId = 3;
 
 
-                string queryRole ="INSERT INTO UserTypeRole (userId, userTypeId) VALUES (" + userId + ", " + typeId + ")";
+                string queryRole = "INSERT INTO UserTypeRole (userId, userTypeId) VALUES (" + userId + ", " + typeId + ")";
 
                 var res2 = Database.ExecuteNonResultQuery(queryRole);
 
@@ -78,10 +80,14 @@ namespace OOP2_final_project
 
         private void lb_co_Name_Click(object sender, EventArgs e)
         {
-            Form3 home = new Form3();
             home.Show();
 
             this.Hide();
+        }
+
+        private void Form9_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

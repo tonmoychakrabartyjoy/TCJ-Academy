@@ -15,7 +15,7 @@ namespace OOP2_final_project
         {
             InitializeComponent();
             lblName.Text = Case.UserName;
-            
+
         }
 
         private void btn_add_course_fee_Click(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace OOP2_final_project
             this.Hide();
         }
 
-        
+
 
         private void Form6_Load(object sender, EventArgs e)
         {
@@ -87,6 +87,54 @@ namespace OOP2_final_project
             login_page.Show();
 
             this.Close();
+        }
+
+        private void btn_add_exam_Click(object sender, EventArgs e)
+        {
+            Form4 create_exam = new Form4(this);
+            create_exam.Show();
+
+            this.Hide();
+        }
+
+        private void btn_add_student_Click(object sender, EventArgs e)
+        {
+            Form8 add_student = new Form8(this);
+            add_student.Show();
+
+            this.Hide();
+        }
+
+        private void btn_add_teacher_Click(object sender, EventArgs e)
+        {
+            Form9 add_teacher = new Form9(this);
+            add_teacher.Show();
+
+            this.Hide();
+        }
+
+        private void btn_upload_result_Click(object sender, EventArgs e)
+        {
+            Form5 upload_result = new Form5(this);
+            upload_result.Show();
+
+            this.Hide();
+        }
+
+        private void btn_update_student_Click(object sender, EventArgs e)
+        {
+            Form12 update_students = new Form12(this);
+            update_students.Show();
+
+            this.Hide();
+        }
+
+        private void btn_add_course_Click(object sender, EventArgs e)
+        {
+            Form7 add_course = new Form7(this);
+            add_course.Show();
+
+            this.Hide();
         }
     }
 }

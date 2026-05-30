@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form9));
             lb_co_Name = new Label();
             panel1 = new Panel();
+            rbFemale = new RadioButton();
+            rbMale = new RadioButton();
+            txtEmail = new TextBox();
+            label1 = new Label();
             btn_add_teacher = new Button();
             txt_address = new TextBox();
             txt_phone = new TextBox();
@@ -40,10 +44,6 @@
             lb_phone = new Label();
             lb_teacher_name = new Label();
             lb_teacher_id = new Label();
-            rbFemale = new RadioButton();
-            rbMale = new RadioButton();
-            txtEmail = new TextBox();
-            label1 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -81,6 +81,46 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(665, 317);
             panel1.TabIndex = 23;
+            // 
+            // rbFemale
+            // 
+            rbFemale.AutoSize = true;
+            rbFemale.Location = new Point(326, 231);
+            rbFemale.Name = "rbFemale";
+            rbFemale.Size = new Size(78, 24);
+            rbFemale.TabIndex = 37;
+            rbFemale.TabStop = true;
+            rbFemale.Text = "Female";
+            rbFemale.UseVisualStyleBackColor = true;
+            // 
+            // rbMale
+            // 
+            rbMale.AutoSize = true;
+            rbMale.Location = new Point(255, 231);
+            rbMale.Name = "rbMale";
+            rbMale.Size = new Size(63, 24);
+            rbMale.TabIndex = 36;
+            rbMale.TabStop = true;
+            rbMale.Text = "Male";
+            rbMale.UseVisualStyleBackColor = true;
+            // 
+            // txtEmail
+            // 
+            txtEmail.BorderStyle = BorderStyle.FixedSingle;
+            txtEmail.Location = new Point(209, 187);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(320, 27);
+            txtEmail.TabIndex = 35;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(139, 189);
+            label1.Name = "label1";
+            label1.Size = new Size(46, 20);
+            label1.TabIndex = 34;
+            label1.Text = "Email";
+            label1.TextAlign = ContentAlignment.MiddleRight;
             // 
             // btn_add_teacher
             // 
@@ -161,46 +201,6 @@
             lb_teacher_id.TabIndex = 25;
             lb_teacher_id.Text = "Teacher Id";
             // 
-            // rbFemale
-            // 
-            rbFemale.AutoSize = true;
-            rbFemale.Location = new Point(326, 231);
-            rbFemale.Name = "rbFemale";
-            rbFemale.Size = new Size(78, 24);
-            rbFemale.TabIndex = 37;
-            rbFemale.TabStop = true;
-            rbFemale.Text = "Female";
-            rbFemale.UseVisualStyleBackColor = true;
-            // 
-            // rbMale
-            // 
-            rbMale.AutoSize = true;
-            rbMale.Location = new Point(255, 231);
-            rbMale.Name = "rbMale";
-            rbMale.Size = new Size(63, 24);
-            rbMale.TabIndex = 36;
-            rbMale.TabStop = true;
-            rbMale.Text = "Male";
-            rbMale.UseVisualStyleBackColor = true;
-            // 
-            // txtEmail
-            // 
-            txtEmail.BorderStyle = BorderStyle.FixedSingle;
-            txtEmail.Location = new Point(209, 187);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(320, 27);
-            txtEmail.TabIndex = 35;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(139, 189);
-            label1.Name = "label1";
-            label1.Size = new Size(46, 20);
-            label1.TabIndex = 34;
-            label1.Text = "Email";
-            label1.TextAlign = ContentAlignment.MiddleRight;
-            // 
             // Form9
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -216,6 +216,7 @@
             Name = "Form9";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Add teacher";
+            Load += Form9_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

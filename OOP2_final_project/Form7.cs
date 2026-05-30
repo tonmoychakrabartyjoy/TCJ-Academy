@@ -10,9 +10,11 @@ namespace OOP2_final_project
 {
     public partial class Form7 : Form
     {
-        public Form7()
+        Form home;
+        public Form7(Form home)
         {
             InitializeComponent();
+            this.home = home;
             txt_course_code.Text = "Auto Generate";
             txt_course_fee.Text = "NULL";
         }
@@ -94,9 +96,7 @@ namespace OOP2_final_project
         }
         private void lb_co_Name_Click(object sender, EventArgs e)
         {
-            Form3 home = new Form3();
             home.Show();
-
             this.Hide();
         }
 
